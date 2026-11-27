@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AI 應用組：SHOP＋應用層初選 12 檔　關注持股看板</title>
+  <style>
+:root {
+  --bg: #f3f0e8;
+  --bg-elev: #fffcf6;
+  --sidebar: #faf7f0;
+  --line: rgba(28, 36, 48, 0.12);
+  --text: #152033;
+  --muted: #5c6b80;
+  --faint: #8a97a8;
+  --accent: #0f6e68;
+  --accent-soft: rgba(15, 110, 104, 0.12);
+  --chip: #e8f4f2;
+  --shadow: 0 10px 30px rgba(21, 32, 51, 0.08);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #0c111b;
+  --bg-elev: #151c29;
+  --sidebar: #101826;
+  --line: rgba(210, 222, 238, 0.1);
+  --text: #e9eef6;
+  --muted: #9aa8bb;
+  --faint: #738196;
+  --accent: #5ee0d0;
+  --accent-soft: rgba(94, 224, 208, 0.12);
+  --chip: #1b2738;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 19px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+}
+.top-inner {
+  max-width: 52rem; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.brand-link {
+  font-weight: 750; text-decoration: none; color: var(--text);
+  font-size: 16px;
+}
+.brand-link:hover { color: var(--accent); }
+.top .spacer { flex: 1; }
+.ghost {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+}
+.ghost:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 24px 20px 64px; }
+.kicker { color: var(--faint); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 31px; letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; margin: 2em 0 0.6em; }
+h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+h4, h5, h6 { font-size: 18px; margin: 1.4em 0 0.4em; }
+.disclaimer {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+article p { margin: 0.7em 0; }
+article ul, article ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+article li { margin: 0.25em 0; }
+article li > ul, article li > ol { margin: 0.2em 0 0.3em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+blockquote {
+  margin: 1em 0;
+  padding: 8px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+}
+blockquote p { margin: 0.4em 0; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--chip);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  overflow-wrap: anywhere; word-break: normal;
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elev);
+  max-width: 100%;
+}
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table {
+  border-collapse: collapse;
+  min-width: 36em;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
+  background: color-mix(in srgb, var(--bg) 55%, var(--bg-elev));
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+.other {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.other h2 { margin-top: 0; font-size: 20px; }
+.other ul { padding-left: 1.2em; }
+.foot {
+  margin-top: 36px;
+  color: var(--faint);
+  font-size: 15px;
+}
+@media (max-width: 720px) {
+  html, body { font-size: 17px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  .wrap { padding: 18px 16px 48px; }
+  .top { padding: 10px 16px; }
+  table { font-size: 15px; min-width: 40em; }
+  th, td { padding: 8px 9px; }
+}
+@media print {
+  .top { position: static; }
+  .ghost { display: none; }
+  body { background: #fff; color: #111; }
+}
+.tag {
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 0.05em 0.32em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.tag-shi { color: var(--accent); background: var(--accent-soft); }
+.tag-si { color: var(--muted); background: var(--chip); }
+.tag-gu { color: var(--muted); background: var(--chip); }
+.tag-tui { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.tag-jia { color: var(--muted); background: var(--chip); }
+.tag-mei { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, var(--bg-elev)); }
+.tag-zan { color: var(--muted); background: var(--chip); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand-link" href="../index.html">← 關注持股看板</a>
+      <div class="spacer"></div>
+      <button class="ghost" id="themeBtn" type="button" aria-label="切換主題">切換深淺色</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">研究報告　2026-11-17　台北時間</p>
+    <p class="disclaimer">僅供陳煒川本人自用。研究用途，不是下單指令，不承諾報酬。文中價格與報酬若未另註，為拆股調整價格指數，不是官方收盤，也不是含息總報酬。若引用 Massive 日線，屬延遲／非官方報價，不是交易所官方收盤。本頁只公開已審報告正文，不含原始指數數列或內部計算檔。</p>
+    <article>
+      <h1 id="ai-應用組-shop-應用層初選-12-檔-條件式研究-2026-11-17">AI 應用組：SHOP＋應用層初選 12 檔（條件式研究，2026-11-17）</h1>
+<ul><li>作業：2026-11-17（台北，UTC+8）｜主責：跨產業研究員｜交 投資 CEO 審核｜僅供使用者本人自用</li><li><strong>這是條件式研究，不是交易指令</strong>：不寫買進指令、不給配置比例、不保證報酬、不承諾倍數報酬、不用槓桿。列入看板不代表持有部位。</li><li>標記：<span class="tag tag-shi">【事】</span>公開文件事實｜<span class="tag tag-si">【司】</span>公司說法、指引或目標｜<span class="tag tag-gu">【估】</span>估算｜<span class="tag tag-jia">【假】</span>假設或條件｜<span class="tag tag-mei">【媒】</span>媒體或傳聞｜【未核】未能以一手文件核實</li><li>基本面來源：SEC EDGAR（submissions／companyfacts API、10-Q、20-F、6-K、8-K Ex.99.1），財報日取自公司 IR 公告；只用免費、不需登入的來源。SHOP 電話會議內容取自第三方免費逐字稿（stockanalysis.com），Shopify 沒有提供官方逐字稿，所以這部分標<span class="tag tag-si">【司】</span>且註明出處。</li><li><strong>行情口徑</strong>：數據專員 <code>ai-apps-prices-20261117.json</code>（台北 11/17 12:37–12:47 取得），<strong>Massive免費、adjusted=true、拆股調整日線，非官方收盤、非總報酬</strong>；13 檔都是<strong>美東 2026-11-16</strong> 的 bar，API status 回傳 <strong>DELAYED（可能還不是最終值）</strong>；成交量調整方式未獨立驗證。本人沒有自行抓價。SMA 含當日。</li><li><strong>量比口徑</strong>：三選一規則一律用<strong>量比 a＝當日量 ÷ 含當日的 20 日均量</strong>（與 ai-security-20261114 一致）；b＝當日量 ÷ 不含當日的前 20 日均量，只並列參考。升級條件「量比 ≥1.0×」指 a 版。前 20 日低／高、前 50 日高都不含 11/16。</li><li>市值＝SEC 最新封面股數（多類股相加，逐檔註明）× 11/16 收盤（與行情同一 bar）；Massive overview 的股數和市值沒有資料日期，不使用。淨負債＝借款 −（現金＋債券型投資）；策略投資或股權投資不抵減（逐檔註明）。金額：百萬美元。</li><li><strong>拆股核對</strong>：NOW 2025-12-17 生效 5:1 拆股，10-Q 註明股數與每股數已追溯調整；封面約 1,038 百萬股、TTM EPS 1.39 都是拆股後口徑，與 Massive 拆股調整價（99.37）一致。其餘 12 檔的最新 10-Q／6-K 都沒有拆股揭露，封面股數與 Massive share_class 股數相符或只差類別加總（SHOP、PLTR、APP、RDDT、DUOL、PINS 是多類股；SPOT 用 6-K 已發行減庫藏股）。</li><li>可重跑：<code>cd ai-apps-data &amp;&amp; python3 fund_pull.py &amp;&amp; python3 calc.py &amp;&amp; python3 build.py</code>（原始文件在 <code>ai-apps-data/raw/</code>）。</li></ul>
+<h2 id="一-排序總表-推薦程度-與三選一一致">一、排序總表（推薦程度，與三選一一致）</h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>Rank</th><th>代碼</th><th>組別</th><th>收盤 11/16</th><th>SMA20</th><th>SMA50</th><th>SMA200</th><th>量比 a（b）</th><th>前20日低（日期）</th><th>壓力：前20日高／前50日高</th><th>TTM GAAP PE</th><th>預估 PE</th><th>EV/S TTM（年度）</th><th>EV/FCF</th><th>三選一</th></tr></thead><tbody><tr><td>1</td><td>CRM</td><td>to B 企業軟體／Agent／客服</td><td>214.83</td><td>229.10</td><td>234.39</td><td>198.00</td><td>0.87（0.87）</td><td>208.88（11-10）</td><td>252.42（10-22）／263.6（09-04）</td><td>18.3x</td><td>12.9x</td><td>4.66x（4.43x）</td><td>13.5x</td><td><strong>觀望</strong></td></tr><tr><td>2</td><td>SHOP</td><td>A／to C 電商平台</td><td>147.81</td><td>157.30</td><td>152.85</td><td>130.26</td><td>0.81（0.81）</td><td>135.65（11-03）</td><td>178.276（10-21）／180.88（10-12）</td><td>89.4x</td><td>不適用</td><td>13.05x（12.08x）</td><td>69.5x</td><td><strong>觀望</strong></td></tr><tr><td>3</td><td>EBAY</td><td>to C 電商</td><td>120.89</td><td>121.20</td><td>114.53</td><td>105.52</td><td>0.98（0.98）</td><td>115.76（10-28）</td><td>127.74（11-05）／127.74（11-05）</td><td>25.3x</td><td>19.3x</td><td>4.67x（4.57x）</td><td>24.0x</td><td><strong>觀望</strong></td></tr><tr><td>4</td><td>HUBS</td><td>to B 中小企業 CRM／Agent</td><td>231.98</td><td>231.48</td><td>226.96</td><td>226.32</td><td>1.50（1.58）</td><td>188.25（11-06）</td><td>271.6（10-26）／271.6（10-26）</td><td>53.1x</td><td>17.1x</td><td>2.79x（2.72x）</td><td>14.3x</td><td><strong>觀望</strong></td></tr><tr><td>5</td><td>VEEV</td><td>to B 垂直 SaaS（生命科學軟體）</td><td>299.28</td><td>310.61</td><td>291.91</td><td>214.01</td><td>0.81（0.80）</td><td>294.99（11-06）</td><td>325.99（10-22）／325.99（10-22）</td><td>47.8x</td><td>32.5x</td><td>11.92x（11.19x）</td><td>25.1x</td><td><strong>觀望</strong></td></tr><tr><td>6</td><td>APP</td><td>to C 廣告（AI 廣告推薦）</td><td>415.22</td><td>312.68</td><td>304.03</td><td>405.50</td><td>0.78（0.79）</td><td>225.19005（10-30）</td><td>413.88（11-13）／413.88（11-13）</td><td>27.4x</td><td>不適用</td><td>18.13x（16.55x）</td><td>28.1x</td><td><strong>觀望</strong></td></tr><tr><td>7</td><td>SPOT</td><td>to C 內容（音訊）</td><td>611.73</td><td>586.14</td><td>544.35</td><td>502.82</td><td>0.51（0.51）</td><td>508.01（10-21）</td><td>635（11-05）／635（11-05）</td><td>37.5x</td><td>不適用</td><td>5.37x（5.19x）</td><td>31.7x</td><td><strong>觀望</strong></td></tr><tr><td>8</td><td>DUOL</td><td>to C 消費應用（教育）</td><td>168.75</td><td>147.65</td><td>146.45</td><td>124.31</td><td>1.34（1.40）</td><td>125.12（11-03）</td><td>175.56（11-04）／175.56（11-04）</td><td>54.6x</td><td>不適用</td><td>5.48x（5.3x）</td><td>16.0x</td><td><strong>觀望</strong></td></tr><tr><td>9</td><td>PLTR</td><td>to B 資料／AI 平台</td><td>160.39</td><td>180.67</td><td>184.51</td><td>153.79</td><td>0.73（0.72）</td><td>152.6（11-05）</td><td>202.63（10-22）／212.9399（10-12）</td><td>105.3x</td><td>不適用</td><td>51.58x（44.06x）</td><td>92.7x</td><td><strong>觀望</strong></td></tr><tr><td>10</td><td>SNOW</td><td>to B 資料平台</td><td>280.54</td><td>305.52</td><td>323.71</td><td>243.62</td><td>0.60（0.58）</td><td>266.355（11-06）</td><td>343.55（10-28）／370.55（10-12）</td><td>不適用（負）</td><td>不適用</td><td>17.84x（15.97x）</td><td>81.1x</td><td><strong>觀望</strong></td></tr><tr><td>11</td><td>PINS</td><td>to C 廣告／購物導購</td><td>18.42</td><td>20.39</td><td>20.02</td><td>20.44</td><td>0.78（0.78）</td><td>18.15（10-30）</td><td>23.6（10-21）／23.6（10-21）</td><td>59.2x</td><td>不適用</td><td>2.15x（2.09x）</td><td>8.0x</td><td><strong>觀望</strong></td></tr><tr><td>12</td><td>NOW</td><td>to B 企業軟體／Agent</td><td>99.37</td><td>121.61</td><td>131.26</td><td>113.65</td><td>0.64（0.64）</td><td>97（11-10）</td><td>159.5（10-23）／159.5（10-23）</td><td>71.4x</td><td>不適用</td><td>6.72x（6.57x）</td><td>21.8x</td><td><strong>不建議</strong></td></tr><tr><td>13</td><td>RDDT</td><td>to C 內容／廣告／資料授權</td><td>92.87</td><td>115.42</td><td>138.01</td><td>153.23</td><td>0.63（0.63）</td><td>89.28（10-30）</td><td>160.415（10-21）／166.18（09-14）</td><td>18.1x</td><td>不適用</td><td>4.82x（4.41x）</td><td>12.4x</td><td><strong>不建議</strong></td></tr></tbody></table></div>
+<p><strong>一覽</strong>：符合條件才分批 0 檔｜觀望 11 檔（CRM、SHOP、EBAY、HUBS、VEEV、APP、SPOT、DUOL、PLTR、SNOW、PINS）｜不建議 2 檔（NOW、RDDT，都是趨勢降級規則觸發，不是基本面否決）。沒有一檔放量（量比 a &gt;1）收破前 20 日低。</p>
+<p><strong>排序理由</strong>：先依三選一分大類（觀望在前、不建議在後），同類內再依 (1) AI 營收能否用申報文件驗證、基本面品質（成長、FCF、GAAP 獲利、負債）；(2) 估值是否極端；(3) 離觸發或降級線多遠、是否在追價區。</p>
+<ul><li><strong>1. CRM</strong>：13 檔中 AI 營收揭露最具體，估值也最低（預估 non-GAAP PE 約 12.9 倍、FCF yield 約 8.6%）。但成長低、負債大增、併購多，且 SMA20&lt;SMA50、收盤在 SMA20 下 6%，所以觀望。</li><li><strong>2. SHOP</strong>：基本面最完整：營收 +32%、FCF margin 22%、零負債、趨勢沒有轉壞。但 AI 只有使用量數據、沒有營收，估值（EV/S 約 13 倍）已反映很多預期；收盤在 SMA20 與 SMA50 之下，所以觀望。</li><li><strong>3. EBAY</strong>：AI 只是功能敘事、無營收，但估值合理（預估 non-GAAP PE 約 19 倍），收盤在 SMA20 ±1% 內（−0.25%），量比 a 0.98，離 (A) 觸發最近。</li><li><strong>4. HUBS</strong>：價量觸發 (A) 已成立，估值也低（預估 PE 約 17 倍）；但公司自己說需求逆風加劇，CEO 又剛換，基本面支撐不足，所以只能觀望。這是我對「基本面支撐」的判斷，CEO 可以改判。</li><li><strong>5. VEEV</strong>：零負債、現金 72 億、毛利穩定，但 AI 還沒有營收；收盤在 SMA20 下 3.7%、SMA50 上 2.5%，剛好在 (B) 區間上緣之外（SMA50 至 +2%＝291.91–297.75）。</li><li><strong>6. APP</strong>：基本面最強之一（成長 55%、FCF margin 約 65%），但 11/16 收盤高於 SMA20 32.8%、高於 SMA50 36.6%，在追價區，(A) 不採計。</li><li><strong>7. SPOT</strong>：基本面穩定、無負債，但 AI 只是成本與功能；收盤高於 SMA20 4.4%、SMA50 12.4%，在追價區。</li><li><strong>8. DUOL</strong>：用戶成長強，但 AI 是成本而不是營收，bookings 減速；收盤高於 SMA20 14.3%、SMA50 15.2%，在追價區。</li><li><strong>9. PLTR</strong>：成長最快，但 AI 營收沒有拆分，EV/S 約 52 倍，對任何減速都很敏感；SMA20&lt;SMA50、收盤在 SMA20 下 11%。</li><li><strong>10. SNOW</strong>：成長在加速，但 GAAP 虧損、SBC 很高、剛發可轉債，EV/S 約 18 倍；SMA20&lt;SMA50。</li><li><strong>11. PINS</strong>：估值最低（EV/S 約 2.1 倍、FCF yield 約 12%），但 GAAP 獲利惡化、成長減速，而且收盤低於 SMA200。</li><li><strong>12. NOW</strong>：基本面沒有否決項，AI ACV 目標上修；但「SMA20&lt;SMA50 且收盤&lt;SMA200」降級規則已觸發，依規則從觀望下調為不建議。這是價格規則造成的，不是基本面否決。</li><li><strong>13. RDDT</strong>：基本面強（成長 53%、FCF margin 約 40%、零負債），但降級規則已觸發（SMA20 115.41&lt;SMA50 138.01，收盤 92.87&lt;SMA200 153.23），收盤距前 20 日低只剩 4.0%。</li></ul>
+<p><strong>價量特別說明（依 CEO 提醒逐項核對）</strong></p>
+<ul><li>APP：收盤 415.22 高於前 20 日高與前 50 日高 413.88（11/13），但距 SMA20 +32.80%、SMA50 +36.57%，同時超過 SMA20+3%（322.06）與 SMA50+8%（328.35），屬追價區；量比 a 0.78 也未達 1.0。突破前高本身不在本組升級規則內。</li><li>HUBS：收盤 231.98 在 SMA20 231.48 上 0.21%（±1% 內），量比 a 1.50 → (A) 成立；未在追價區。仍判觀望，原因是基本面支撐不足（見逐檔）。EBAY：收盤 120.89 在 SMA20 121.20 下 0.25%（±1% 內），(A) 要求收盤 ≥ SMA20，未成立。</li><li>趨勢降級核對：<strong>NOW</strong>（SMA20 121.61 &lt; SMA50 131.26，收盤 99.37 &lt; SMA200 113.65）與 <strong>RDDT</strong>（115.41 &lt; 138.01，92.87 &lt; 153.23）兩檔觸發。<strong>PINS 沒有觸發</strong>：收盤 18.42 雖低於 SMA200 20.44，但 SMA20 20.39 &gt; SMA50 20.02（行情檔 sma20_vs_sma50 為「&gt;」），兩個條件只成立一個。</li><li>我用行情檔的 sma20／sma50／sma200 與 dist 欄位交叉核對過一致；數據專員另用純 Python 路徑重算，結果一致。</li></ul>
+<h2 id="二-規則-沿用本組既有規則">二、規則（沿用本組既有規則）</h2>
+<ul><li>來源：<code>ai-security-20261114.md</code> §二、<code>value-stocks-20261114.md</code> §4.3、<code>ai-lending-20261114.md</code>。</li><li><strong>符合條件才分批</strong>：基本面支撐＋價量觸發成立＋沒有否決，三者同時成立。<strong>不建議</strong>：基本面否決（例如下修指引），或放量（量比 a &gt;1.0×）收在前 20 日低之下。其餘為<strong>觀望</strong>。</li><li>價量觸發（擇一）：(A) 收盤站上 SMA20 且量比 a ≥1.0×<span class="tag tag-jia">【假】</span>；(B) 收盤在 SMA50 至 +2% 且量比 a &lt;1.0×（回測縮量守住）。</li><li><strong>追價區（自訂<span class="tag tag-jia">【假】</span>）</strong>：高於 SMA20 3% 以上<strong>且</strong>高於 SMA50 8% 以上；追價區內 (A) 不採計。11/16 在追價區：APP、DUOL、SPOT。</li><li><strong>趨勢降級</strong>：SMA20 &lt; SMA50 且收盤 &lt; SMA200 → 下調一級（觀望→不建議）。11/16 觸發：NOW、RDDT。</li><li>壓力價＝前 20 日高、前 50 日高（不含 11/16）。</li></ul>
+<h2 id="三-a-shop-shopify-inc-nasdaq-class-a-次級表決股-觀望">三、A｜SHOP（Shopify Inc.，Nasdaq，Class A 次級表決股）｜<strong>觀望</strong></h2>
+<h3 id="a1-ai-功能變現-已揭露-vs-敘事">A1. AI 功能變現：已揭露 vs 敘事</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>項目</th><th>性質</th><th>內容與出處</th></tr></thead><tbody><tr><td>AI 營收</td><td><span class="tag tag-shi">【事】</span>未揭露</td><td>10-Q（2026-11-03）、新聞稿都沒有 AI 營收或 AI 抽成。10-Q 只提到「AI platforms」是銷售通路之一，以及訂閱成本因「LLM usage costs」增加</td></tr><tr><td>Sidekick</td><td><span class="tag tag-si">【司】</span>只有採用數據</td><td>每日活躍商家年增 3.7 倍、sessions 年增 4.2 倍、Q3 約 2/3 的 Flow 由 Sidekick 建立（Q3 電話會議，第三方逐字稿）；屬方案內功能，沒有單獨收費揭露</td></tr><tr><td>Agentic commerce／Shop／Catalog</td><td><span class="tag tag-si">【司】</span>只有採用數據</td><td>AI 流量年增 2.6 倍、訂單年增 3.3 倍（公司說「volume is still small」）；Catalog 搜尋轉換率是一般 AI 搜尋的 2 倍；CFO：代理導來的訂單「economics are exactly the same」，即沒有額外變現率</td></tr><tr><td>OpenAI（ChatGPT）</td><td><span class="tag tag-si">【司】</span>官方說明頁</td><td>Help Center「agentic storefronts」：ChatGPT 是「discovery-focused referrer」，結帳回到商家 checkout；Google AI Mode／Gemini、Copilot、Meta Muse 可用 Shopify 直接結帳。沒有找到分潤條款</td></tr><tr><td>Perplexity 等</td><td>【未核】</td><td>本輪沒有找到一手文件，只能當敘事</td></tr></tbody></table></div>
+<h3 id="a2-近四季營運-百萬美元-來源-各季-8-k-ex-99-1-與-sec-xbrl">A2. 近四季營運（百萬美元；來源：各季 8-K Ex.99.1 與 SEC XBRL）</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>季</th><th>GMV</th><th>GMV YoY</th><th>營收</th><th>營收 YoY</th><th>毛利率</th><th>Merchant 占營收</th><th>Payments 滲透率</th><th>OCF</th><th>資本支出</th><th>FCF</th><th>FCF margin</th><th>SBC</th><th>GAAP EPS</th></tr></thead><tbody><tr><td>Q4’25</td><td>123,841</td><td>31.1%</td><td>3,672</td><td>30.6%</td><td>46.1%</td><td>78.8%</td><td>—</td><td>725</td><td>10</td><td>715</td><td>19.5%</td><td>115</td><td>0.57</td></tr><tr><td>Q1’26</td><td>100,743</td><td>34.8%</td><td>3,170</td><td>34.3%</td><td>48.8%</td><td>76.3%</td><td>—</td><td>481</td><td>5</td><td>476</td><td>15.0%</td><td>132</td><td>-0.45</td></tr><tr><td>Q2’26</td><td>115,567</td><td>31.6%</td><td>3,583</td><td>33.7%</td><td>47.7%</td><td>77.6%</td><td>—</td><td>658</td><td>4</td><td>654</td><td>18.3%</td><td>128</td><td>1.16</td></tr><tr><td>Q3’26</td><td>119,145</td><td>29.5%</td><td>3,742</td><td>31.6%</td><td>47.6%</td><td>77.7%</td><td>68%（去年 65%）</td><td>818</td><td>2</td><td>816</td><td>21.8%</td><td>140</td><td>0.36</td></tr></tbody></table></div>
+<p>TTM：營收 14,167、FCF 2,661（FCF margin 18.8%）、SBC 515（占營收 3.6%）、GAAP 淨利 2,126、GAAP 稀釋 EPS 1.64。</p>
+<ul><li><strong>毛利率與 Payments 占比<span class="tag tag-shi">【事＋估】</span></strong>：四季毛利率都比去年同期低（−2.0／−0.8／−0.9／−1.3 個百分點）。拆解 Q3：Merchant solutions 占營收由 75.4% 升到 77.7%；若兩段毛利率維持去年水準，光是組合變化就讓毛利率降約 1.0 個百分點<span class="tag tag-gu">【估】</span>；訂閱段毛利率由 81.7% 降到 79.1%（10-Q：雲端、基礎設施軟體與 LLM 使用成本增加 40），Merchant 段毛利率由 38.2% 微升到 38.5%。Payments 滲透率 68%（去年 65%），經 Shopify Payments 的 GMV 814 億。結論：毛利率下降主要是收入組合（Payments 毛利較低），其次是 AI／基礎設施成本，不是 Payments 本身毛利惡化。</li><li><span class="tag tag-shi">【事】</span>2026-04 起商家預支款（MCA）的現金流由營業活動改列投資活動，Q3 影響約 30；FCF 前後口徑不完全可比。<span class="tag tag-shi">【事】</span>GMV 註：Q3 新聞稿 GMV 年增 29%（電話會議 29.5%）。</li></ul>
+<h3 id="a3-估值-收盤-147-81-美東-11-16-與行情同一-bar">A3. 估值（收盤 147.81，美東 11/16，與行情同一 bar）</h3>
+<ul><li>股數：10-Q 封面 2026-10-30：Class A 次級表決股 1,208,456,928＋Class B 限制表決股 78,065,084＋Founder Share 1（Founder Share 為特殊表決權股，計 1 股）＝1,286,522,013 股 → 市值 190,161</li><li>淨現金：現金 1,868＋有價證券 2,859＋長期投資（債券）524；另有股權及其他投資 4,911、權益法投資 538 未計入（見另算）；借款 0 → 淨現金 5,251；EV 184,910。若再扣除股權投資（4,911＋538），EV 約 179,461。</li><li><strong>Trailing P/E</strong>：GAAP TTM 淨利 2,126（Q4’25 743＋Q1 −581＋Q2 1,502＋Q3 462）→ <strong>89.4x</strong>；以 GAAP EPS 1.64 計 90.1x。GAAP 淨利含股權投資市價變動（Q1 −941、Q2 +1,063 等，稅後），所以另算「排除股權投資的淨利」（公司 non-GAAP）TTM 1,977（594＋360＋439＋584）→ <strong>96.2x</strong>。Q3 才開始揭露 non-GAAP EPS（0.49），沒有四季可加總，TTM non-GAAP EPS 列缺口。</li><li><strong>Forward P/E：不適用</strong>（公司不給 EPS 指引）。改用營收／營業利益指引推估<span class="tag tag-gu">【估】</span>：Q4 營業利益約 715–764，FY2026 營業利益約 2,178 → EV／FY26E 營業利益約 <strong>84.9x</strong>。<span class="tag tag-gu">【估】</span>Q4 毛利＝1,693×1.275（high-twenties 取 27.5%<span class="tag tag-jia">【假】</span>）；Q4 營收＝3,672×1.31；營業費用率 29–30%（公司指引）。淨利排除股權投資＝594＋360＋439＋584（公司 non-GAAP，各季新聞稿）。</li><li><strong>EV/S</strong>：TTM 13.05x；FY2026E 營收 15,305<span class="tag tag-gu">【估】</span>→ 12.08x。<strong>EV/FCF</strong>：TTM FCF 2,661 → 69.5x（FCF yield 1.4%）。</li></ul>
+<h3 id="a4-技術面與三選一">A4. 技術面與三選一</h3>
+<p>收盤 147.81｜SMA20 157.30（-6.03%）｜SMA50 152.85（-3.30%）｜SMA200 130.26（+13.48%）｜量比 a 0.81×、b 0.81×、50 日 0.71×｜前 20 日低 135.65（11-03）｜壓力：前 20 日高 178.276（10-21）、前 50 日高 180.88（10-12）｜11/16 盤中 141.56–150.33</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 147.81（美東 11/16），距 SMA20 -6.03%、SMA50 -3.30%、SMA200 +13.48%；SMA20 157.30 &gt; SMA50 152.85；量比 a 0.81×（b 0.81×）；前 20 日低 135.65（2026-11-03）未破，收盤高於它 9.0%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：支撐。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 157.30 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 162.02（SMA20+3%）與 165.08（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（152.85–155.91）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 135.65（2026-11-03）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 130.26（目前 SMA20 157.30 &gt; SMA50 152.85）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>風險：<ul><li><span class="tag tag-shi">【事】</span>毛利率連四季年減（Q3 47.6% vs 48.9%），主因是 Payments 占比提高（mix 約 −1.0 個百分點）；訂閱方案毛利率也從 81.7% 降到 79.1%（LLM 與基礎設施成本）</li><li><span class="tag tag-shi">【事】</span>GAAP 淨利受股權投資市價影響很大（Q1 −581、Q2 +1,502），TTM GAAP PE 不能代表本業</li><li><span class="tag tag-shi">【事】</span>2026-04 起商家預支款的現金流改列投資活動，FCF 前後口徑不完全可比</li><li><span class="tag tag-shi">【事】</span>11/03 申報 S-3ASR（自動生效儲架註冊），只代表可以發行，未見實際發行</li><li><span class="tag tag-si">【司】</span>AI 通路對 SHOP 的抽成與一般導流相同，AI 目前沒有帶來額外的變現率</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收年增 low-thirties、毛利年增 high-twenties、營業費用率 29–30%、SBC 155、FCF margin 與去年 Q4 相當；<span class="tag tag-si">【司】</span>Shop Pay 在第三方代理中的錢包滲透率；Catalog／shop.dev 是否另外收費（目前未揭露）｜下次財報：未公告；去年 Q4 於 2026-02-11 公布，推估 2027-02 中旬<span class="tag tag-gu">【估】</span></li></ul>
+<p><strong>看板短句</strong>：SHOP｜觀望——營收 +32%、FCF margin 22%、零負債；AI 只有使用量、未見額外變現，收盤在 SMA20／SMA50 下方，等站回 SMA20 且量比 a ≥1.0×。</p>
+<h2 id="四-b-ai-應用層初選-12-檔">四、B｜AI 應用層初選（12 檔）</h2>
+<p><strong>AI 營收可驗證程度一覽</strong></p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>代碼</th><th>AI 營收可否以申報文件驗證</th><th>最具體的一手數字</th></tr></thead><tbody><tr><td>CRM</td><td>可（公司自訂 ARR，非 GAAP）</td><td>Agentforce＋Data 360 ARR 近 39 億（+210%）；Agentforce ARR &gt;15 億（+240%）</td></tr><tr><td>EBAY</td><td>否</td><td>AI 上架工具</td></tr><tr><td>HUBS</td><td>否（有收費機制、未揭露金額）</td><td>HubSpot Credits 用於 AI agents；公司說 AI 定價調整拖累成長</td></tr><tr><td>VEEV</td><td>否</td><td>Vault AI／Falcon 產品進度</td></tr><tr><td>APP</td><td>間接（整體業務靠 Axon AI 推薦）</td><td>營收 2,185（+55%）</td></tr><tr><td>SPOT</td><td>否</td><td>AI 為費用項目</td></tr><tr><td>DUOL</td><td>否（AI 是成本；Max 停售）</td><td>第三方 AI 成本 Q3 +3.2</td></tr><tr><td>PLTR</td><td>否（未按平台拆分）</td><td>整體營收 +96%、美國商業 +148%</td></tr><tr><td>SNOW</td><td>否（只有帳戶數）</td><td>CoCo 9,100 帳戶、CoWork 5,800 帳戶</td></tr><tr><td>PINS</td><td>否</td><td>—</td></tr><tr><td>NOW</td><td>部分（年底目標）</td><td>2026 年 AI ACV 目標 17 億（年初 10 億）</td></tr><tr><td>RDDT</td><td>部分（含在 Other revenue）</td><td>Other revenue 48（+35%），含內容授權；未拆 AI</td></tr></tbody></table></div>
+<h3 id="1-crm-salesforce-inc-to-b-企業軟體-agent-客服-觀望">1. CRM｜Salesforce, Inc.｜to B 企業軟體／Agent／客服｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：FY27Q2（至 2026-07-31）｜會計年度止於 1月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（8-K Ex.99.1，2026-08-26）：「Agentforce and Data 360 ARR reached nearly $3.9 billion, up over 210% Y/Y」「Agentforce ARR exceeded $1.5 billion, up over 240% Y/Y」，並附定義：已簽訂之 Data 360 與部分生成式 AI 訂閱合約的年化經常性價值。注意兩點：自 Q2 FY27 起 Agentforce ARR 把 Slackbot、Headless 360 也算進去，口徑變寬；ARR 是公司自定指標，不是 GAAP 營收。另揭露 Agentic Work Units 累計 70 億次，Q2 單季 32 億次（季增 97%）。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>CEO 說 AI 與資料產品 ARR「about to cross $4 billion」。 <strong>成長與獲利</strong>：近四季營收（舊→新）10,259, 11,201, 11,133, 11,345；YoY 8.6%, 12.1%, 13.3%, 10.8%；GAAP 毛利率 78.0%, 77.6%, 76.9%, 76.7%；FCF（OCF−資本支出）2,177, 5,323, 6,556, 1,098；TTM 營收 43,938、FCF 15,154（34.5%）、GAAP 淨利 9,662、GAAP EPS 10.97、SBC 占營收 8.3%。 <strong>估值</strong>（收盤 214.83，美東 11/16）：市值 176,805｜淨負債 27,885（負值＝淨現金）｜EV 204,690｜TTM GAAP PE 18.3x｜預估 PE 12.9x（FY27 non-GAAP 稀釋 EPS 指引 16.67–16.71（GAAP 10.21–10.25），non-GAAP，非共識）｜EV/S TTM 4.66x、年度 4.43x（FY27 營收指引 46.1–46.4 十億）｜EV/FCF 13.5x｜FCF yield 8.57%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-08-20：約 823 百萬股；現金 現金 8,310＋有價證券 3,093；策略投資 11,324 未計；負債 非流動借款 39,288（含為 250 億美元 ASR 舉債）；Braze（EV 約 56.6 億，10/20 簽約）、Fin（約 36 億）、Contentful 待交割未計。</li></ul>
+<p><strong>技術面</strong>：SMA20 229.10／SMA50 234.39／SMA200 198.00｜量比 a 0.87×、b 0.87×、50 日 0.66×｜前 20 日低 208.88（2026-11-10）｜壓力：前 20 日高 252.42（2026-10-22）、前 50 日高 263.6（2026-09-04）｜11/16 盤中 213.57–219.2</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 214.83（美東 11/16），距 SMA20 -6.23%、SMA50 -8.34%、SMA200 +8.50%；SMA20 229.10 &lt; SMA50 234.39；量比 a 0.87×（b 0.87×）；前 20 日低 208.88（2026-11-10）未破，收盤高於它 2.8%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：支撐（有條件）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 229.10 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 235.97（SMA20+3%）與 253.14（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（234.39–239.08）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 208.88（2026-11-10）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 198.00（目前 SMA20 229.10 &lt; SMA50 234.39）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>非流動借款 39,288（年初 10,439），主要用於 250 億美元 ASR</li><li><span class="tag tag-shi">【事】</span>併購密集：Informatica（已併入）、Contentful、Fin（約 36 億）、Braze（10/20 簽約，EV 約 56.6 億）；這屬於併購整合風險，但不是財報否決項</li><li><span class="tag tag-shi">【事】</span>營收年增 10.8%，Informatica 貢獻約 4 個百分點，內生成長約 6–7%<span class="tag tag-gu">【估】</span>（456／10,236≈4.5 個百分點）</li><li><span class="tag tag-shi">【事】</span>Q2 GAAP 淨利 3,526 含非營業收益，TTM GAAP PE 偏低</li></ul></li><li>催化劑：<span class="tag tag-shi">【事】</span>2026-12-02 FY27Q3：營收指引 11.42–11.50 十億、cRPO 約 +14%；<span class="tag tag-si">【司】</span>Agentforce ARR 是否跨過 40 億｜下次財報：<span class="tag tag-shi">【事】</span>2026-12-02 美東盤後（公司 IR 11/10 公告）</li></ul>
+<h3 id="3-ebay-ebay-inc-to-c-電商-觀望">3. EBAY｜eBay Inc.｜to C 電商｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（2026-10-28）只寫 AI 功能：「AI-powered Magical Listing」推到美國所有新上架者、eBay Live 的 AI 內容審核、Depop 的 AI 輔助上架。沒有任何 AI 營收或採用率數字。 <strong>成長與獲利</strong>：近四季營收（舊→新）2,965, 3,089, 3,134, 3,206；YoY 15.0%, 19.5%, 14.8%, 13.7%；GAAP 毛利率 68.7%, 74.0%, 73.5%, 72.3%；FCF（OCF−資本支出）466, 897, 300, 749；TTM 營收 12,394、FCF 2,412（19.5%）、GAAP 淨利 2,099、GAAP EPS 4.6、SBC 占營收 5.4%。 <strong>估值</strong>（收盤 120.89，美東 11/16）：市值 53,071｜淨負債 4,758（負值＝淨現金）｜EV 57,829｜TTM GAAP PE 25.3x｜預估 PE 19.3x（FY2026 non-GAAP EPS 指引 6.25–6.30（GAAP 4.26–4.31），non-GAAP，非共識）｜EV/S TTM 4.67x、年度 4.57x（FY2026 營收指引 12.62–12.67 十億）｜EV/FCF 24.0x｜FCF yield 4.54%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-23：439 百萬股；現金 現金 1,166＋短期投資 809；長期投資 2,171（含股權）未計；負債 短期借款 1,599＋長期借款 5,134。</li></ul>
+<p><strong>技術面</strong>：SMA20 121.20／SMA50 114.53／SMA200 105.52｜量比 a 0.98×、b 0.98×、50 日 0.9×｜前 20 日低 115.76（2026-10-28）｜壓力：前 20 日高 127.74（2026-11-05）、前 50 日高 127.74（2026-11-05）｜11/16 盤中 119.01–121.025｜在 SMA20 ±1% 內</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 120.89（美東 11/16），距 SMA20 -0.25%、SMA50 +5.55%、SMA200 +14.56%；SMA20 121.20 &gt; SMA50 114.53；量比 a 0.98×（b 0.98×）；前 20 日低 115.76（2026-10-28）未破，收盤高於它 4.4%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：支撐。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 121.20 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 124.83（SMA20+3%）與 123.69（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（114.53–116.82）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 115.76（2026-10-28）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 105.52（目前 SMA20 121.20 &gt; SMA50 114.53）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>10/20 宣布裁員約 9%，GAAP 費用 130–150（8-K Item 2.05）</li><li><span class="tag tag-shi">【事】</span>7/30 以 14 億美元現金買下 Depop，Q4 與全年成長含併購貢獻</li><li><span class="tag tag-shi">【事】</span>淨負債約 4,758（長期投資 2,171 未抵減）</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 3.19–3.24 十億、GMV 23.7–24.1 十億、non-GAAP EPS 1.48–1.53｜下次財報：未公告；去年 Q4 於 2026-02-18 公布，推估 2027-02 中旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="4-hubs-hubspot-inc-to-b-中小企業-crm-agent-觀望">4. HUBS｜HubSpot, Inc.｜to B 中小企業 CRM／Agent｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>10-Q（2026-11-04）營收認列說明：HubSpot Credits 在客戶使用 AI agent 產品時消耗，屬使用量收入；但沒有揭露金額。10-Q MD&amp;A 原文：免費試用 AI agents 與按價值定價等調整「extended customer buying cycles and adversely affected our revenue growth」，且「demand headwinds intensified during the third quarter of 2026」。也就是說，AI 轉型目前對營收是負面影響。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>CEO：AI 讓軟體從工具變成「做事的 agent」。 <strong>成長與獲利</strong>：近四季營收（舊→新）847, 881, 912, 948；YoY 20.4%, 23.4%, 19.8%, 17.1%；GAAP 毛利率 83.7%, 83.5%, 82.4%, 82.6%；FCF（OCF−資本支出）204, 149, 163, 183；TTM 營收 3,587、FCF 699（19.5%）、GAAP 淨利 213、GAAP EPS 4.17、SBC 占營收 14.0%。 <strong>估值</strong>（收盤 231.98，美東 11/16）：市值 11,329｜淨負債 -1,310（負值＝淨現金）｜EV 10,019｜TTM GAAP PE 53.1x｜預估 PE 17.1x（FY2026 non-GAAP EPS 指引 13.59–13.61（11/4；11/12 重申），non-GAAP，非共識）｜EV/S TTM 2.79x、年度 2.72x（FY2026 營收指引 3,685–3,687）｜EV/FCF 14.3x｜FCF yield 6.17%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-30：48,836,461 股；現金 現金 1,121.3＋投資 189.2；負債 無借款。</li></ul>
+<p><strong>技術面</strong>：SMA20 231.48／SMA50 226.96／SMA200 226.32｜量比 a 1.5×、b 1.58×、50 日 1.43×｜前 20 日低 188.25（2026-11-06）｜壓力：前 20 日高 271.6（2026-10-26）、前 50 日高 271.6（2026-10-26）｜11/16 盤中 212.09–233.88｜在 SMA20 ±1% 內</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 231.98（美東 11/16），距 SMA20 +0.21%、SMA50 +2.21%、SMA200 +2.50%；SMA20 231.48 &gt; SMA50 226.96；量比 a 1.50×（b 1.58×）；前 20 日低 188.25（2026-11-06）未破，收盤高於它 23.2%。觸發 (A) 成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：不足（指引減速＋CEO 更換）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 231.48 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 238.43（SMA20+3%）與 245.11（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（226.96–231.5）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 188.25（2026-11-06）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 226.32（目前 SMA20 231.48 &gt; SMA50 226.96）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>Q4 指引營收年增約 12%，低於 Q3 的 17%</li><li><span class="tag tag-shi">【事】</span>11/12 CEO Yamini Rangan 辭任，由共同創辦人 Brian Halligan 接任（8-K 5.02），同日重申 Q4／全年指引</li><li><span class="tag tag-shi">【事】</span>10/1 董事會通過裁員約 7%（8-K 2.05）</li><li><span class="tag tag-shi">【事】</span>11/16 單日 +6.78%、量比 a 1.50，原因本輪未以一手文件核實【未核】</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>FY2026 non-GAAP EPS 指引 13.59–13.61（8 月為 13.23–13.31，已上調）；<span class="tag tag-si">【司】</span>新 CEO 的策略與 2027 指引（預計 2027-02 公布）｜下次財報：未公告；去年 Q4 於 2026-02-11 公布，推估 2027-02 中旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="5-veev-veeva-systems-inc-to-b-垂直-saas-生命科學軟體-觀望">5. VEEV｜Veeva Systems Inc.｜to B 垂直 SaaS（生命科學軟體）｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：FY27Q2（至 2026-07-31）｜會計年度止於 1月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（2026-08-26）只有產品進度：Vault AI 推出新的標準 agents、Veeva Falcon（臨床、法規、安全的 agentic 平台）有 5 家早期採用者、Vault CRM 有一家前 20 大藥廠導入 Agentic Call Report。沒有 AI 營收數字。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>11/06 投資人日重申「預期達到或超過 Q3 指引」。 <strong>成長與獲利</strong>：近四季營收（舊→新）811, 836, 883, 928；YoY 16.0%, 16.0%, 16.3%, 17.6%；GAAP 毛利率 75.4%, 74.5%, 75.0%, 75.0%；FCF（OCF−資本支出）183, 100, 1,125, 231；TTM 營收 3,458、FCF 1,639（47.4%）、GAAP 淨利 1,015、GAAP EPS 6.11、SBC 占營收 14.3%。 <strong>估值</strong>（收盤 299.28，美東 11/16）：市值 48,456｜淨負債 -7,243（負值＝淨現金）｜EV 41,213｜TTM GAAP PE 47.8x｜預估 PE 32.5x（FY27 non-GAAP EPS 指引約 9.21，non-GAAP，非共識）｜EV/S TTM 11.92x、年度 11.19x（FY27 營收指引 3,682–3,687）｜EV/FCF 25.1x｜FCF yield 3.38%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-08-25：Class A 161,908,850 股；現金 現金 1,812.0＋短期投資 5,430.9；負債 無借款。</li></ul>
+<p><strong>技術面</strong>：SMA20 310.61／SMA50 291.91／SMA200 214.01｜量比 a 0.81×、b 0.8×、50 日 0.75×｜前 20 日低 294.99（2026-11-06）｜壓力：前 20 日高 325.99（2026-10-22）、前 50 日高 325.99（2026-10-22）｜11/16 盤中 298.885–303.76</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 299.28（美東 11/16），距 SMA20 -3.65%、SMA50 +2.52%、SMA200 +39.85%；SMA20 310.61 &gt; SMA50 291.91；量比 a 0.81×（b 0.80×）；前 20 日低 294.99（2026-11-06）未破，收盤高於它 1.5%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：支撐。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 310.61 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 319.93（SMA20+3%）與 315.26（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（291.91–297.75）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 294.99（2026-11-06）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 214.01（目前 SMA20 310.61 &gt; SMA50 291.91）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>客戶集中在生命科學業，與醫藥研究員的領域相鄰；本稿只從軟體角度分析</li><li><span class="tag tag-shi">【事】</span>10/2 起 President 兼 CCO 離任（8-K 5.02）</li><li><span class="tag tag-shi">【事】</span>營收成長約 16–18%，屬中速</li></ul></li><li>催化劑：<span class="tag tag-shi">【事】</span>2026-12-03 FY27Q3：營收指引 932–935、non-GAAP EPS 2.33–2.34｜下次財報：<span class="tag tag-shi">【事】</span>2026-12-03 美東盤後（公司 IR 11/12 公告）</li></ul>
+<h3 id="6-app-applovin-corp-to-c-廣告-ai-廣告推薦-觀望">6. APP｜AppLovin Corp｜to C 廣告（AI 廣告推薦）｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>10-Q（2026-11-04）：公司靠改進「Axon AI recommendation system」來提高營收。整個廣告業務都是 AI 推薦引擎驅動，但這是機器學習廣告，不是另外單列的「生成式 AI 營收」。Q3 營收 2,185（+55%）、淨利率 66%。 <strong>成長與獲利</strong>：近四季營收（舊→新）1,658, 1,842, 1,924, 2,185；YoY -33.3%, 59.0%, 52.8%, 55.5%；GAAP 毛利率 88.9%, 88.9%, 88.3%, 89.0%；FCF（OCF−資本支出）1,314, 1,291, 869, 1,429；TTM 營收 7,609、FCF 4,903（64.4%）、GAAP 淨利 5,013、GAAP EPS 14.86、SBC 占營收 4.4%。 <strong>估值</strong>（收盤 415.22，美東 11/16）：市值 137,572｜淨負債 342（負值＝淨現金）｜EV 137,914｜TTM GAAP PE 27.4x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 18.13x、年度 16.55x（<span class="tag tag-gu">【估】</span>FY2026＝前三季 5,951＋Q4 指引中點 2,380）｜EV/FCF 28.1x｜FCF yield 3.56%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-31：Class A 301,258 千股＋Class B 30,064 千股；現金 現金 3,173.7；負債 長期借款（優先票據）3,516.1。</li></ul>
+<p><strong>技術面</strong>：SMA20 312.68／SMA50 304.03／SMA200 405.50｜量比 a 0.78×、b 0.79×、50 日 0.85×｜前 20 日低 225.19005（2026-10-30）｜壓力：前 20 日高 413.88（2026-11-13）、前 50 日高 413.88（2026-11-13）｜11/16 盤中 404.78–418.7665</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 415.22（美東 11/16），距 SMA20 +32.80%、SMA50 +36.57%、SMA200 +2.40%；SMA20 312.68 &gt; SMA50 304.03；量比 a 0.78×（b 0.79×）；前 20 日低 225.19005（2026-10-30）未破，收盤高於它 84.4%。觸發 (A) 未成立、(B) 未成立、追價區 是、趨勢降級 未觸發、放量破前低 否。基本面：支撐。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 312.68 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 322.06（SMA20+3%）與 328.35（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（304.03–310.11）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 225.19005（2026-10-30）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 405.50（目前 SMA20 312.68 &gt; SMA50 304.03）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>營收年增在 Q4’25 顯示 −33%，原因是 2025 年出售 apps 業務，前期基期含停業部門，可比性要小心</li><li><span class="tag tag-shi">【事】</span>長期借款 3,516</li><li>【未核】本輪沒有查監管或訴訟（例如外界傳聞的調查），列為缺口</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 2,365–2,395、Adjusted EBITDA 1,995–2,025（利潤率 84–85%）｜下次財報：未公告；去年 Q4 於 2026-02-11 公布，推估 2027-02 中旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="7-spot-spotify-technology-s-a-to-c-內容-音訊-觀望">7. SPOT｜Spotify Technology S.A.｜to C 內容（音訊）｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30；IFRS、歐元）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>Q3 6-K（2026-10-22）：AI 只出現在兩處，一是「cloud and AI spend」推高營業費用（年增 19% 的原因之一），二是與 Muse 整合，讓使用者透過 AI agent 播放音樂。沒有 AI 營收。 <strong>成長與獲利</strong>（百萬歐元）：近四季營收 4531, 4533, 4777, 4969；Q3 YoY +16.3%（固定匯率 +14% 以上，見 6-K）；毛利率 33.1, 33.0, 33.4, 33.0%；FCF 834, 824, 797, 735；TTM 營收 €18,810、FCF €3,190、淨利 €2,958；Q3 SBC €87。 <strong>估值</strong>（收盤 611.73，美東 11/16）：市值 125,726｜淨負債 -11,201（負值＝淨現金）｜EV 114,525｜TTM GAAP PE 37.5x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 5.37x、年度 5.19x（<span class="tag tag-gu">【估】</span>FY2026＝前三季 €14,279＋Q4 指引 €5,200＝€19,479，×匯率）｜EV/FCF 31.7x｜FCF yield 2.87%</p>
+<ul><li>口徑：股數 Q3 6-K（2026-10-22）附註 13：9/30 已發行 210,741,268 股－庫藏 5,215,814 股＝205,525,454 股（普通股，非 ADR）；現金 現金 €6,032＋短期投資 €3,856＝€9,888，×1/0.8828 換算<span class="tag tag-gu">【估】</span>；長期投資 €1,066（股權）未計；負債 可交換票據已清償（9/30 為 0）；租賃負債未計。</li></ul>
+<p><strong>技術面</strong>：SMA20 586.14／SMA50 544.35／SMA200 502.82｜量比 a 0.51×、b 0.51×、50 日 0.59×｜前 20 日低 508.01（2026-10-21）｜壓力：前 20 日高 635（2026-11-05）、前 50 日高 635（2026-11-05）｜11/16 盤中 598.56–619.06</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 611.73（美東 11/16），距 SMA20 +4.37%、SMA50 +12.38%、SMA200 +21.66%；SMA20 586.14 &gt; SMA50 544.35；量比 a 0.51×（b 0.51×）；前 20 日低 508.01（2026-10-21）未破，收盤高於它 20.4%。觸發 (A) 未成立、(B) 未成立、追價區 是、趨勢降級 未觸發、放量破前低 否。基本面：支撐。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 586.14 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 603.72（SMA20+3%）與 587.89（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（544.35–555.23）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 508.01（2026-10-21）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 502.82（目前 SMA20 586.14 &gt; SMA50 544.35）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>Q3 FCF 735 歐元，年減 9%；營業利益率 13.5%，年減約 0.1 個百分點</li><li><span class="tag tag-shi">【事】</span>財報為 IFRS／歐元，本稿用 6-K 所載 9/30 匯率換算，有匯率誤差<span class="tag tag-gu">【估】</span></li><li><span class="tag tag-shi">【事】</span>Social Charges（社會稅負）隨股價波動</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 €5.2B、毛利率 33.8%、營業利益 €820M、MAU 818M｜下次財報：未公告；去年 Q4 於 2026-02-10 公布，推估 2027-02 上旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="8-duol-duolingo-inc-to-c-消費應用-教育-觀望">8. DUOL｜Duolingo, Inc.｜to C 消費應用（教育）｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>股東信（2026-11-03）：Video Call（AI 會話練習）將併入 Super；Duolingo Max（AI 方案）停售，既有個人用戶轉到同價的 Super 家庭方案。10-Q：第三方 AI 成本 Q3 增加 3.2、前九月增加 8.7。也就是說 AI 目前主要是成本，原本的 AI 付費方案還取消了。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>公司說毛利率優於預期，原因是「lower feature-based AI costs」；Q4 毛利率預計因 AI 功能擴大而季減 0.9 個百分點。 <strong>成長與獲利</strong>：近四季營收（舊→新）283, 292, 298, 309；YoY 35.0%, 26.5%, 18.3%, 13.7%；GAAP 毛利率 72.8%, 73.0%, 72.6%, 72.9%；FCF（OCF−資本支出）97, 151, 81, 75；TTM 營收 1,182、FCF 404（34.2%）、GAAP 淨利 146、GAAP EPS 3.03、SBC 占營收 13.2%。 <strong>估值</strong>（收盤 168.75，美東 11/16）：市值 7,961｜淨負債 -1,484（負值＝淨現金）｜EV 6,477｜TTM GAAP PE 54.6x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 5.48x、年度 5.3x（FY2026 營收指引 1,221）｜EV/FCF 16.0x｜FCF yield 5.07%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-11-03：Class A 40,779,003＋Class B 6,399,257；現金 現金 1,239.6＋短期投資 134.3＋長期投資 110.1；負債 無借款。</li></ul>
+<p><strong>技術面</strong>：SMA20 147.65／SMA50 146.45／SMA200 124.31｜量比 a 1.34×、b 1.4×、50 日 1.74×｜前 20 日低 125.12（2026-11-03）｜壓力：前 20 日高 175.56（2026-11-04）、前 50 日高 175.56（2026-11-04）｜11/16 盤中 162–173.065</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 168.75（美東 11/16），距 SMA20 +14.29%、SMA50 +15.23%、SMA200 +35.74%；SMA20 147.65 &gt; SMA50 146.45；量比 a 1.34×（b 1.40×）；前 20 日低 125.12（2026-11-03）未破，收盤高於它 34.9%。觸發 (A) 未成立、(B) 未成立、追價區 是、趨勢降級 未觸發、放量破前低 否。基本面：有條件（bookings 減速）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 147.65 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 152.08（SMA20+3%）與 158.17（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（146.45–149.38）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 125.12（2026-11-03）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 124.31（目前 SMA20 147.65 &gt; SMA50 146.45）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>bookings 年增 12%，營收年增由 35% 降到 13.7%</li><li><span class="tag tag-shi">【事】</span>GAAP 營業利益 Q3 24.2，連三季下滑</li><li><span class="tag tag-shi">【事】</span>Q3’25 淨利 292.2 含一次性稅務利益，TTM PE 會跳動</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：bookings 382、營收 322、Adjusted EBITDA 84；DAU 年增 29%｜下次財報：未公告；去年 Q4 於 2026-02-26 公布，推估 2027-02 下旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="9-pltr-palantir-technologies-inc-to-b-資料-ai-平台-觀望">9. PLTR｜Palantir Technologies Inc.｜to B 資料／AI 平台｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>10-Q（2026-11-03）把 AIP 列為四個主要平台之一，但營收沒有按平台拆分，所以 AI 營收無法單獨驗證。可驗證的是整體：Q3 營收 2,313（+96%）、美國商業營收 984（+148%）。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>FY2026 營收指引 8,530–8,534、美國商業至少 3,559、adjusted FCF 4.8–5.0 十億。 <strong>成長與獲利</strong>：近四季營收（舊→新）1,407, 1,633, 1,936, 2,313；YoY 70.0%, 84.7%, 92.8%, 95.9%；GAAP 毛利率 84.6%, 86.8%, 84.7%, 83.4%；FCF（OCF−資本支出）764, 892, 1,202, 1,197；TTM 營收 7,288、FCF 4,054（55.6%）、GAAP 淨利 3,669、GAAP EPS 1.42、SBC 占營收 13.5%。 <strong>估值</strong>（收盤 160.39，美東 11/16）：市值 386,459｜淨負債 -10,562（負值＝淨現金）｜EV 375,898｜TTM GAAP PE 105.3x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 51.58x、年度 44.06x（FY2026 營收指引 8,530–8,534）｜EV/FCF 92.7x｜FCF yield 1.05%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-26：Class A 2,306,705,341＋Class B 101,787,133＋Class F 1,005,000；現金 現金 3,619.4＋有價證券 6,942.1；負債 無借款。</li></ul>
+<p><strong>技術面</strong>：SMA20 180.67／SMA50 184.51／SMA200 153.79｜量比 a 0.73×、b 0.72×、50 日 0.74×｜前 20 日低 152.6（2026-11-05）｜壓力：前 20 日高 202.63（2026-10-22）、前 50 日高 212.9399（2026-10-12）｜11/16 盤中 158.68–166.09</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 160.39（美東 11/16），距 SMA20 -11.22%、SMA50 -13.07%、SMA200 +4.29%；SMA20 180.67 &lt; SMA50 184.51；量比 a 0.73×（b 0.72×）；前 20 日低 152.6（2026-11-05）未破，收盤高於它 5.1%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：支撐（估值極端）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 180.67 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 186.09（SMA20+3%）與 199.27（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（184.51–188.2）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 152.6（2026-11-05）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 153.79（目前 SMA20 180.67 &lt; SMA50 184.51）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>EV/S 約 52 倍、TTM GAAP PE 約 105 倍，估值最高</li><li><span class="tag tag-shi">【事】</span>SBC 占營收約 13.5%</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 2,649–2,653｜下次財報：未公告；去年 Q4 於 2026-02-02 公布，推估 2027-02 初<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="10-snow-snowflake-inc-to-b-資料平台-觀望">10. SNOW｜Snowflake Inc.｜to B 資料平台｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：FY27Q2（至 2026-07-31）｜會計年度止於 1月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（2026-09-02）只有帳戶數：CoCo 超過 9,100 個帳戶（單季新增 2,000 以上）、CoWork 5,800 個帳戶。CFO 說 AI 營收有「meaningful step-up」，但沒有給金額，所以 AI 營收無法驗證。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>FY27 產品營收指引上調到 6,070（+36%）。 <strong>成長與獲利</strong>：近四季營收（舊→新）1,213, 1,284, 1,391, 1,547；YoY 28.7%, 30.1%, 33.5%, 35.1%；GAAP 毛利率 67.8%, 66.8%, 66.6%, 67.0%；FCF（OCF−資本支出）114, 765, 233, 84；TTM 營收 5,435、FCF 1,195（22.0%）、GAAP 淨利 -1,091、GAAP EPS -3.19、SBC 占營收 30.2%。 <strong>估值</strong>（收盤 280.54，美東 11/16）：市值 98,974｜淨負債 -2,045（負值＝淨現金）｜EV 96,929｜TTM GAAP PE 不適用（TTM GAAP 淨利為負）｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 17.84x、年度 15.97x（FY27 產品營收指引 6,070（非總營收））｜EV/FCF 81.1x｜FCF yield 1.21%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-08-21：352.8 百萬股；現金 現金 1,707.2＋可供出售證券 2,622.0（7/31）；負債 7/31 可轉債帳面 2,284.0。期後 9/28 發行 2029／2031 零息可轉債本金 3,750（淨額約 3,700；capped call 383.5；買回部分 2027 票據 548.3），未計入 7/31 資產負債表。</li></ul>
+<p><strong>技術面</strong>：SMA20 305.52／SMA50 323.71／SMA200 243.62｜量比 a 0.6×、b 0.58×、50 日 0.58×｜前 20 日低 266.355（2026-11-06）｜壓力：前 20 日高 343.55（2026-10-28）、前 50 日高 370.55（2026-10-12）｜11/16 盤中 278.69–286.72</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 280.54（美東 11/16），距 SMA20 -8.18%、SMA50 -13.34%、SMA200 +15.15%；SMA20 305.52 &lt; SMA50 323.71；量比 a 0.60×（b 0.58×）；前 20 日低 266.355（2026-11-06）未破，收盤高於它 5.3%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：有條件（GAAP 虧損、SBC 高）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 305.52 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 314.69（SMA20+3%）與 349.61（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（323.71–330.19）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 266.355（2026-11-06）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 243.62（目前 SMA20 305.52 &lt; SMA50 323.71）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>TTM GAAP 淨損 1,091；SBC 占營收約 30%</li><li><span class="tag tag-shi">【事】</span>9/28 新發 3,750 零息可轉債（轉換價約 500／484），潛在稀釋約 7.6 百萬股（約 2.2%）<span class="tag tag-gu">【估】</span></li></ul></li><li>催化劑：<span class="tag tag-shi">【事】</span>2026-12-02 FY27Q3：產品營收指引 1,588–1,593（+37–38%）｜下次財報：<span class="tag tag-shi">【事】</span>2026-12-02 美東盤後（公司 11/2 公告）</li></ul>
+<h3 id="11-pins-pinterest-inc-to-c-廣告-購物導購-觀望">11. PINS｜Pinterest, Inc.｜to C 廣告／購物導購｜<strong>觀望</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（2026-10-29）只有 CEO 一句「AI-driven visual search and shopping experiences」；10-Q 記載以 465.1 買下 tvScientific，用來延伸「AI-powered performance advertising」到 CTV。沒有 AI 營收。 <strong>成長與獲利</strong>：近四季營收（舊→新）1,319, 1,008, 1,180, 1,174；YoY 14.3%, 17.8%, 18.2%, 11.9%；GAAP 毛利率 82.8%, 76.3%, 78.2%, 77.7%；FCF（OCF−資本支出）380, 312, 270, 300；TTM 營收 4,680、FCF 1,262（27.0%）、GAAP 淨利 178、GAAP EPS 0.25、SBC 占營收 23.0%。 <strong>估值</strong>（收盤 18.42，美東 11/16）：市值 10,564｜淨負債 -488（負值＝淨現金）｜EV 10,076｜TTM GAAP PE 59.2x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 2.15x、年度 2.09x（<span class="tag tag-gu">【估】</span>FY2026＝前三季 3,361.1＋Q4 指引中點 1,450）｜EV/FCF 8.0x｜FCF yield 11.95%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-23：Class A 500,526,454＋Class B 72,981,386；現金 現金 654.3＋有價證券 815.7；負債 可轉債帳面 982.1；10/15 新簽 7 億循環信用額度（未動用與否未核）。</li></ul>
+<p><strong>技術面</strong>：SMA20 20.39／SMA50 20.02／SMA200 20.44｜量比 a 0.78×、b 0.78×、50 日 0.78×｜前 20 日低 18.15（2026-10-30）｜壓力：前 20 日高 23.6（2026-10-21）、前 50 日高 23.6（2026-10-21）｜11/16 盤中 18.215–19.09</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 18.42（美東 11/16），距 SMA20 -9.65%、SMA50 -8.01%、SMA200 -9.86%；SMA20 20.39 &gt; SMA50 20.02；量比 a 0.78×（b 0.78×）；前 20 日低 18.15（2026-10-30）未破，收盤高於它 1.5%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 未觸發、放量破前低 否。基本面：有條件（GAAP 淨利大減）。→ 觀望。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 20.39 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 21.0（SMA20+3%）與 21.63（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（20.02–20.43）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 18.15（2026-10-30）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 20.44（目前 SMA20 20.39 &gt; SMA50 20.02）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>Q3 GAAP 淨利 21.5，年減 77%；Q1、Q2 為 GAAP 淨損</li><li><span class="tag tag-shi">【事】</span>Q4 指引年增 8–12%，中點 10%，低於 Q3 的 12%</li><li><span class="tag tag-shi">【事】</span>10/5 宣布新 CFO（8-K 5.02）</li><li><span class="tag tag-shi">【事】</span>SBC 占營收約 23%</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 1,425–1,475、Adjusted EBITDA 538–588｜下次財報：未公告；去年 Q4 於 2026-02-12 公布，推估 2027-02 中旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="12-now-servicenow-inc-to-b-企業軟體-agent-不建議">12. NOW｜ServiceNow, Inc.｜to B 企業軟體／Agent｜<strong>不建議</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>新聞稿（8-K Ex.99.1，2026-10-28）：「raises AI annual contract value target again for 2026 to $1.7 billion」，年初目標是 10 億。這是年底 ACV 目標，不是已實現營收<span class="tag tag-si">【司】</span>。另揭露 agentic AI 生產環境用量年增超過 13 倍。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>與 OpenAI 擴大合作（ChatGPT 外掛），Control Tower Alliance 成員包含 Anthropic、OpenAI、NVIDIA 等。 <strong>成長與獲利</strong>：近四季營收（舊→新）3,568, 3,770, 3,987, 4,106；YoY 20.7%, 22.1%, 24.0%, 20.5%；GAAP 毛利率 76.6%, 75.1%, 70.7%, 70.5%；FCF（OCF−資本支出）2,000, 1,529, 473, 748；TTM 營收 15,431、FCF 4,750（30.8%）、GAAP 淨利 1,445、GAAP EPS 1.39、SBC 占營收 15.1%。 <strong>估值</strong>（收盤 99.37，美東 11/16）：市值 103,138｜淨負債 563（負值＝淨現金）｜EV 103,701｜TTM GAAP PE 71.4x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 6.72x、年度 6.57x（FY2026 訂閱營收指引 15,780–15,790（公司未給總營收指引；訂閱約占 97%））｜EV/FCF 21.8x｜FCF yield 4.61%</p>
+<ul><li>口徑：股數 10-Q 資產負債表 9/30 流通 1,037,917 千股（封面約 1,038 百萬股）；2025-12-17 生效 5:1 拆股，10-Q 註明股數與每股數已追溯調整；現金 現金 2,393＋有價證券 2,214＋長期有價證券 2,354；策略投資 2,050 未計；負債 短期借款 2,086＋長期借款 5,438（併購 Armis／Veza 後增加）。</li></ul>
+<p><strong>技術面</strong>：SMA20 121.61／SMA50 131.26／SMA200 113.65｜量比 a 0.64×、b 0.64×、50 日 0.85×｜前 20 日低 97（2026-11-10）｜壓力：前 20 日高 159.5（2026-10-23）、前 50 日高 159.5（2026-10-23）｜11/16 盤中 98.88–101.94</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 99.37（美東 11/16），距 SMA20 -18.29%、SMA50 -24.30%、SMA200 -12.57%；SMA20 121.61 &lt; SMA50 131.26；量比 a 0.64×（b 0.64×）；前 20 日低 97（2026-11-10）未破，收盤高於它 2.4%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 觸發、放量破前低 否。基本面：支撐。→ 不建議。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>回到觀望：SMA20 重新站上 SMA50，或收盤站回 SMA200 113.65（解除趨勢降級）</li><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 121.61 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 125.26（SMA20+3%）與 141.76（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（131.26–133.88）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 97（2026-11-10）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 113.65（已觸發）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>GAAP 毛利率由去年同期 77.3% 降到 70.5%、GAAP 營業利益 Q3 385（去年同期 572），主要受 Armis、Veza 等併購的攤銷與費用影響</li><li><span class="tag tag-shi">【事】</span>借款由 1,491 增加到 7,524</li><li><span class="tag tag-shi">【事】</span>2025-12-17 生效 5:1 拆股；本稿的股數、EPS 與 Massive 價格都是拆股後口徑（10-Q 註明已追溯調整）</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：訂閱營收 4,245–4,255（+22.5–23%）、營業利益率 32%（non-GAAP）｜下次財報：未公告；去年 Q4 於 2026-01-28 公布，推估 2027-01 下旬<span class="tag tag-gu">【估】</span></li></ul>
+<h3 id="13-rddt-reddit-inc-to-c-內容-廣告-資料授權-不建議">13. RDDT｜Reddit, Inc.｜to C 內容／廣告／資料授權｜<strong>不建議</strong></h3>
+<p><strong>季別</strong>：2026Q3（至 9/30）｜會計年度止於 12月 <strong>AI 營收驗證</strong>：<span class="tag tag-shi">【事】</span>10-Q（2026-10-30）：「Other revenue」47.96（+35%）包含內容授權（content licensing）；超過一年的剩餘履約義務 62.4，主要是長期內容授權合約。公司沒有把 AI 資料授權單獨列出，所以「AI 授權營收」最多只能說包含在 Other revenue 的 48 裡<span class="tag tag-gu">【估】</span>。 <strong>公司說法</strong>：<span class="tag tag-si">【司】</span>股東信：AI 搜尋解決的是不同問題，無法取代社群。 <strong>敘事／傳聞</strong>：<span class="tag tag-mei">【媒】</span>外界常說的 Google、OpenAI 授權金額，本輪沒有在申報文件中看到金額 <strong>成長與獲利</strong>：近四季營收（舊→新）726, 663, 805, 895；YoY 69.7%, 69.1%, 61.1%, 53.0%；GAAP 毛利率 91.9%, 91.5%, 91.3%, 91.5%；FCF（OCF−資本支出）264, 311, 261, 363；TTM 營收 3,089、FCF 1,198（38.8%）、GAAP 淨利 992、GAAP EPS 4.9、SBC 占營收 12.5%。 <strong>估值</strong>（收盤 92.87，美東 11/16）：市值 17,933｜淨負債 -3,033（負值＝淨現金）｜EV 14,899｜TTM GAAP PE 18.1x｜預估 PE 不適用：公司未給 EPS 指引（無免費共識）｜EV/S TTM 4.82x、年度 4.41x（<span class="tag tag-gu">【估】</span>FY2026＝前三季 2,363.3＋Q4 指引中點 1,015）｜EV/FCF 12.4x｜FCF yield 6.68%</p>
+<ul><li>口徑：股數 10-Q 封面 2026-10-28：Class A 146,942,127＋Class B 46,151,604（Class C 0）；現金 現金 1,357.6＋有價證券 1,675.8；負債 無借款。</li></ul>
+<p><strong>技術面</strong>：SMA20 115.42／SMA50 138.01／SMA200 153.23｜量比 a 0.63×、b 0.63×、50 日 0.83×｜前 20 日低 89.28（2026-10-30）｜壓力：前 20 日高 160.415（2026-10-21）、前 50 日高 166.18（2026-09-14）｜11/16 盤中 92.1813–96.16</p>
+<ul><li>判定：<span class="tag tag-shi">【事】</span>收盤 92.87（美東 11/16），距 SMA20 -19.53%、SMA50 -32.71%、SMA200 -39.39%；SMA20 115.42 &lt; SMA50 138.01；量比 a 0.63×（b 0.63×）；前 20 日低 89.28（2026-10-30）未破，收盤高於它 4.0%。觸發 (A) 未成立、(B) 未成立、追價區 否、趨勢降級 觸發、放量破前低 否。基本面：支撐。→ 不建議。</li><li>升級條件：<ul><li><span class="tag tag-jia">【假】</span>回到觀望：SMA20 重新站上 SMA50，或收盤站回 SMA200 153.23（解除趨勢降級）</li><li><span class="tag tag-jia">【假】</span>(A) 收盤 ≥ SMA20 115.42 且量比 a（當日量÷含當日 20 日均量）≥1.0×；若同時高於 118.88（SMA20+3%）與 149.05（SMA50+8%）屬追價區，(A) 不採計</li><li><span class="tag tag-jia">【假】</span>(B) 收盤在 SMA50 至 +2%（138.01–140.77）且量比 a &lt;1.0×（縮量守住）</li><li><span class="tag tag-jia">【假】</span>任一成立時，還要基本面成立、沒有否決項（下次財報未下修指引）、沒有觸發趨勢降級，才列「符合條件才分批」</li></ul></li><li>降級條件：<ul><li><span class="tag tag-jia">【假】</span>降為不建議：量比 a &gt;1.0× 且收盤 &lt; 前 20 日低 89.28（2026-10-30）</li><li><span class="tag tag-jia">【假】</span>降一級：SMA20 &lt; SMA50 且收盤 &lt; SMA200 153.23（已觸發）</li><li><span class="tag tag-jia">【假】</span>基本面否決：下次財報下修全年營收／EPS／FCF 指引，或出現重大會計、監管事件</li></ul></li><li>主要風險：<ul><li><span class="tag tag-shi">【事】</span>10-Q 揭露一宗證券集體訴訟，指控公司就 Google Search 與 AI Overviews 對業務的影響做出誤導陳述；2026-08-13 法院駁回並准予修改再訴</li><li><span class="tag tag-shi">【事】</span>雲端承諾：AWS 880（2026-07 至 2029-06）、Google Cloud 580（2026-09 至 2029-08）</li></ul></li><li>催化劑：<span class="tag tag-si">【司】</span>Q4 指引：營收 1,000–1,030、Adjusted EBITDA 480–510｜下次財報：未公告；去年 Q4 於 2026-02-05 公布，推估 2027-02 上旬<span class="tag tag-gu">【估】</span></li></ul>
+<h2 id="五-對照前稿-應用層營收能不能填補-capex-缺口">五、對照前稿：應用層營收能不能填補 capex 缺口</h2>
+<ul><li>前稿（<code>ai-cycle-stage-20261114.md</code> §2d、<code>ai-infra-to-services-20261114.md</code>）：週期約在 1998–1999；2026 年 hyperscaler capex 約 7,300–8,000 億美元，可辨識模型層 run-rate 約 1,310 億（Anthropic 810 億<span class="tag tag-si">【司】</span>＋OpenAI 約 500 億<span class="tag tag-mei">【媒】</span>【未核】），比率約 1:6<span class="tag tag-gu">【估】</span>。</li></ul>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>口徑</th><th>年化金額（億美元）</th><th>占 capex 7,300–8,000 億</th><th>標記</th></tr></thead><tbody><tr><td>①本組可驗證、標明 AI 的指標：CRM Agentforce＋Data 360 ARR 約 39 億＋NOW AI ACV 目標 17 億</td><td>約 56</td><td>約 0.7%–0.8%</td><td><span class="tag tag-shi">【事】</span>CRM ARR／<span class="tag tag-si">【司】</span>NOW 為年底目標；ARR、ACV 都不是 GAAP 營收，CRM 還含 Data 360</td></tr><tr><td>②加上「AI 原生」但未拆 AI 的整體營收：PLTR TTM 72.9 億＋APP TTM 76.1 億</td><td>約 205</td><td>約 2.6%–2.8%</td><td><span class="tag tag-gu">【估】</span><span class="tag tag-jia">【假】</span>把整家公司營收都算成 AI，明顯高估</td></tr><tr><td>③極端上限：13 檔 TTM 營收全部相加</td><td>約 1,436</td><td>約 18%–20%</td><td><span class="tag tag-gu">【估】</span><span class="tag tag-jia">【假】</span>只是上限示意，不是 AI 營收</td></tr><tr><td>④模型層＋①</td><td>約 1,366</td><td>約 17%–19%（約 1:5.5）</td><td><span class="tag tag-gu">【估】</span></td></tr></tbody></table></div>
+<ul><li><strong>結論<span class="tag tag-gu">【估】</span></strong>：應用層目前<strong>填不了</strong>這個缺口。能用申報文件驗證、又明確標為 AI 的應用層收入，在本組只有約 56 億美元年化（CRM、NOW），不到 capex 的 1%；即使把 PLTR、APP 整家營收算進去也只約 3%。多數公司（SHOP、SNOW、HUBS、VEEV、DUOL、SPOT、PINS、EBAY）的 AI 仍是功能、使用量或成本，沒有營收數字。</li><li><strong>重複計算要扣除<span class="tag tag-gu">【估】</span></strong>：應用層付給模型層的 API／雲端費用（例如 SHOP 10-Q 的 LLM 使用成本、DUOL 的第三方 AI 成本、RDDT 的 AWS 880／Google Cloud 580 承諾）本身就是模型層或雲端營收。對 capex 回收真正有意義的是<strong>最終使用者付的錢</strong>，應用層營收不能直接加在模型層上面。</li><li><strong>對階段判斷的意涵<span class="tag tag-jia">【假】</span></strong>：應用層 AI 收入規模、以及「AI 變現率」（SHOP 說代理訂單的經濟效益與一般導流相同）都還在早期，支持前稿「1998–99、尚未進入服務主導期」的看法。前稿的轉換條件之一是「SaaS AI ARR／ACV 占總 ARR ≥10%」：CRM 的 Agentforce＋Data 360 ARR 約 39 億，對 FY27 營收指引約 462.5 億約 8.4%<span class="tag tag-gu">【估】</span>，Agentforce 單獨約 3.2%<span class="tag tag-gu">【估】</span>；NOW AI ACV 17 億對訂閱營收指引 157.85 億約 10.8%<span class="tag tag-gu">【估】</span>（ACV 與營收口徑不同）。兩家接近門檻，其他公司沒有揭露。</li></ul>
+<h2 id="六-資料缺口">六、資料缺口</h2>
+<ul><li>SHOP：官方電話會議逐字稿未提供，AI 採用數據取自第三方免費逐字稿；TTM non-GAAP EPS 不足四季；Financial Supplemental（IR 網站）未抓取；Perplexity 合作無一手文件</li><li>所有公司：無免費 NTM 共識 EPS；只有 CRM、HUBS、VEEV、EBAY 有 EPS 指引，其餘預估 PE 寫不適用</li><li>CRM、SNOW、VEEV 的最新資料是 7/31 季底；三家都在 12/2–12/3 公布新一季，屆時要更新</li><li>SNOW：9/28 新發可轉債在 7/31 資產負債表之後，EV 未調整（買回的 2027 票據本金未揭露，無法精算）</li><li>CRM：Braze、Fin、Contentful 的交割與負債影響未計入 EV</li><li>APP：監管或訴訟本輪未查；Q4’25 YoY 受停業部門基期影響</li><li>HUBS：11/16 大漲原因未核</li><li>RDDT：AI 資料授權金額未單獨揭露</li><li>SPOT：歐元以 6-K 所載 9/30 匯率換算，非 11/16 匯率；SBC 只有 Q3</li><li>DUOL、VEEV：資本化軟體的 XBRL 季度值有重複或期別缺漏，金額很小（&lt;1% 營收），對 FCF 影響可忽略</li><li>行情：API status DELAYED，可能不是最終值；成交量調整方式未獨立驗證</li><li>裝置端 to C：沒有找到不在看板上、又合適的美股候選</li></ul>
+<h2 id="七-排除名單">七、排除名單</h2>
+<ul><li>已在看板：GOOG／GOOGL、MSFT、AMZN、META、ORCL、AAPL、NVDA、AVGO、AMD、INTC、TSM、MRVL、COHR、LITE（AI 晶片／基建）</li><li>AI 資安：PANW、CRWD、ZS、FTNT、NET、S、OKTA</li><li>AI 借貸／數位金融：UPST、AFRM、SOFI、PGY、HAPN、LC、OPFI、FICO</li><li>價值股：ACN、IBM、KO、COST、PG、CL、ITW、GD、LMT、CMCSA</li><li>醫藥：LLY、MRNA、RLAY、TMDX 等</li><li>ADBE 是 VEEV 的備選，本輪未分析；裝置端 to C 沒有找到不在看板上、又合適的美股（AAPL 已在看板），列為缺口</li></ul>
+<h2 id="八-主要來源-皆-sec-edgar-或公司-ir-2026-11-17-擷取">八、主要來源（皆 SEC EDGAR 或公司 IR，2026-11-17 擷取）</h2>
+<ul><li>CRM：10-Q 2026-08-27（0001108524-26-000190）；8-K Ex.99.1 2026-08-26；8-K 2026-10-20（Braze）；IR 11/10 財報日公告</li><li>SHOP：10-Q 2026-11-03（0001594805-26-000068）；8-K Ex.99.1 2026-11-03／08-05／05-05／02-11；Help Center agentic storefronts；Editions Fall ’26；Q3 電話會議第三方逐字稿 stockanalysis.com</li><li>EBAY：10-Q 2026-10-29；8-K Ex.99.1 2026-10-28；8-K 2026-10-22（裁員）</li><li>HUBS：10-Q 2026-11-04；8-K Ex.99.1 2026-11-04、2026-08-05；8-K 2026-10-06、11-12</li><li>VEEV：10-Q 2026-08-27；8-K Ex.99.1 2026-08-26、11-06；IR 11/12 財報日公告</li><li>APP：10-Q 2026-11-04；8-K Ex.99.1 2026-11-04</li><li>SPOT：20-F 2026-02-10；6-K 2026-10-22（財報與 Ex.99.1）；6-K 08-20、09-03</li><li>DUOL：10-Q 2026-11-04；8-K Ex.99.1／99.2 2026-11-03</li><li>PLTR：10-Q 2026-11-03；8-K Ex.99.1 2026-11-02</li><li>SNOW：10-Q 2026-09-04；8-K Ex.99.1 2026-09-02；8-K 2026-10-02（可轉債）；IR 11/02 財報日公告</li><li>PINS：10-Q 2026-10-29；8-K Ex.99.1 2026-10-29；8-K 10-05、10-15</li><li>NOW：10-Q 2026-10-28（0001373715-26-000096）；8-K Ex.99.1 2026-10-28</li><li>RDDT：10-Q 2026-10-30；8-K Ex.99.1／99.2 2026-10-29</li></ul>
+    </article>
+    <nav class="other"><h2>其他研究報告</h2><ul><li><a href="ai-disruption-20261123.html">AI 時代產業金流轉移</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="agentic-commerce-20261123.html">Agent 消費端口的受益者</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="spacex-tsla-cashflow-20261117.html">SpaceX／Tesla 現金流與 Terafab</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="hyperscalers-4-20261117.html">四大雲：MSFT、AMZN、META、ORCL</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="midterm-election-20261115.html">期中選舉後一年報酬</a>　<span class="meta" style="display:inline">2026-11-15</span></li><li><a href="midterm-entry-timing-20261116.html">期中選後進場時點</a>　<span class="meta" style="display:inline">2026-11-16</span></li></ul></nav>
+    <p class="foot">來源檔只作內部研究底稿。本頁為已審正文的網頁版，不是交易授權。</p>
+  </main>
+  <script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function label(t){ if(btn) btn.textContent = t === "dark" ? "切換淺色" : "切換深色"; }
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    try { localStorage.setItem("watchlist-theme", t); } catch(e) {}
+    label(t);
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("watchlist-theme"); } catch(e) {}
+  var prefer = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply((saved === "dark" || saved === "light") ? saved : (prefer ? "dark" : "light"));
+  if (btn) btn.addEventListener("click", function(){
+    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>
