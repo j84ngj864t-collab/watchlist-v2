@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SpaceX × Tesla：營運現金流能否支應資料中心與 Terafab 資本支出　關注持股看板</title>
+  <style>
+:root {
+  --bg: #f3f0e8;
+  --bg-elev: #fffcf6;
+  --sidebar: #faf7f0;
+  --line: rgba(28, 36, 48, 0.12);
+  --text: #152033;
+  --muted: #5c6b80;
+  --faint: #8a97a8;
+  --accent: #0f6e68;
+  --accent-soft: rgba(15, 110, 104, 0.12);
+  --chip: #e8f4f2;
+  --shadow: 0 10px 30px rgba(21, 32, 51, 0.08);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #0c111b;
+  --bg-elev: #151c29;
+  --sidebar: #101826;
+  --line: rgba(210, 222, 238, 0.1);
+  --text: #e9eef6;
+  --muted: #9aa8bb;
+  --faint: #738196;
+  --accent: #5ee0d0;
+  --accent-soft: rgba(94, 224, 208, 0.12);
+  --chip: #1b2738;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 19px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+}
+.top-inner {
+  max-width: 52rem; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.brand-link {
+  font-weight: 750; text-decoration: none; color: var(--text);
+  font-size: 16px;
+}
+.brand-link:hover { color: var(--accent); }
+.top .spacer { flex: 1; }
+.ghost {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+}
+.ghost:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 24px 20px 64px; }
+.kicker { color: var(--faint); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 31px; letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; margin: 2em 0 0.6em; }
+h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+h4, h5, h6 { font-size: 18px; margin: 1.4em 0 0.4em; }
+.disclaimer {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+article p { margin: 0.7em 0; }
+article ul, article ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+article li { margin: 0.25em 0; }
+article li > ul, article li > ol { margin: 0.2em 0 0.3em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+blockquote {
+  margin: 1em 0;
+  padding: 8px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+}
+blockquote p { margin: 0.4em 0; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--chip);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  overflow-wrap: anywhere; word-break: normal;
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elev);
+  max-width: 100%;
+}
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table {
+  border-collapse: collapse;
+  min-width: 36em;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
+  background: color-mix(in srgb, var(--bg) 55%, var(--bg-elev));
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+.other {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.other h2 { margin-top: 0; font-size: 20px; }
+.other ul { padding-left: 1.2em; }
+.foot {
+  margin-top: 36px;
+  color: var(--faint);
+  font-size: 15px;
+}
+@media (max-width: 720px) {
+  html, body { font-size: 17px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  .wrap { padding: 18px 16px 48px; }
+  .top { padding: 10px 16px; }
+  table { font-size: 15px; min-width: 40em; }
+  th, td { padding: 8px 9px; }
+}
+@media print {
+  .top { position: static; }
+  .ghost { display: none; }
+  body { background: #fff; color: #111; }
+}
+.tag {
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 0.05em 0.32em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.tag-shi { color: var(--accent); background: var(--accent-soft); }
+.tag-si { color: var(--muted); background: var(--chip); }
+.tag-gu { color: var(--muted); background: var(--chip); }
+.tag-tui { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.tag-jia { color: var(--muted); background: var(--chip); }
+.tag-mei { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, var(--bg-elev)); }
+.tag-zan { color: var(--muted); background: var(--chip); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand-link" href="../index.html">← 關注持股看板</a>
+      <div class="spacer"></div>
+      <button class="ghost" id="themeBtn" type="button" aria-label="切換主題">切換深淺色</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">研究報告　2026-11-17　台北時間</p>
+    <p class="disclaimer">僅供陳煒川本人自用。研究用途，不是下單指令，不承諾報酬。文中價格與報酬若未另註，為拆股調整價格指數，不是官方收盤，也不是含息總報酬。若引用 Massive 日線，屬延遲／非官方報價，不是交易所官方收盤。本頁只公開已審報告正文，不含原始指數數列或內部計算檔。</p>
+    <article>
+      <h1 id="spacex-tesla-營運現金流能否支應資料中心與-terafab-資本支出">SpaceX × Tesla：營運現金流能否支應資料中心與 Terafab 資本支出</h1>
+<p>作業日：2026/11/17（台北，UTC+8）｜主責：跨產業研究員｜使用者自用研究，非交易指令、無配置比例、不承諾報酬 標記：<span class="tag tag-shi">【事】</span>文件原文｜<span class="tag tag-si">【司】</span>公司說法／預測｜<span class="tag tag-gu">【估】</span>本稿依一手數字簡算｜<span class="tag tag-jia">【假】</span>本稿假設｜<span class="tag tag-mei">【媒】</span>媒體報導｜【未核】未能以一手核對 重算：<code>cd /workspace/cross-sector-screen/spacex-tsla-data &amp;&amp; python3 calc_cf.py &amp;&amp; python3 calc_pv.py &amp;&amp; python3 calc_scen.py &amp;&amp; python3 build_json.py</code>（數字單位：十億美元，除另註）</p>
+<hr>
+<h2 id="0-結論先講">0. 結論先講</h2>
+<ol><li><strong>合併不存在（尚未成案）</strong><span class="tag tag-shi">【事】</span>：兩家董事會只各自成立特別委員會「評估」合併；沒有協議、條款、換股比例，也沒有 S-4、425、合併 8-K 或股東會議程。以下改用「兩家各自＋假設合併（簡單加總，<span class="tag tag-jia">【假】</span>）」分析。</li><li><strong>Terafab 官方唯一數字</strong>：第一期資本投資 &gt;168 億美元（德州州長辦公室，2026/8/6）。「至 2028 初數百億」「長期 &gt;1,000 億」「1 兆」都是 Musk 口頭說法經媒體轉述<span class="tag tag-mei">【媒】</span>，兩家怎麼分攤未定。</li><li><strong>現金流</strong>：近四季（TTM）SpaceX OCF 157.6 億、capex 549.6 億，FCF <strong>−392.0 億</strong>；Tesla OCF 187.1 億、capex 154.1 億，FCF <strong>+33.0 億</strong>；假設合併 FCF <strong>−358.9 億</strong>，capex/OCF 204%<span class="tag tag-gu">【估】</span>。五家 CSP 的 TTM capex/OCF 在 69%（MSFT）到 161%（ORCL）之間；SpaceX 349% 遠高於全部。</li><li><strong>三情境（2026Q4–2027Q3，<span class="tag tag-jia">【假】</span>）</strong>：三種情境下 OCF 都不夠付 capex 加 Terafab。基準情境 SpaceX 單獨要用掉約 1.46 倍的可用流動性，缺口約 366 億，需要外部融資；合併後靠 Tesla 的淨現金與未動用額度，基準情境可撐四季，偏悲觀仍缺約 732 億。</li><li><strong>判斷</strong>：SPCX <strong>觀望</strong>；TSLA <strong>觀望（研究性質）</strong>。兩檔都沒站回 SMA20，量比a 都 &lt;1，也都沒跌破前 20 日低。</li><li><strong>看板一句話</strong>：合併未成案；SpaceX 現金流遠不足支應算力與 Terafab，靠舉債租賃，觀望。</li></ol>
+<hr>
+<h2 id="1-合併性質">1. 合併性質</h2>
+<h3 id="1a-已發生的事實-事">1a. 已發生的事實<span class="tag tag-shi">【事】</span></h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>日期</th><th>文件</th><th>內容</th></tr></thead><tbody><tr><td>2026/2/2</td><td>SpaceX 10-Q Note 1（期末 9/30，10/22 受理）</td><td>SpaceX 完成收購 X.AI Holdings（xAI，含 X），屬 common control merger，比較期重編 → <strong>xAI 完全在 SpaceX 合併報表內</strong></td></tr><tr><td>2026/3</td><td>Tesla 10-Q Note 13；SpaceX 424B4</td><td>Tesla 以 20.0 億美元取得 SpaceX A 股（原 xAI E 輪優先股權利轉換），持股 &lt;1%；9/30 公允價值 28.65 億，ASC 323 採公允價值選擇權</td></tr><tr><td>2026/10/20</td><td>SpaceX Q3 法說</td><td>宣布兩家董事會各成立特別委員會</td></tr><tr><td>2026/10/22</td><td>SpaceX 10-Q「Evaluation of Potential Combination with Tesla」</td><td>特別委員會尚未做出任何決定；交易須經特別委員會、董事會與控制股東同意；「不保證達成協議或完成交易」</td></tr><tr><td>2026/10/22（EDGAR 日）</td><td>Tesla 10-Q Part II Item 5</td><td>特別委員會由非利害關係董事組成，負責「探討深化與 SpaceX 的關係，可能包括但不限於企業合併」；交易須經特別委員會正面建議與必要股東同意</td></tr><tr><td>10/19–11/16</td><td>Tesla DEF 14A 與 DEFA14A ×9</td><td>12/3 年會議程為董事改選等，<strong>沒有</strong>合併議案</td></tr><tr><td>至 11/17</td><td>EDGAR 全文檢索（2026/1/1–11/17）</td><td>兩家都<strong>沒有</strong> S-4、425、DEFM14A 或合併 8-K</td></tr></tbody></table></div>
+<p><span class="tag tag-si">【司】</span>Musk（Q3 法說，10/20）：「special committees have not reached agreement on the terms of any transaction」；他個人認為合併是好主意，但說市場把合併當成定局是「overstating」；Tesla 需全體流通股過半數同意。</p>
+<h3 id="1b-傳聞與報導-與事實分開">1b. 傳聞與報導（與事實分開）</h3>
+<ul><li><span class="tag tag-mei">【媒／未核】</span>Bloomberg 11/13（經 superchargeddaily 轉述）：雙方正在談條款與治理，最快 12 月或 2027 年初宣布。兩家都沒證實。</li><li><span class="tag tag-mei">【媒】</span>Bloomberg Law 11/9：Tesla 章程把門檻降為過半數流通股；並點出 Tesla 董事 Ehrenpreis 自 2 月起也是 SpaceX 董事，委員會的獨立性仍有疑問。</li></ul>
+<h3 id="1c-既有關係人往來-事">1c. 既有關係人往來<span class="tag tag-shi">【事】</span></h3>
+<ul><li>Tesla 前 9 個月對 SpaceX 認列 Megapack 營收 6.26 億、應收帳款 7.29 億（Tesla 10-Q）。假設合併時，這部分應沖銷；本稿沒有做沖銷（金額相對小）。</li></ul>
+<hr>
+<h2 id="2-terafab">2. Terafab</h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>項目</th><th>內容</th><th>來源與可信度</th></tr></thead><tbody><tr><td>是什麼</td><td>晶片製造計畫，長期目標是每年生產 1 TW 算力硬體；做邏輯、記憶體與先進封裝。SpaceX 與 Tesla 於 2026/3 合作，Intel 於 2026/4 加入</td><td><span class="tag tag-shi">【事】</span>424B4</td></tr><tr><td>框架</td><td>兩家只同意了一般框架；具體專案的時程、里程碑、capex「須另行談判，尚未決定」</td><td><span class="tag tag-shi">【事】</span>424B4／10-Q</td></tr><tr><td>第一期規模</td><td>Grimes County（Gibbons Creek）：資本投資 <strong>&gt;168 億美元</strong>、3,000 職缺、1 億平方英尺；州政府 TEF 補助 3,000 萬，並列入 JETI</td><td><span class="tag tag-shi">【事】</span>德州州長辦公室 2026/8/6 公告（政府一手資料，非公司財報）</td></tr><tr><td>時程</td><td>Austin 研究 fab 約 2027 年 5–6 月做出測試晶片（SRAM）；Gibbons Creek 量產期望 2028Q3–Q4，Musk 自稱「big error bars」</td><td><span class="tag tag-si">【司】</span>SpaceX Q3 法說 10/20</td></tr><tr><td>Tesla 端</td><td>Austin Fab 持續施工，2027 年開始設備 commissioning</td><td><span class="tag tag-si">【司】</span>Tesla Q3 Update 10/21</td></tr><tr><td>總 capex</td><td>「至 2028 初設備 capex 不少於數百億」「長期可能 &gt;1,000 億」「兩家分攤未定」</td><td><span class="tag tag-mei">【媒】</span>Tesla Q3 法說 10/21 轉述；官方逐字稿未取得</td></tr><tr><td></td><td>2026/5 申報（推測為 JETI 申請）：初期 550 億、全期 1,190 億</td><td><span class="tag tag-mei">【媒／未核】</span>Reuters 轉述，原件未讀</td></tr><tr><td></td><td>Baron 投資會議 11/6：Musk 接受「1 兆美元」說法，表示會分期投入</td><td><span class="tag tag-mei">【媒】</span></td></tr><tr><td>晶片細節</td><td>製程（傳 Intel 14A）、EUV 下單情形</td><td>屬 AI 晶片研究員範圍，只作補充；<span class="tag tag-mei">【媒】</span></td></tr></tbody></table></div>
+<p><strong>可信度結論</strong>：官方能用的只有「第一期 &gt;168 億」。總額從數百億到 1 兆都是 CEO 願景或媒體轉述，不能當作 capex 指引。情境分析以第一期為下限，用<span class="tag tag-jia">【假】</span>數字放大。</p>
+<hr>
+<h2 id="3-兩家最新現金流與資產負債">3. 兩家最新現金流與資產負債</h2>
+<h3 id="3a-現金流-十億美元-fcf-ocf-現金-capex">3a. 現金流（十億美元；FCF＝OCF − 現金 capex）</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th></th><th>Q3 2026 OCF</th><th>Q3 capex</th><th>Q3 FCF</th><th>Q3 capex/OCF</th><th>TTM OCF</th><th>TTM capex</th><th>TTM FCF</th><th>TTM capex/OCF</th></tr></thead><tbody><tr><td>SpaceX（含 xAI）</td><td>9.631</td><td>19.593</td><td>−9.962</td><td>203%</td><td>15.762</td><td>54.960</td><td>−39.198</td><td>349%</td></tr><tr><td>Tesla</td><td>6.263</td><td>4.732</td><td>1.531</td><td>76%</td><td>18.710</td><td>15.407</td><td>3.303</td><td>82%</td></tr><tr><td>假設合併<span class="tag tag-jia">【假】</span></td><td>15.894</td><td>24.325</td><td>−8.431</td><td>153%</td><td>34.472</td><td>70.367</td><td>−35.895</td><td>204%</td></tr></tbody></table></div>
+<p>逐季明細（OCF／capex）：</p>
+<ul><li>SpaceX：2025Q4 2.665/6.891、2026Q1 1.047/10.107、Q2 2.419/18.369、Q3 9.631/19.593。</li><li>Tesla：3.813/2.393、3.937/2.493、4.697/5.789、6.263/4.732。</li></ul>
+<p><strong>SpaceX 的來源與計算<span class="tag tag-shi">【事→估】</span></strong></p>
+<ul><li>9M2026 OCF 13.097、PP&amp;E 購置 48.069；H1 3.466／28.476（10-Q）。</li><li>Q1 2026：1.047／10.107（424B4）。</li><li>FY2025：6.785／20.737（424B4 經審計）。9M2025：4.120／13.846（10-Q 比較期）。</li><li>2025Q4 ＝ FY − 9M。SpaceX 沒有 10-K（2026/6 才上市）。可信度：10-Q 未經查核、424B4 年度數經查核，屬一手。</li></ul>
+<p><strong>口徑說明</strong></p>
+<ul><li>SpaceX capex 用 gross PP&amp;E 購置，沒有扣掉 9M product rebates 13.72 億。</li><li>另有應付帳款中的 PP&amp;E 118.27 億、以其他融資取得的 PP&amp;E 39.21 億，兩者都不是現金 capex，<strong>實際投資比現金 capex 更大</strong><span class="tag tag-shi">【事】</span>。</li><li>Tesla capex 依公司口徑（不含融資租賃、扣除出售）。</li></ul>
+<p><strong>指引<span class="tag tag-si">【司／事】</span></strong></p>
+<ul><li>SpaceX：Q4 2026 capex 350–400 億；2027Q1 營收 330–370 億；Q4 末 nameplate 2.5–3 GW；2027 末 13 GW「highly confident」。CFO 說資金來源依序是 OCF、債市（投資級）、供應商與客戶合作。</li><li>Tesla：2026 capex「in excess of $20 billion」（10-Q）。9M 已花 130.14 億，隱含 Q4 ≥70 億<span class="tag tag-gu">【估】</span>。</li></ul>
+<h3 id="3b-資產負債-2026-9-30-十億美元">3b. 資產負債（2026/9/30，十億美元）</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th></th><th>現金及約當</th><th>有價證券</th><th>現金合計</th><th>債務＋融資租賃（帳面）</th><th>其中可轉債</th><th>淨現金</th><th>未動用承諾額度</th></tr></thead><tbody><tr><td>SpaceX</td><td>51.294</td><td>38.561</td><td>89.855</td><td>38.844</td><td>0</td><td>51.011</td><td>5.25（Credit Facility 5.0＋xAI RLOC 0.25）</td></tr><tr><td>Tesla</td><td>17.853</td><td>27.594</td><td>45.447</td><td>9.523</td><td>0</td><td>35.924</td><td>30.0（Term Loan 20＋Revolvers 10，2026/9 新簽）</td></tr><tr><td>假設合併<span class="tag tag-jia">【假】</span></td><td>69.147</td><td>66.155</td><td>135.302</td><td>48.367</td><td>0</td><td>86.935</td><td>35.25（控制權變更條款未核）</td></tr></tbody></table></div>
+<p><strong>SpaceX 債務組成<span class="tag tag-shi">【事】</span></strong>：本金 380.06 億，包括：</p>
+<ul><li>SpaceX Notes 250 億：五批，2031–2056 年到期，加權票息 5.855%。</li><li>其他融資 129.79 億：含 failed sale-leaseback 與 Valor 設備租賃，屬關係人。</li><li>融資租賃 9.83 億。</li><li>2031/7/15 前沒有重大本金到期。</li><li>營業租賃負債流動部分 3.74 億；非流動部分沒有單列（【未核】）。</li></ul>
+<p><strong>SpaceX 表外承擔與其他現金需求<span class="tag tag-shi">【事】</span></strong></p>
+<ul><li>Apollo GPU 融資租賃承諾約 400 億，預計 2027 上半年起隨交貨開始（8-K 10/26），尚未入帳。</li><li>EchoStar 頻譜對價中，最多 85 億用於清償 EchoStar 債務、不足部分付現，預計 2027/11/30 交割。</li></ul>
+<p><strong>Tesla 債務組成<span class="tag tag-shi">【事】</span></strong></p>
+<ul><li>未償本金 92.84 億，幾乎都是無追索債（China Working Capital 59.66 億、汽車 ABS 26.65 億）；融資租賃 2.56 億。</li><li>營業租賃負債（長期）58.47 億，不計入上表債務。</li><li>另持有 SpaceX 股權 28.65 億、比特幣 9.62 億，均未計入現金。</li></ul>
+<h3 id="3c-市值-sec-封面股數-massive-11-16-收盤-估">3c. 市值（SEC 封面股數 × Massive 11/16 收盤，<span class="tag tag-gu">【估】</span>）</h3>
+<ul><li>SPCX：A 股 8,246,541,218＋B 股 5,334,522,491＝13,581,063,709 股（10/15）× 137.36 ≈ <strong>1.866 兆美元</strong>。</li><li>TSLA：3,952,757,946 股（10/15）× 379.74 ≈ <strong>1.501 兆美元</strong>。</li><li>若按市值比例合併、不付溢價<span class="tag tag-jia">【假】</span>，Tesla 股東約占合併後 44.6%。實際換股比例未知。</li></ul>
+<hr>
+<h2 id="4-與-csp-比較-十億美元">4. 與 CSP 比較（十億美元）</h2>
+<p>口徑沿用 <code>hyperscalers-4-20261117.json</code>：</p>
+<ul><li>一律用 cash PP&amp;E。</li><li>AMZN 扣除 proceeds from sales and incentives（公司 FCF 定義）。</li><li>META 不含融資租賃本金；MSFT 不含新增融資租賃。</li><li>GOOG 依同一口徑補上（SEC XBRL）。</li></ul>
+<p>期間：GOOG、MSFT（FY27Q1）、AMZN、META、SpaceX、Tesla 都截至 2026/9/30；<strong>ORCL 截至 2026/8/31，不同時點，不可直接加總</strong>。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th></th><th>最新季 OCF</th><th>最新季 capex</th><th>最新季 FCF</th><th>季 capex/OCF</th><th>TTM OCF</th><th>TTM capex</th><th>TTM FCF</th><th>TTM capex/OCF</th></tr></thead><tbody><tr><td>GOOG</td><td>42.290</td><td>51.355</td><td>−9.065</td><td>121%</td><td>179.551</td><td>159.804</td><td>19.747</td><td>89%</td></tr><tr><td>MSFT</td><td>58.000</td><td>39.367</td><td>18.633</td><td>68%</td><td>195.878</td><td>135.921</td><td>59.957</td><td>69%</td></tr><tr><td>AMZN</td><td>42.422</td><td>75.878</td><td>−33.456</td><td>179%</td><td>168.300</td><td>210.657</td><td>−42.357</td><td>125%</td></tr><tr><td>META</td><td>32.785</td><td>33.942</td><td>−1.157</td><td>104%</td><td>133.087</td><td>104.438</td><td>28.649</td><td>78%</td></tr><tr><td>ORCL（8/31）</td><td>23.103</td><td>28.499</td><td>−5.396</td><td>123%</td><td>46.940</td><td>75.660</td><td>−28.720</td><td>161%</td></tr><tr><td><strong>SpaceX</strong></td><td>9.631</td><td>19.593</td><td>−9.962</td><td>203%</td><td>15.762</td><td>54.960</td><td>−39.198</td><td><strong>349%</strong></td></tr><tr><td>Tesla</td><td>6.263</td><td>4.732</td><td>1.531</td><td>76%</td><td>18.710</td><td>15.407</td><td>3.303</td><td>82%</td></tr><tr><td>假設合併<span class="tag tag-jia">【假】</span></td><td>15.894</td><td>24.325</td><td>−8.431</td><td>153%</td><td>34.472</td><td>70.367</td><td>−35.895</td><td>204%</td></tr></tbody></table></div>
+<p><strong>AWS 揭露<span class="tag tag-shi">【事】</span></strong>：AMZN Q3 PP&amp;E 淨增加（權責基礎、含融資租賃）合計 782.62 億，其中 AWS 571.16 億，占 73.0%。AWS Q3 營業利益 177.73 億。AWS 沒有單獨的現金流量表。</p>
+<p><strong>解讀<span class="tag tag-gu">【估】</span></strong></p>
+<ul><li>SpaceX 的 TTM capex（550 億）約是 ORCL 的 0.7 倍、AMZN 的 1/4；但它的 OCF 只有 AMZN 的 1/11。所以「capex/OCF」比所有 CSP 都高得多。</li><li>合併後 capex/OCF 約 204%，仍比最激進的 ORCL（161%）高。</li><li>2026Q4 capex 指引 350–400 億，單季就接近 GOOG／AMZN 規模。</li></ul>
+<hr>
+<h2 id="5-三情境-資金缺口與融資-2026q4-2027q3-四季-所有輸入皆-假">5. 三情境：資金缺口與融資（2026Q4–2027Q3，四季，所有輸入皆<span class="tag tag-jia">【假】</span>）</h2>
+<h3 id="5a-假設">5a. 假設</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>參數</th><th>偏樂觀</th><th>基準</th><th>偏悲觀</th><th>依據</th></tr></thead><tbody><tr><td>SpaceX 各季營收</td><td>25/37/40/45</td><td>22/35/35/35</td><td>18/33/30/30</td><td>2027Q1 指引 330–370<span class="tag tag-si">【司】</span>；其他季為<span class="tag tag-jia">【假】</span></td></tr><tr><td>SpaceX OCF/營收</td><td>50%</td><td>40%</td><td>30%</td><td>9M2026 實際 48%（含預收款）<span class="tag tag-gu">【估】</span></td></tr><tr><td>SpaceX capex（不含 Terafab）各季</td><td>35×4</td><td>37.5、40×3</td><td>40、50×3</td><td>Q4 指引 35–40<span class="tag tag-si">【司】</span>，2027 為<span class="tag tag-jia">【假】</span></td></tr><tr><td>Tesla OCF（四季合計）</td><td>22.0</td><td>18.7（＝TTM）</td><td>14.0</td><td><span class="tag tag-jia">【假】</span></td></tr><tr><td>Tesla capex（不含 Terafab）</td><td>24</td><td>28</td><td>36</td><td>2026 &gt;20<span class="tag tag-shi">【事】</span>，2027 未指引</td></tr><tr><td>Terafab 四季合計（兩家）</td><td>8.4（第一期 168 億攤兩年）</td><td>20</td><td>35</td><td>第一期 &gt;16.8<span class="tag tag-shi">【事】</span>，其他<span class="tag tag-jia">【假】</span></td></tr><tr><td>Terafab 分攤</td><td>50/50</td><td>50/50</td><td>50/50</td><td>官方未定<span class="tag tag-jia">【假】</span></td></tr><tr><td>保留最低現金</td><td>各 15</td><td>各 15</td><td>各 15</td><td><span class="tag tag-jia">【假】</span></td></tr></tbody></table></div>
+<h3 id="5b-結果-十億美元">5b. 結果（十億美元）</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>情境</th><th>主體</th><th>OCF</th><th>capex</th><th>Terafab</th><th>FCF</th><th>現金＋額度</th><th>缺口（扣最低現金後）</th><th>若缺口全靠發股的稀釋</th><th>若 FCF 赤字全靠發股的稀釋</th></tr></thead><tbody><tr><td>偏樂觀</td><td>SpaceX</td><td>73.5</td><td>140.0</td><td>4.2</td><td>−70.7</td><td>95.1</td><td>0</td><td>0%</td><td>3.8%</td></tr><tr><td></td><td>Tesla</td><td>22.0</td><td>24.0</td><td>4.2</td><td>−6.2</td><td>75.4</td><td>0</td><td>0%</td><td>0.4%</td></tr><tr><td></td><td>合併<span class="tag tag-jia">【假】</span></td><td>95.5</td><td>164.0</td><td>8.4</td><td>−76.9</td><td>170.6</td><td>0</td><td>0%</td><td>2.3%</td></tr><tr><td>基準</td><td>SpaceX</td><td>50.8</td><td>157.5</td><td>10.0</td><td>−116.7</td><td>95.1</td><td><strong>36.6</strong></td><td>2.0%</td><td>6.3%</td></tr><tr><td></td><td>Tesla</td><td>18.7</td><td>28.0</td><td>10.0</td><td>−19.3</td><td>75.4</td><td>0</td><td>0%</td><td>1.3%</td></tr><tr><td></td><td>合併<span class="tag tag-jia">【假】</span></td><td>69.5</td><td>185.5</td><td>20.0</td><td>−136.0</td><td>170.6</td><td>0（用掉可用流動性 97%）</td><td>0%</td><td>4.0%</td></tr><tr><td>偏悲觀</td><td>SpaceX</td><td>33.3</td><td>190.0</td><td>17.5</td><td>−174.2</td><td>95.1</td><td><strong>94.1</strong></td><td>5.0%</td><td>9.3%</td></tr><tr><td></td><td>Tesla</td><td>14.0</td><td>36.0</td><td>17.5</td><td>−39.5</td><td>75.4</td><td>0</td><td>0%</td><td>2.6%</td></tr><tr><td></td><td>合併<span class="tag tag-jia">【假】</span></td><td>47.3</td><td>226.0</td><td>35.0</td><td>−213.7</td><td>170.6</td><td><strong>73.2</strong></td><td>2.2%</td><td>6.4%</td></tr></tbody></table></div>
+<p>稀釋計算：融資額 ÷ 11/16 市值。沒有計入發行折價，發行折價會讓實際稀釋更高。</p>
+<h3 id="5c-融資方式與意涵-估-司">5c. 融資方式與意涵<span class="tag tag-gu">【估／司】</span></h3>
+<ul><li><strong>舉債</strong>（最可能，<span class="tag tag-si">【司】</span>CFO 稱維持投資級）：基準情境 SpaceX 缺口約 366 億，約等於再發一次 SpaceX Notes 規模的 1.5 倍。以 Q3 調整後 EBITDA 88.09 億×4 ≈ 352 億年化<span class="tag tag-gu">【估】</span>計算，債務從 388 億增到約 750 億，淨債務仍小於 1 倍 EBITDA。但年化 EBITDA 含一次性項目，CFO 說 Q4 毛利率會回落。</li><li><strong>租賃／供應商融資</strong>：Apollo 400 億 GPU 融資租賃，預計 2027H1 起動用。它會把一部分 capex 從現金流量表移到租賃負債，現金缺口變小，但固定支付變大。這部分在表中沒有扣除，可視為基準缺口的主要填補來源（【未核】主約是否已完成）。</li><li><strong>發股</strong>：SpaceX 用股票支付 Cursor（約 427 億）與 EchoStar（111 億），已有以股換資產的先例。即使用增發補完整個悲觀缺口，稀釋約 5%（以市值計）；12/8 起還有禁售股釋出的供給壓力。</li><li><strong>資產出售</strong>：Tesla 持有 SpaceX 股權 28.65 億（12 月解禁）與比特幣約 9.6 億；SpaceX 持有比特幣 15.73 億與 TBC 股權。規模都遠小於缺口。</li><li><strong>合併的財務意涵</strong>：<ul><li>合併主要讓 SpaceX 可以用到 Tesla 約 359 億淨現金與 300 億未動用額度。</li><li>合併<strong>不會</strong>改變「OCF 不夠付 capex」：合併後 TTM capex/OCF 仍有 204%。</li><li>對 Tesla 股東而言，合併等於承擔 SpaceX 的資金缺口。</li><li>Tesla 的 300 億額度有沒有控制權變更條款，本稿未核。</li></ul></li></ul>
+<hr>
+<h2 id="6-對-spcx-tsla-股東的意涵與三選一判斷">6. 對 SPCX／TSLA 股東的意涵與三選一判斷</h2>
+<p><strong>價量</strong>：數據專員檔 <code>/workspace/cross-sector-screen/spcx-tsla-prices-20261117.json</code>；原始資料 <code>/workspace/value-run-20261114/raw/r9/</code>；本稿以 <code>calc_pv.py</code> 從原始成交量重算。</p>
+<ul><li><strong>Massive免費、adjusted=true、拆股調整日線，非官方收盤、非總報酬</strong>。API status <strong>DELAYED</strong>（可能還不是定稿），成交量調整方式未獨立核對。</li><li>bar 日期為美東 2026-11-16；前 20 日窗口為 10/19–11/13，不含當日。</li></ul>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th></th><th>SPCX</th><th>TSLA</th></tr></thead><tbody><tr><td>收盤（日漲跌）</td><td>137.36（−1.26%）</td><td>379.74（−2.69%）</td></tr><tr><td>SMA20／距離</td><td>141.57／−2.98%</td><td>385.94／−1.61%</td></tr><tr><td>SMA50／距離</td><td>148.69／−7.62%</td><td>375.25／+1.20%</td></tr><tr><td>SMA200／距離</td><td>不適用（109 根 bar）</td><td>382.48／−0.72%</td></tr><tr><td>量比a（÷含當日 20 日均量）</td><td><strong>0.89×</strong></td><td><strong>0.78×</strong></td></tr><tr><td>量比b（÷前 20 日均量，數據專員檔）</td><td>0.90×</td><td>0.77×</td></tr><tr><td>前 20 日低／高（不含當日）</td><td>120.39（11/05）／166.18（10/21）</td><td>338.15（11/05）／414.23（11/02）</td></tr><tr><td>距前 20 日低</td><td>+14.1%</td><td>+12.3%</td></tr><tr><td>趨勢降級（SMA20&lt;SMA50 且收盤&lt;SMA200）</td><td>不適用（歷史不足）</td><td>不觸發（SMA20&gt;SMA50）</td></tr><tr><td>追價區（&gt;SMA20 3% 且 &gt;SMA50 8%）</td><td>否</td><td>否</td></tr></tbody></table></div>
+<ul><li><strong>SPCX 核身</strong>：Space Exploration Technologies Corp. Class A Common Stock，CIK 0001181412，XNAS，list_date 2026-06-12，FIGI BBG000NQF3Z5，與舊 SPAC ETF（SPCK）無關。</li><li><strong>異常 bar</strong>：Massive 在同一代碼下另外回傳 344 根上市前 bar（2024-11-18～2026-04-06，收盤 21.71–26.59，成交量極小），數據專員已全部排除、沒有拼接，這些 bar 屬於哪檔證券也沒有查證。</li><li><strong>股數</strong>：overview 的 share_class 股數為 null，市值改用 SEC 封面股數。</li></ul>
+<h3 id="spcx-觀望">SPCX：<strong>觀望</strong></h3>
+<ul><li><strong>理由</strong><ul><li>價量：收盤在 SMA20、SMA50 之下，量比a 0.89，升級觸發未成立；也沒有放量跌破 120.39。</li><li>基本面：沒有否決項。營收指引與營業利益改善，債務 2031 年前沒有重大到期。但 TTM FCF −392 億、capex/OCF 349% 是全比較組最高，Q4 capex 還在上升。</li><li>合併不確定：條款未知，可能是稀釋事件，也可能是融資管道。</li></ul></li><li><strong>升級（→符合條件才分批）</strong>：三項都要成立。<ol><li>收盤站回重算後 SMA20（現 141.57），且量比a ≥1.0×<span class="tag tag-jia">【假】</span>。</li><li>基本面成立：Q4 財報 capex 不明顯超出 350–400 億；2027Q1 營收 330–370 億指引未下修；新增資金以債務或租賃為主，而不是大額增發。</li><li>無否決項；若合併宣布，條款不構成否決。</li></ol></li><li><strong>降級（→不建議）</strong>：任一成立即降級。<ol><li>收盤跌破前 20 日低（現 120.39，不含當日）且量比a &gt;1。</li><li>基本面否決：單次增發 &gt;5% 股本<span class="tag tag-jia">【假】</span>、下修營收指引，或合併條款對 SPCX 股東明顯不利。</li></ol></li><li>趨勢規則：沒有 SMA200，不適用。12/8 禁售到期後要重看價量。</li></ul>
+<h3 id="tsla-觀望-研究性質-不在看板">TSLA：<strong>觀望（研究性質，不在看板）</strong></h3>
+<ul><li><strong>理由</strong><ul><li>價量：收盤低於 SMA20，量比a 0.78，升級觸發未成立；距前 20 日低 +12.3%，沒有放量跌破。</li><li>趨勢：SMA20 高於 SMA50，趨勢降級不觸發；但收盤略低於 SMA200。</li><li>基本面：TTM FCF 仍為正（33 億），但 2026 capex 翻倍以上、Q3 營業利益年減約 56%<span class="tag tag-shi">【事：16.24 億→7.18 億】</span>；Terafab 分攤與 2027 capex 都未定。</li><li>合併：可能讓 Tesla 承擔 SpaceX 的資金缺口。</li></ul></li><li><strong>規則註記</strong>：團隊另一條升級路徑 (B)「量縮守 SMA50 +2% 內」在價量面成立（+1.20%、量比a 0.78）。但本任務 CEO 指定的升級規則是站回 SMA20，而且基本面條件未成立，所以不升級。這點請 CEO 裁示。</li><li><strong>升級</strong>：三項都要成立。<ol><li>收盤站回重算後 SMA20（現 385.94），且量比a ≥1.0×<span class="tag tag-jia">【假】</span>。</li><li>基本面成立：2027 capex 指引（預計 1 月下旬，<span class="tag tag-mei">【媒】</span>）附資金計畫、Terafab 分攤明確、FCF 沒有深度轉負。</li><li>無否決項。</li></ol></li><li><strong>降級</strong>：<ul><li>收盤跌破前 20 日低（現 338.15）且量比a &gt;1 → 不建議。</li><li>SMA20&lt;SMA50 且收盤&lt;SMA200 → 降一級。</li><li>合併條款讓 Tesla 以現金或信用承擔 SpaceX 缺口，且溢價偏高 → 基本面否決。</li></ul></li></ul>
+<p><strong>催化劑</strong></p>
+<ul><li>Tesla 年會 12/3 15:00 CT（台北 12/4 05:00）。</li><li>SPCX 180 日禁售到期 12/8。</li><li>兩家 Q4 財報（日期未公告）。</li><li>特別委員會的任何公告。</li></ul>
+<hr>
+<h2 id="7-看板一句話">7. 看板一句話</h2>
+<p><strong>合併未成案；SpaceX 現金流遠不足支應算力與 Terafab，靠舉債租賃，觀望。</strong></p>
+<hr>
+<h2 id="8-來源-讀取-台北-2026-11-17-18-47-19-30">8. 來源（讀取：台北 2026/11/17 18:47–19:30）</h2>
+<ul><li>SpaceX 10-Q（2026/9/30）：https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm</li><li>SpaceX 424B4（2026/6/12）：https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm</li><li>SpaceX FWP CFO 訪談（2026/6/9）：https://www.sec.gov/Archives/edgar/data/1181412/000162828026041761/fwp_cfointerview.htm</li><li>SpaceX 8-K 10/26（Apollo）：https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm</li><li>SpaceX Q3 法說逐字稿（10/20）：https://s21.q4cdn.com/184289198/files/content_files/SpaceX-Third-Quarter-2026-Webcast-Transcript.pdf</li><li>Tesla 10-Q（2026/9/30）：https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm</li><li>Tesla Q3 2026 Update（8-K EX-99.1，10/21）：https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm</li><li>Tesla DEF 14A（10/19）：https://www.sec.gov/Archives/edgar/data/1318605/000110465926116700/tm267596-1_def14a.htm；DEFA14A 10/19–11/16（9 份，皆以 CIK 0001318605 列示）</li><li>AMZN 10-Q（2026/9/30）：https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm</li><li>SEC XBRL companyfacts（TSLA、GOOG、MSFT、AMZN、META、ORCL；2026/11/17 下載）：https://data.sec.gov/api/xbrl/companyfacts/CIK##########.json</li><li>EDGAR 全文檢索：https://efts.sec.gov/LATEST/search-index?q=Terafab 等</li><li>德州州長辦公室（2026/8/6）：https://gov.texas.gov/news/post/governor-abbott-announces-spacex-expansion-in-grimes-county</li><li>媒體（只作<span class="tag tag-mei">【媒】</span>）：teslanewswire（Tesla Q3 法說轉述）、247wallst 11/7、Reuters via investing.com 8/6、superchargeddaily（Bloomberg 11/13 轉述）、Bloomberg Law 11/9、TechCrunch 10/20</li><li>CSP 口徑：/workspace/cross-sector-screen/hyperscalers-4-20261117.json</li><li>原始檔：/workspace/cross-sector-screen/spacex-tsla-data/raw/</li></ul>
+<h2 id="9-資料缺口">9. 資料缺口</h2>
+<ol><li>沒有合併協議、條款、換股比例或時程；Bloomberg 11/13 報導未核。</li><li>Terafab 總 capex、時程、兩家分攤都沒有官方數字；JETI 申請文件（550／1,190 億）沒有直接讀取。</li><li>Tesla Q3 法說官方逐字稿未取得（Terafab「數百億」「&gt;1,000 億」是媒體轉述）。</li><li>SpaceX 沒有 2027 capex 指引；13 GW 目標對應多少 capex 未揭露；SpaceX TTM 調整後 EBITDA 未編。</li><li>Apollo 400 億 GPU 租賃主約是否完成未核；它能替代多少現金 capex 未揭露。</li><li>SpaceX 營業租賃負債的非流動部分沒有單列。</li><li>EchoStar 頻譜對價：261.8M 股 @42.40 是否為拆股前口徑、現金支付時點，都未核。</li><li>Tesla 2027 capex 指引尚未公布；Tesla 300 億新額度是否有控制權變更條款未核。</li><li>價量為 DELAYED，未確認定稿；SPCX 只有 109 根 bar，沒有 SMA200；成交量調整方式未獨立核對。</li><li>pro forma 沒有沖銷關係人交易（Megapack 9M 6.26 億），也沒計交易溢價、交易成本，或 Tesla 持有 SpaceX 股權的沖銷。</li><li>CSP 只取 OCF／capex；GOOG 用 XBRL，沒有逐條重讀 10-Q 附註；AWS 只有權責基礎的 PP&amp;E 增加，沒有現金口徑。</li></ol>
+    </article>
+    <nav class="other"><h2>其他研究報告</h2><ul><li><a href="ai-disruption-20261123.html">AI 時代產業金流轉移</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="agentic-commerce-20261123.html">Agent 消費端口的受益者</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="ai-apps-shop-20261117.html">AI 應用：SHOP 與初選 12 檔</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="hyperscalers-4-20261117.html">四大雲：MSFT、AMZN、META、ORCL</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="midterm-election-20261115.html">期中選舉後一年報酬</a>　<span class="meta" style="display:inline">2026-11-15</span></li><li><a href="midterm-entry-timing-20261116.html">期中選後進場時點</a>　<span class="meta" style="display:inline">2026-11-16</span></li></ul></nav>
+    <p class="foot">來源檔只作內部研究底稿。本頁為已審正文的網頁版，不是交易授權。</p>
+  </main>
+  <script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function label(t){ if(btn) btn.textContent = t === "dark" ? "切換淺色" : "切換深色"; }
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    try { localStorage.setItem("watchlist-theme", t); } catch(e) {}
+    label(t);
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("watchlist-theme"); } catch(e) {}
+  var prefer = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply((saved === "dark" || saved === "light") ? saved : (prefer ? "dark" : "light"));
+  if (btn) btn.addEventListener("click", function(){
+    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>
