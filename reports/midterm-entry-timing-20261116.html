@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>期中選舉後「第幾個交易日進場」的歷史檢視（1950–2022）與 2026 對照　關注持股看板</title>
+  <style>
+:root {
+  --bg: #f3f0e8;
+  --bg-elev: #fffcf6;
+  --sidebar: #faf7f0;
+  --line: rgba(28, 36, 48, 0.12);
+  --text: #152033;
+  --muted: #5c6b80;
+  --faint: #8a97a8;
+  --accent: #0f6e68;
+  --accent-soft: rgba(15, 110, 104, 0.12);
+  --chip: #e8f4f2;
+  --shadow: 0 10px 30px rgba(21, 32, 51, 0.08);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #0c111b;
+  --bg-elev: #151c29;
+  --sidebar: #101826;
+  --line: rgba(210, 222, 238, 0.1);
+  --text: #e9eef6;
+  --muted: #9aa8bb;
+  --faint: #738196;
+  --accent: #5ee0d0;
+  --accent-soft: rgba(94, 224, 208, 0.12);
+  --chip: #1b2738;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 19px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+}
+.top-inner {
+  max-width: 52rem; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.brand-link {
+  font-weight: 750; text-decoration: none; color: var(--text);
+  font-size: 16px;
+}
+.brand-link:hover { color: var(--accent); }
+.top .spacer { flex: 1; }
+.ghost {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+}
+.ghost:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 24px 20px 64px; }
+.kicker { color: var(--faint); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 31px; letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; margin: 2em 0 0.6em; }
+h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+h4, h5, h6 { font-size: 18px; margin: 1.4em 0 0.4em; }
+.disclaimer {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+article p { margin: 0.7em 0; }
+article ul, article ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+article li { margin: 0.25em 0; }
+article li > ul, article li > ol { margin: 0.2em 0 0.3em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+blockquote {
+  margin: 1em 0;
+  padding: 8px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+}
+blockquote p { margin: 0.4em 0; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--chip);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  overflow-wrap: anywhere; word-break: normal;
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elev);
+  max-width: 100%;
+}
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table {
+  border-collapse: collapse;
+  min-width: 36em;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
+  background: color-mix(in srgb, var(--bg) 55%, var(--bg-elev));
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+.other {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.other h2 { margin-top: 0; font-size: 20px; }
+.other ul { padding-left: 1.2em; }
+.foot {
+  margin-top: 36px;
+  color: var(--faint);
+  font-size: 15px;
+}
+@media (max-width: 720px) {
+  html, body { font-size: 17px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  .wrap { padding: 18px 16px 48px; }
+  .top { padding: 10px 16px; }
+  table { font-size: 15px; min-width: 40em; }
+  th, td { padding: 8px 9px; }
+}
+@media print {
+  .top { position: static; }
+  .ghost { display: none; }
+  body { background: #fff; color: #111; }
+}
+.tag {
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 0.05em 0.32em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.tag-shi { color: var(--accent); background: var(--accent-soft); }
+.tag-si { color: var(--muted); background: var(--chip); }
+.tag-gu { color: var(--muted); background: var(--chip); }
+.tag-tui { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.tag-jia { color: var(--muted); background: var(--chip); }
+.tag-mei { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, var(--bg-elev)); }
+.tag-zan { color: var(--muted); background: var(--chip); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand-link" href="../index.html">← 關注持股看板</a>
+      <div class="spacer"></div>
+      <button class="ghost" id="themeBtn" type="button" aria-label="切換主題">切換深淺色</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">研究報告　2026-11-16　台北時間</p>
+    <p class="disclaimer">僅供陳煒川本人自用。研究用途，不是下單指令，不承諾報酬。文中價格與報酬若未另註，為拆股調整價格指數，不是官方收盤，也不是含息總報酬。若引用 Massive 日線，屬延遲／非官方報價，不是交易所官方收盤。本頁只公開已審報告正文，不含原始指數數列或內部計算檔。</p>
+    <article>
+      <h1 id="期中選舉後-第幾個交易日進場-的歷史檢視-1950-2022-與-2026-對照">期中選舉後「第幾個交易日進場」的歷史檢視（1950–2022）與 2026 對照</h1>
+<p>撰寫：總體經濟研究員｜2026-11-16（台北，UTC+8）｜僅供使用者本人自用。不是交易指令，沒有報酬保證，也不提供配置比例。 資料：S&amp;P 500 與 Nasdaq 收盤到 <strong>2026-11-13（美東，星期五）</strong>。取數時間：台北 2026-11-16 18:33。<strong>所有數字都是價格指數，不是總報酬</strong>。歷史統計都是<span class="tag tag-gu">【估】</span>（自行計算）。</p>
+<h2 id="一頁摘要">一頁摘要</h2>
+<ol><li><strong>選後 12 個月內的最低收盤，落點分散，沒有固定天數。</strong><span class="tag tag-gu">【估】</span><ul><li><strong>S&amp;P 500（19 屆）</strong>：最低點平均落在選後第 52.1 個交易日，中位數第 15 日。<ul><li>分桶：0–10 日 7 屆、11–30 日 6 屆、31–60 日 1 屆、61–120 日 2 屆、超過 120 日 3 屆（1986、2010、2014）。</li><li>最低點相對第 0 日：平均 −4.4%、中位數 −1.9%、最差 −14.7%（2018）。</li></ul></li><li><strong>Nasdaq（1974–2022，13 屆）</strong>：最低點平均第 73.5 日、中位數第 33 日；相對第 0 日中位數 −3.8%、最差 −19.3%（1986）。</li><li>平均數被少數幾屆遠期的低點拉高，例如 1987 年 10 月、2011 年 10 月、2015 年 8 月，所以<strong>中位數比平均更有代表性</strong>。</li></ul></li><li><strong>「晚幾天進場」在歷史上沒有勝過第 0 日。</strong><span class="tag tag-gu">【估】</span><ul><li><strong>S&amp;P、持有至選後 12 個月</strong>：第 0 日 +15.1%、第 10 日 +15.2%，兩者幾乎相同（差 +0.1 個百分點，p=0.95）。</li><li>進場越晚越差：第 60 日 +7.7%、第 90 日 +5.0%，Holm 校正後仍顯著偏低（p ≤ 0.001）。</li><li>進場價差 P_k/P_0−1：第 90 日的價格平均比第 0 日高 +9.9%，19 屆中只有 1 屆（2002）比第 0 日便宜。</li></ul></li><li><strong>所謂「最佳進場日」是事後選出來的，而且不穩定。</strong><span class="tag tag-gu">【估】</span><ul><li>在第 0–120 日全部掃描，平均報酬最高的是第 10 日（S&amp;P、Nasdaq 都是），但只比第 0 日多約 0.06 和 0.03 個百分點。</li><li>逐屆剔除時，最佳日在第 0 日和第 10 日之間來回跳動。差距主要來自 <strong>1974 年</strong>：選後又跌 −13.4%，晚進場反而較好。</li><li><strong>沒有任何一個進場日顯著優於第 0 日。</strong></li></ul></li><li><strong>2026 年對照</strong><ul><li>11/13 收盤是選後<strong>第 8 個交易日</strong><span class="tag tag-shi">【事 XNYS 交易日曆；11/11 退伍軍人節照常開市】</span>。美東 11/16 收盤會是第 9 日，11/17 是第 10 日。</li><li>S&amp;P 相對第 0 日 −0.1%：歷史同一第 8 日的平均是 +1.0%、中位數 +1.3%，19 屆中有 6 屆比現在低。</li><li>Nasdaq −0.9%：13 屆中只有 2 屆比現在低（1974、2018）。</li><li>CAPE 40.7、10 年期 5.15%（11/13）、12/9 升息定價 100%，<strong>都在歷史樣本之外</strong>。</li><li>所以「第幾天進場」的歷史規律對 2026 年的參考性有限。以下框架改用價格、利率與事件作為觸發條件（第 6 節）。</li></ul></li></ol>
+<h2 id="1-定義">1. 定義</h2>
+<ul><li><strong>第 0 日</strong>：選舉日的收盤。選舉日休市時用前一個交易日的收盤；1950–1966 年各屆屬於這種情況，逐屆表用 * 標註。</li><li><strong>第 k 日</strong>：資料序列中第 0 日之後的第 k 個交易日。</li><li><strong>選後 12 個月終點</strong>：與前一份研究的窗口①相同，就是選舉日加 12 個月當天，或之前最後一個交易日。</li><li><strong>次年底</strong>：次年 12 月最後一個交易日。</li><li><strong>最低點</strong>：第 0 日到 12 個月終點之間（含兩端）最低收盤所在的日序。如果第 0 日本身就是最低，記為 0，跌幅也記為 0。</li><li><strong>進場價差</strong>：P_k/P_0−1。正值代表第 k 日的價格比第 0 日貴。這個指標不受「晚進場、持有期較短」影響，比較乾淨。</li><li><strong>檢定</strong>：每一屆配對計算「第 k 日報酬 − 第 0 日報酬」。<ul><li>符號置換檢定：精確列舉全部 2^n 種符號組合，雙尾。</li><li>配對 bootstrap：20,000 次，seed=20261116。</li><li>6 個比較用 Holm 校正，Bonferroni 結果也附在 JSON。</li></ul></li><li><strong>交易日核對</strong>：用 exchange_calendars 的 XNYS 曆核對，見 <code>calendar_check.json</code>。<ul><li>1950–1966 年套件曆本少收了感恩節、聖誕節和選舉日等休市日，所以和資料不一致的日子都是這類假日，資料本身沒有缺漏。</li><li>1967 年以後完全一致，只有 Nasdaq 多出 2019-04-19（FRED 原樣保留）。</li></ul></li></ul>
+<h2 id="2-選後-12-個月內最低收盤落在第幾日-估">2. 選後 12 個月內最低收盤落在第幾日<span class="tag tag-gu">【估】</span></h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>指數（樣本）</th><th>平均日序</th><th>中位日序</th><th>範圍</th><th>0–10</th><th>11–30</th><th>31–60</th><th>61–120</th><th>&gt;120</th><th>第 0 日即最低</th><th>最低相對第 0 日：平均／中位／最差</th></tr></thead><tbody><tr><td>S&amp;P 500（1950–2022，19屆）</td><td>52.1</td><td>15</td><td>0–241</td><td>7</td><td>6</td><td>1</td><td>2</td><td>3</td><td>2</td><td>-4.4%／-1.9%／-14.7%</td></tr><tr><td>Nasdaq（1974–2022，13屆）</td><td>73.5</td><td>33</td><td>0–248</td><td>4</td><td>1</td><td>3</td><td>2</td><td>3</td><td>2</td><td>-6.3%／-3.8%／-19.3%</td></tr></tbody></table></div>
+<p>Nasdaq 的樣本從 1974 年開始。FRED NASDAQCOM 從 1971-02-05 起才有資料，1970 年那屆不含。</p>
+<h2 id="3-各進場日的報酬-價格指數-估">3. 各進場日的報酬（價格指數）<span class="tag tag-gu">【估】</span></h2>
+<p><strong>S&amp;P 500 持有至選後12個月</strong>（最佳平均日＝第10日；最佳中位日＝第0日）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>進場日</th><th>上漲/總屆</th><th>平均</th><th>中位</th><th>最差（屆）</th><th>與第0日差（均）</th><th>優於第0日屆數</th><th>符號置換 p（精確）</th><th>Holm 校正 p</th><th>配對 bootstrap 95% CI</th></tr></thead><tbody><tr><td>第0日</td><td>19/19</td><td>+15.1%</td><td>+14.5%</td><td>+1.1%（1986）</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>第5日</td><td>19/19</td><td>+13.8%</td><td>+13.0%</td><td>+0.8%（1986）</td><td>-1.3%</td><td>5/19</td><td>0.040</td><td>0.121</td><td>[-2.3%, -0.2%]</td></tr><tr><td>第10日</td><td>19/19</td><td>+15.2%</td><td>+14.4%</td><td>+2.5%（2014）</td><td>+0.1%</td><td>9/19</td><td>0.952</td><td>0.952</td><td>[-1.8%, +2.1%]</td></tr><tr><td>第20日</td><td>18/19</td><td>+13.2%</td><td>+14.1%</td><td>-1.9%（1986）</td><td>-2.0%</td><td>3/19</td><td>0.105</td><td>0.210</td><td>[-3.9%, +0.4%]</td></tr><tr><td>第40日</td><td>18/19</td><td>+11.4%</td><td>+10.9%</td><td>-1.6%（2010）</td><td>-3.7%</td><td>4/19</td><td>0.017</td><td>0.069</td><td>[-6.5%, -1.0%]</td></tr><tr><td>第60日</td><td>16/19</td><td>+7.7%</td><td>+6.4%</td><td>-9.2%（1986）</td><td>-7.4%</td><td>2/19</td><td>0.000</td><td>0.001</td><td>[-10.0%, -4.7%]</td></tr><tr><td>第90日</td><td>15/19</td><td>+5.0%</td><td>+3.7%</td><td>-13.6%（1986）</td><td>-10.1%</td><td>1/19</td><td>0.000</td><td>0.000</td><td>[-12.9%, -7.0%]</td></tr></tbody></table></div>
+<p><strong>S&amp;P 500 持有至次年底</strong>（最佳平均日＝第10日；最佳中位日＝第10日）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>進場日</th><th>上漲/總屆</th><th>平均</th><th>中位</th><th>最差（屆）</th><th>與第0日差（均）</th><th>優於第0日屆數</th><th>符號置換 p（精確）</th><th>Holm 校正 p</th><th>配對 bootstrap 95% CI</th></tr></thead><tbody><tr><td>第0日</td><td>19/19</td><td>+20.1%</td><td>+20.1%</td><td>+0.4%（1986）</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>第5日</td><td>18/19</td><td>+18.8%</td><td>+19.5%</td><td>+0.0%（1986）</td><td>-1.3%</td><td>5/19</td><td>0.041</td><td>0.124</td><td>[-2.4%, -0.2%]</td></tr><tr><td>第10日</td><td>18/19</td><td>+20.1%</td><td>+21.8%</td><td>-0.4%（2014）</td><td>+0.0%</td><td>9/19</td><td>0.990</td><td>0.990</td><td>[-1.9%, +2.1%]</td></tr><tr><td>第20日</td><td>17/19</td><td>+18.0%</td><td>+19.8%</td><td>-2.7%（1986）</td><td>-2.1%</td><td>3/19</td><td>0.095</td><td>0.191</td><td>[-4.2%, +0.3%]</td></tr><tr><td>第40日</td><td>17/19</td><td>+16.1%</td><td>+17.4%</td><td>-0.7%（2014）</td><td>-4.0%</td><td>4/19</td><td>0.017</td><td>0.067</td><td>[-6.8%, -1.1%]</td></tr><tr><td>第60日</td><td>17/19</td><td>+12.3%</td><td>+13.1%</td><td>-9.9%（1986）</td><td>-7.8%</td><td>2/19</td><td>0.000</td><td>0.001</td><td>[-10.6%, -4.9%]</td></tr><tr><td>第90日</td><td>16/19</td><td>+9.5%</td><td>+9.1%</td><td>-14.3%（1986）</td><td>-10.6%</td><td>1/19</td><td>0.000</td><td>0.000</td><td>[-13.5%, -7.4%]</td></tr></tbody></table></div>
+<p><strong>Nasdaq 持有至選後12個月</strong>（最佳平均日＝第10日；最佳中位日＝第40日）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>進場日</th><th>上漲/總屆</th><th>平均</th><th>中位</th><th>最差（屆）</th><th>與第0日差（均）</th><th>優於第0日屆數</th><th>符號置換 p（精確）</th><th>Holm 校正 p</th><th>配對 bootstrap 95% CI</th></tr></thead><tbody><tr><td>第0日</td><td>12/13</td><td>+25.3%</td><td>+18.9%</td><td>-11.5%（1986）</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>第5日</td><td>12/13</td><td>+23.7%</td><td>+19.5%</td><td>-11.4%（1986）</td><td>-1.6%</td><td>5/13</td><td>0.188</td><td>0.663</td><td>[-3.9%, +0.5%]</td></tr><tr><td>第10日</td><td>12/13</td><td>+25.4%</td><td>+22.2%</td><td>-9.2%（1986）</td><td>+0.0%</td><td>6/13</td><td>0.983</td><td>0.983</td><td>[-2.7%, +2.9%]</td></tr><tr><td>第20日</td><td>12/13</td><td>+22.2%</td><td>+17.0%</td><td>-11.8%（1986）</td><td>-3.1%</td><td>3/13</td><td>0.166</td><td>0.663</td><td>[-7.1%, +0.9%]</td></tr><tr><td>第40日</td><td>11/13</td><td>+22.0%</td><td>+23.3%</td><td>-9.4%（1986）</td><td>-3.4%</td><td>6/13</td><td>0.292</td><td>0.663</td><td>[-9.3%, +1.6%]</td></tr><tr><td>第60日</td><td>11/13</td><td>+14.8%</td><td>+12.1%</td><td>-18.3%（1986）</td><td>-10.6%</td><td>1/13</td><td>0.005</td><td>0.027</td><td>[-18.8%, -3.8%]</td></tr><tr><td>第90日</td><td>11/13</td><td>+10.0%</td><td>+8.8%</td><td>-25.7%（1986）</td><td>-15.3%</td><td>1/13</td><td>0.000</td><td>0.003</td><td>[-23.2%, -8.6%]</td></tr></tbody></table></div>
+<p><strong>Nasdaq 持有至次年底</strong>（最佳平均日＝第0日；最佳中位日＝第10日）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>進場日</th><th>上漲/總屆</th><th>平均</th><th>中位</th><th>最差（屆）</th><th>與第0日差（均）</th><th>優於第0日屆數</th><th>符號置換 p（精確）</th><th>Holm 校正 p</th><th>配對 bootstrap 95% CI</th></tr></thead><tbody><tr><td>第0日</td><td>12/13</td><td>+33.5%</td><td>+28.0%</td><td>-8.7%（1986）</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>第5日</td><td>12/13</td><td>+31.7%</td><td>+24.6%</td><td>-8.5%（1986）</td><td>-1.9%</td><td>5/13</td><td>0.178</td><td>0.606</td><td>[-4.4%, +0.5%]</td></tr><tr><td>第10日</td><td>12/13</td><td>+33.3%</td><td>+29.9%</td><td>-6.3%（1986）</td><td>-0.2%</td><td>6/13</td><td>0.900</td><td>0.900</td><td>[-3.3%, +2.9%]</td></tr><tr><td>第20日</td><td>12/13</td><td>+29.8%</td><td>+27.6%</td><td>-9.0%（1986）</td><td>-3.7%</td><td>3/13</td><td>0.152</td><td>0.606</td><td>[-8.5%, +0.6%]</td></tr><tr><td>第40日</td><td>11/13</td><td>+29.2%</td><td>+26.8%</td><td>-6.5%（1986）</td><td>-4.3%</td><td>6/13</td><td>0.286</td><td>0.606</td><td>[-11.8%, +1.6%]</td></tr><tr><td>第60日</td><td>11/13</td><td>+21.2%</td><td>+20.1%</td><td>-15.7%（1986）</td><td>-12.3%</td><td>1/13</td><td>0.005</td><td>0.027</td><td>[-23.1%, -4.1%]</td></tr><tr><td>第90日</td><td>11/13</td><td>+16.4%</td><td>+16.1%</td><td>-23.3%（1986）</td><td>-17.1%</td><td>1/13</td><td>0.000</td><td>0.003</td><td>[-27.0%, -9.0%]</td></tr></tbody></table></div>
+<p><strong>進場價差 P_k/P_0−1</strong>（越高代表越晚越貴）</p>
+<p>S&amp;P 500：</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>第k日</th><th>平均</th><th>中位</th><th>比第0日便宜的屆數</th><th>範圍</th><th>符號置換 p</th><th>Holm p</th><th>bootstrap 95% CI</th></tr></thead><tbody><tr><td>5</td><td>+1.1%</td><td>+1.4%</td><td>5/19</td><td>-3.5%～+4.3%</td><td>0.036</td><td>0.108</td><td>[+0.2%, +2.0%]</td></tr><tr><td>10</td><td>+0.0%</td><td>+1.2%</td><td>9/19</td><td>-9.2%～+5.6%</td><td>0.980</td><td>0.980</td><td>[-1.6%, +1.6%]</td></tr><tr><td>20</td><td>+1.9%</td><td>+2.2%</td><td>3/19</td><td>-10.3%～+6.9%</td><td>0.059</td><td>0.117</td><td>[-0.0%, +3.5%]</td></tr><tr><td>40</td><td>+3.5%</td><td>+2.3%</td><td>4/19</td><td>-7.5%～+12.4%</td><td>0.011</td><td>0.046</td><td>[+1.2%, +5.9%]</td></tr><tr><td>60</td><td>+7.1%</td><td>+7.1%</td><td>2/19</td><td>-6.0%～+14.6%</td><td>0.000</td><td>0.001</td><td>[+4.6%, +9.5%]</td></tr><tr><td>90</td><td>+9.9%</td><td>+10.0%</td><td>1/19</td><td>-5.3%～+19.6%</td><td>0.000</td><td>0.000</td><td>[+7.0%, +12.6%]</td></tr></tbody></table></div>
+<p>Nasdaq：</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>第k日</th><th>平均</th><th>中位</th><th>比第0日便宜的屆數</th><th>範圍</th><th>符號置換 p</th><th>Holm p</th><th>bootstrap 95% CI</th></tr></thead><tbody><tr><td>5</td><td>+1.3%</td><td>+0.8%</td><td>5/13</td><td>-3.7%～+7.0%</td><td>0.187</td><td>0.587</td><td>[-0.4%, +2.9%]</td></tr><tr><td>10</td><td>-0.1%</td><td>+1.5%</td><td>6/13</td><td>-7.7%～+5.3%</td><td>0.899</td><td>0.899</td><td>[-2.4%, +2.0%]</td></tr><tr><td>20</td><td>+2.4%</td><td>+2.9%</td><td>3/13</td><td>-8.5%～+11.6%</td><td>0.147</td><td>0.587</td><td>[-0.6%, +5.2%]</td></tr><tr><td>40</td><td>+2.6%</td><td>+2.2%</td><td>6/13</td><td>-7.5%～+22.6%</td><td>0.273</td><td>0.587</td><td>[-1.2%, +7.0%]</td></tr><tr><td>60</td><td>+9.3%</td><td>+6.1%</td><td>1/13</td><td>-4.7%～+40.4%</td><td>0.003</td><td>0.015</td><td>[+3.9%, +16.0%]</td></tr><tr><td>90</td><td>+14.1%</td><td>+11.7%</td><td>1/13</td><td>-0.0%～+36.9%</td><td>0.000</td><td>0.003</td><td>[+8.4%, +20.7%]</td></tr></tbody></table></div>
+<p><strong>事後掃描第 0–120 日（持有至 12 個月終點）</strong></p>
+<ul><li>S&amp;P：平均報酬最高在第 10 日（+15.17%，第 0 日是 +15.11%）；中位數最高在第 27 日（+16.2%）。</li><li>Nasdaq：平均報酬最高在第 10 日（+25.36%，第 0 日是 +25.33%）；中位數最高在第 32 日（+30.0%）。</li><li>一共比較了 121 個日子，屬於事後最佳，<strong>不能當作事前規則</strong>。</li></ul>
+<h2 id="4-限制與敏感度">4. 限制與敏感度</h2>
+<ul><li><strong>後見偏誤</strong>：「最佳進場日」和「最低點日」都是看完整段路徑之後才知道的。事前沒有辦法判斷哪一天會是低點。</li><li><strong>樣本小</strong>：S&amp;P 只有 19 屆，Nasdaq 只有 13 屆。一屆就可以改變結論。</li><li><strong>逐屆剔除（S&amp;P，最佳日第 10 日對比第 0 日，持有 12 個月）</strong>：<ul><li>剔除任一屆後，平均差介於 −0.6 到 +0.5 個百分點。</li><li>最佳日在第 0 日和第 10 日之間來回，剔除 1966、1974、1982、1986、1994、2002、2010、2018 任一屆，最佳日就變回第 0 日。</li><li>個別屆差距最大的是：1974 年（第 10 日比第 0 日多 +12.0pp）、1954 年（−7.1pp）、2022 年（−5.0pp）、2018 年（+4.8pp）。</li><li><strong>所謂第 10 日的優勢，基本上是 1974 和 2018 兩屆選後續跌造成的</strong>，不是穩定的規律。</li></ul></li><li><strong>1986、1962、2002 三屆</strong>：<ul><li>1986 年的低點在第 241 日（1987/10/19 崩盤），各進場日的報酬都偏低，但它對「第 k 日對比第 0 日」的影響不大。</li><li>1962 年最低點在第 2 日，跌幅只有 −0.1%。</li><li>2002 年是 19 屆中唯一第 90 日比第 0 日便宜的一屆（−5.3%），最低點在第 85 日（2003/3/11）。</li></ul></li><li><strong>持有期不同</strong>：在共同終點之下，第 90 日進場的持有期少了約 4 個月，報酬偏低有一部分只是時間較短，所以要搭配上面的進場價差一起看。</li><li><strong>存活與成分偏誤</strong>：只看美國這個事後證明成功的市場；指數成分會變動；Nasdaq 從 1971 年才開始。</li><li><strong>資料</strong>：只有價格指數，沒有股利。1950–2016 年 S&amp;P 來自第三方 Yahoo ^GSPC 鏡像【未核，前稿已與 FRED 和 Shiller 交叉核對】；2016 年以後用 FRED SP500；Nasdaq 用 FRED NASDAQCOM。</li><li><strong>Massive Stocks Basic</strong>：沒有用。我手上沒有可以合法使用的金鑰，也不註冊；而原檔既有的來源已經足夠。</li></ul>
+<h2 id="5-2026-對照">5. 2026 對照</h2>
+<p><strong>交易日核算</strong><span class="tag tag-shi">【事 exchange_calendars XNYS】</span></p>
+<ul><li>11/3 是第 0 日；11/11 退伍軍人節股市照常開市。</li><li>11/13（星期五）是第 8 日。台北 11/16 18:33 撰寫時，美東 11/16 還沒開盤；11/16 收盤會是第 9 日，11/17 是第 10 日。</li><li>之後的日序：第 20 日是 12/2，第 40 日是 12/31，第 60 日是 2027/2/1，第 90 日是 2027/3/16<span class="tag tag-gu">【估，依交易曆推算】</span>。</li></ul>
+<p><strong>價格</strong><span class="tag tag-shi">【事 FRED】</span></p>
+<ul><li>S&amp;P 500：第 0 日 7,568.92 → 第 8 日 7,561.67（−0.1%）。選後最低是第 2 日（11/5）的 7,353.73（−2.8%），最高是第 1 日（11/4）的 7,688.62。</li><li>Nasdaq：25,372.01 → 25,136.27（−0.9%），選後最低是第 2 日的 24,315.00（−4.2%）。</li><li><strong>歷史上第 8 日相對第 0 日</strong><span class="tag tag-gu">【估】</span>：<ul><li>S&amp;P 平均 +1.0%、中位數 +1.3%；19 屆中有 6 屆比現在低，現在大約在第 32 百分位。</li><li>Nasdaq 平均 +1.4%、中位數 +0.8%；13 屆中有 2 屆比現在低，大約在第 15 百分位。</li></ul></li><li>歷史最低點相對第 0 日的中位數是 −1.9%（S&amp;P），2026 年選後的低點（−2.8%）已經超過這個中位數。</li></ul>
+<p><strong>利率與估值</strong></p>
+<ul><li>10 年期 Treasury 面值殖利率：<strong>11/13 為 5.15%</strong><span class="tag tag-shi">【事 Treasury Daily Par Yield Curve，11/16 18:33 台北重新取數，11/16 尚未公布】</span>。</li><li>高收益債利差（ICE BofA HY OAS）：11/12 為 3.20%<span class="tag tag-shi">【事 FRED BAMLH0A0HYM2】</span>。</li><li>CAPE 40.7（2026/10）<span class="tag tag-shi">【事 Shiller】</span>，高於 19 屆期中年的最高值（1998 年的 37.4）。</li></ul>
+<p><strong>FedWatch</strong><span class="tag tag-shi">【事；CME FedWatch 公開頁，資料時間 15 Nov 2026 03:35:16 CT＝台北 11/15 17:35:16】</span></p>
+<ul><li><strong>11/16 重新核對失敗，數字沒有更新。</strong> 台北 11/16 18:3x 嘗試兩次：嵌入工具一次顯示 access denied，一次空白；未繞過。</li><li>此版對應的是 11/13（週五）收盤後的定價，不含 11/16 美國交易日。</li><li>12/9 會議：+25bp（4.00–4.25%）88.5%、+50bp（4.25–4.50%）11.5%、不變 0%、降息 0%（ZQZ6 中價 95.9250）。</li><li>同版本的比較值：<ul><li>11/13 相同（88.5%／11.5%）。</li><li>11/9：不變 16.0%、+25bp 84.0%。</li><li>11/6：不變 23.7%、+25bp 76.3%。</li><li>10/15：不變 10.7%、+25bp 65.7%、+50bp 23.6%。</li></ul></li><li>這是市場定價，不是官方決議。</li></ul>
+<p><strong>事件日期</strong>（已核實；台北時間）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>事件</th><th>美東時間</th><th>台北時間</th><th>來源</th></tr></thead><tbody><tr><td>NVDA FY27 Q3 財報</td><td>11/17 約 13:20 PT 發布，17:00 ET 電話會議</td><td>11/18 約 05:20 發布，06:00 電話會議</td><td><span class="tag tag-shi">【事】</span><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx" rel="noopener noreferrer" target="_blank">NVIDIA IR</a>；營收指引 1,080 億 ±2%<span class="tag tag-mei">【媒，轉引 8 月指引】</span></td></tr><tr><td>11 月就業報告</td><td>12/4 08:30 ET</td><td>12/4 21:30</td><td><span class="tag tag-shi">【事】</span><a href="https://www.bls.gov/schedule/2026/home.htm" rel="noopener noreferrer" target="_blank">BLS 時程表</a></td></tr><tr><td>FOMC（附經濟預測摘要）</td><td>12/8–9，聲明 12/9 14:00 ET</td><td>12/10 03:00</td><td><span class="tag tag-shi">【事】</span><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" rel="noopener noreferrer" target="_blank">Fed 會議日曆</a>（聲明時間依慣例<span class="tag tag-jia">【假】</span>）</td></tr><tr><td>11 月 CPI</td><td>12/10 08:30 ET</td><td>12/10 21:30</td><td><span class="tag tag-shi">【事】</span><a href="https://www.bls.gov/schedule/news_release/cpi.htm" rel="noopener noreferrer" target="_blank">BLS CPI 時程</a></td></tr><tr><td>下一次 FOMC</td><td>2027/1/26–27</td><td>—</td><td><span class="tag tag-shi">【事】</span>Fed 日曆（暫定）</td></tr></tbody></table></div>
+<h2 id="6-條件式分批框架-以觸發條件為準-不以日期為準-不提供比例-也不構成指令-假">6. 條件式分批框架（以觸發條件為準，不以日期為準；不提供比例，也不構成指令）<span class="tag tag-jia">【假】</span></h2>
+<p>這是給使用者自己評估用的檢查清單。是否行動、行動多少，由使用者自行決定。</p>
+<p><strong>參考價位</strong><span class="tag tag-gu">【估，以第 0 日收盤推算】</span></p>
+<ul><li>S&amp;P 500：第 0 日 7,568.92<ul><li>−5%：約 7,190</li><li>−10%：約 6,812</li><li>−14.7%（歷史最差的「最低相對第 0 日」）：約 6,456</li><li>年內高點 7,818.93（10/6）的 −10%：約 7,037</li></ul></li><li>Nasdaq：第 0 日 25,372.01<ul><li>−5%：約 24,103</li><li>−10%：約 22,835</li><li>−19.3%（歷史最差）：約 20,475</li></ul></li></ul>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>層級</th><th>價格條件</th><th>利率條件</th><th>事件條件</th><th>含義</th></tr></thead><tbody><tr><td><strong>暫停／降級</strong></td><td>跌幅超過歷史最差（S&amp;P 低於約 6,456），或伴隨盈餘下修</td><td>10 年期持續高於約 5.5%；FedWatch 定價 +50bp 機率過半，或 2027 年路徑再上移；HY OAS 明顯走寬（例如回到 4% 以上）</td><td>NVDA 營收或指引低於 1,080 億 ±2% 區間；FOMC 點陣圖上移；11 月 CPI 高於預期</td><td>歷史規律失效的風險升高，先暫停並重新評估</td></tr><tr><td><strong>觀察（現況）</strong></td><td>S&amp;P 在第 0 日上下約 ±3%（目前 −0.1%）</td><td>10 年期約 5.15%；12/9 升息定價 100%</td><td>等待 NVDA（台北 11/18 05:20）與 FOMC（台北 12/10 03:00）的結果</td><td>歷史上第 0 日和第 10 日沒有差別，<strong>沒有證據支持「等某一天」</strong>；主要不確定性來自事件</td></tr><tr><td><strong>第一層條件</strong></td><td>距第 0 日 −3% 至 −5%（歷史中位數 −1.9%、平均 −4.4%）</td><td>10 年期沒有再上行（例如 ≤5.2%）；HY OAS ≤ 約 3.5%</td><td>NVDA 財報沒有下修指引</td><td>價格回到歷史常見的回檔範圍，且利率與信用沒有惡化</td></tr><tr><td><strong>第二層條件</strong></td><td>距第 0 日 −5% 至 −10%，或距年內高點約 −10%</td><td>10 年期回落（例如 &lt;5.0%），或 FedWatch 重新出現「不變」的機率</td><td>FOMC 沒有比市場定價更鷹</td><td>價格便宜程度和利率條件同時改善</td></tr><tr><td><strong>升級</strong></td><td>價格止跌回升，例如站回第 0 日以上</td><td>10 年期 &lt;4.9%；2027 年路徑下移</td><td>CPI 降溫，且 2027 年資本支出指引延續</td><td>風險條件放寬</td></tr></tbody></table></div>
+<ul><li>每一層都要求<strong>價格、利率、事件至少兩項同時成立</strong>。只有價格條件成立、利率持續惡化時，歸類為暫停。</li><li>括號中的數字是門檻示意<span class="tag tag-jia">【假】</span>，不是預測。</li><li>歷史樣本裡沒有 CAPE 40 以上、又處於升息定價的情境，所以以上框架的歷史依據有限。</li></ul>
+<h2 id="7-來源與缺口">7. 來源與缺口</h2>
+<p><strong>資料來源</strong></p>
+<ul><li>歷史價格：沿用 <code>/workspace/cross-sector-screen/midterm-election-20261115/</code> 的拼接序列（1950–2016 第三方鏡像加 FRED）。</li><li>本次重新取得（台北 11/16 18:33）：FRED SP500、NASDAQCOM、DGS10（最新 11/12 5.10%）、BAMLH0A0HYM2，以及 Treasury 面值殖利率曲線。</li><li>授權：S&amp;P 與 Nasdaq 資料只供內部研究，不轉發。</li></ul>
+<p><strong>缺口</strong></p>
+<ul><li>FedWatch 在 11/16 重新核對失敗（CME 嵌入工具 access denied 或空白，未繞過），沿用 11/15 17:35 台北版本。</li><li>沒有總報酬版本。</li><li>1950–1966 年 XNYS 套件曆本不完整，只能用資料本身的交易日。</li><li>NVDA 指引數字取自轉引來源。</li></ul>
+<p><strong>檔案</strong>（<code>/workspace/cross-sector-screen/midterm-entry-timing-20261116/</code>）</p>
+<ul><li>腳本：<code>entry_timing.py</code>（主計算）、<code>calendar_check.py</code>（交易日核對）、<code>build_report_tables.py</code>（產生表格）、<code>write_md.py</code>（產生本稿）</li><li>逐屆表：<code>entry_timing_by_year.csv</code></li><li>計算輸出：<code>entry_timing_output.json</code>、<code>calendar_check.json</code></li><li>原始取數：<code>raw/</code></li></ul>
+    </article>
+    <nav class="other"><h2>其他研究報告</h2><ul><li><a href="ai-disruption-20261123.html">AI 時代產業金流轉移</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="agentic-commerce-20261123.html">Agent 消費端口的受益者</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="spacex-tsla-cashflow-20261117.html">SpaceX／Tesla 現金流與 Terafab</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="ai-apps-shop-20261117.html">AI 應用：SHOP 與初選 12 檔</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="hyperscalers-4-20261117.html">四大雲：MSFT、AMZN、META、ORCL</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="midterm-election-20261115.html">期中選舉後一年報酬</a>　<span class="meta" style="display:inline">2026-11-15</span></li></ul></nav>
+    <p class="foot">來源檔只作內部研究底稿。本頁為已審正文的網頁版，不是交易授權。</p>
+  </main>
+  <script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function label(t){ if(btn) btn.textContent = t === "dark" ? "切換淺色" : "切換深色"; }
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    try { localStorage.setItem("watchlist-theme", t); } catch(e) {}
+    label(t);
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("watchlist-theme"); } catch(e) {}
+  var prefer = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply((saved === "dark" || saved === "light") ? saved : (prefer ? "dark" : "light"));
+  if (btn) btn.addEventListener("click", function(){
+    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>
