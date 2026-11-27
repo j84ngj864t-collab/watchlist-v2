@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>美國期中選舉後股市表現（1950–2022）與 2026 對照　關注持股看板</title>
+  <style>
+:root {
+  --bg: #f3f0e8;
+  --bg-elev: #fffcf6;
+  --sidebar: #faf7f0;
+  --line: rgba(28, 36, 48, 0.12);
+  --text: #152033;
+  --muted: #5c6b80;
+  --faint: #8a97a8;
+  --accent: #0f6e68;
+  --accent-soft: rgba(15, 110, 104, 0.12);
+  --chip: #e8f4f2;
+  --shadow: 0 10px 30px rgba(21, 32, 51, 0.08);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #0c111b;
+  --bg-elev: #151c29;
+  --sidebar: #101826;
+  --line: rgba(210, 222, 238, 0.1);
+  --text: #e9eef6;
+  --muted: #9aa8bb;
+  --faint: #738196;
+  --accent: #5ee0d0;
+  --accent-soft: rgba(94, 224, 208, 0.12);
+  --chip: #1b2738;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 19px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+}
+.top-inner {
+  max-width: 52rem; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.brand-link {
+  font-weight: 750; text-decoration: none; color: var(--text);
+  font-size: 16px;
+}
+.brand-link:hover { color: var(--accent); }
+.top .spacer { flex: 1; }
+.ghost {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+}
+.ghost:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 24px 20px 64px; }
+.kicker { color: var(--faint); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 31px; letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; margin: 2em 0 0.6em; }
+h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+h4, h5, h6 { font-size: 18px; margin: 1.4em 0 0.4em; }
+.disclaimer {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+article p { margin: 0.7em 0; }
+article ul, article ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+article li { margin: 0.25em 0; }
+article li > ul, article li > ol { margin: 0.2em 0 0.3em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+blockquote {
+  margin: 1em 0;
+  padding: 8px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+}
+blockquote p { margin: 0.4em 0; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--chip);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  overflow-wrap: anywhere; word-break: normal;
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elev);
+  max-width: 100%;
+}
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table {
+  border-collapse: collapse;
+  min-width: 36em;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
+  background: color-mix(in srgb, var(--bg) 55%, var(--bg-elev));
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+.other {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.other h2 { margin-top: 0; font-size: 20px; }
+.other ul { padding-left: 1.2em; }
+.foot {
+  margin-top: 36px;
+  color: var(--faint);
+  font-size: 15px;
+}
+@media (max-width: 720px) {
+  html, body { font-size: 17px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  .wrap { padding: 18px 16px 48px; }
+  .top { padding: 10px 16px; }
+  table { font-size: 15px; min-width: 40em; }
+  th, td { padding: 8px 9px; }
+}
+@media print {
+  .top { position: static; }
+  .ghost { display: none; }
+  body { background: #fff; color: #111; }
+}
+.tag {
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 0.05em 0.32em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.tag-shi { color: var(--accent); background: var(--accent-soft); }
+.tag-si { color: var(--muted); background: var(--chip); }
+.tag-gu { color: var(--muted); background: var(--chip); }
+.tag-tui { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.tag-jia { color: var(--muted); background: var(--chip); }
+.tag-mei { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, var(--bg-elev)); }
+.tag-zan { color: var(--muted); background: var(--chip); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand-link" href="../index.html">← 關注持股看板</a>
+      <div class="spacer"></div>
+      <button class="ghost" id="themeBtn" type="button" aria-label="切換主題">切換深淺色</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">研究報告　2026-11-15　台北時間</p>
+    <p class="disclaimer">僅供陳煒川本人自用。研究用途，不是下單指令，不承諾報酬。文中價格與報酬若未另註，為拆股調整價格指數，不是官方收盤，也不是含息總報酬。若引用 Massive 日線，屬延遲／非官方報價，不是交易所官方收盤。本頁只公開已審報告正文，不含原始指數數列或內部計算檔。</p>
+    <article>
+      <h1 id="美國期中選舉後股市表現-1950-2022-與-2026-對照">美國期中選舉後股市表現（1950–2022）與 2026 對照</h1>
+<p>撰寫：總體經濟研究員｜完成：2026-11-15（台北，UTC+8）｜僅供使用者本人自用。不是交易指令，不含買進建議，不承諾報酬。 資料截至：S&amp;P 500、Nasdaq 收盤到 <strong>2026-11-13（美東）</strong>。取數時間：台北 2026-11-15 17:48–17:51。 <strong>所有報酬都是價格指數，不是總報酬</strong>（沒有股利再投入）。歷史統計都是<span class="tag tag-gu">【估】</span>（自行計算），計算腳本在 <code>midterm-election-20261115/</code>。</p>
+<h2 id="一頁摘要">一頁摘要</h2>
+<ol><li><strong>歷史樣本裡，期中選舉後的報酬明顯高於其他年份，但每次的路徑都不平順。</strong><span class="tag tag-gu">【估】</span><ul><li><strong>S&amp;P 500</strong>：選舉日收盤起 12 個月，<strong>19/19 次上漲</strong>，平均 +15.1%，中位數 +14.5%。非期中年同一窗口：上漲率 68.4%，平均 +7.4%。</li><li><strong>Nasdaq</strong>：同窗口 12/13 次上漲，平均 +25.3%。非期中年：上漲率 76.2%，平均 +9.7%。</li><li><strong>窗口內一定有回檔</strong>：S&amp;P 窗口內最大回撤（MDD）的中位數是 −10.3%。最差的是 1986 年那屆，因為窗口裡包含 1987 年 10 月的崩盤：MDD −33.2%，12 個月只漲 +1.1%，Nasdaq 同期 −11.5%。</li></ul></li><li><strong>顯著性只算中等，而且很依賴窗口怎麼定。</strong><span class="tag tag-gu">【估】</span><ul><li><strong>S&amp;P 窗口①</strong>：均值差 +7.7 個百分點。置換檢定 p=0.060，但 bootstrap 95% 信賴區間 [+2.0, +13.5] 不含 0，Welch t 檢定 p=0.012。</li><li><strong>窗口③（10 月低點起算）</strong>：差距最大，置換檢定 p 約 0.002–0.003。但這個窗口刻意從低點起算，數字天生偏高，有挑選起點的問題。</li><li><strong>多重比較</strong>：6 個檢定用 Bonferroni 校正（門檻 0.0083），只有兩個指數的窗口③過關。</li><li>有效樣本只有 19 次（Nasdaq 13 次），而且這個效應本身就是事後發現、再拿同一批資料驗證的，<strong>屬於資料探勘的結果</strong>。</li></ul></li><li><strong>背後原因沒有因果證據。</strong><span class="tag tag-gu">【估】</span><ul><li>「分裂政府」和「一致政府」的窗口①平均都是約 +15%，看不出差別。</li><li>期中年前段跌得越深、之後漲得越多，方向符合均值回歸，但不顯著：S&amp;P 相關係數 r=−0.20，p=0.42。</li><li>窗口①期間 FEDFUNDS 上升超過 25bp 的 8 屆，S&amp;P 窗口①也全部上漲，平均 +17.5%。所以「升息」本身並不會推翻歷史規律。</li><li>比較說得通的解釋是總統任期週期，學界有記錄，但原因仍有爭議，見第 4 節。</li></ul></li><li><strong>2026 年是樣本外的組合，歷史平均的參考價值打折扣。</strong><span class="tag tag-gu">【估／假】</span><ul><li><strong>選舉結果</strong>：民主黨拿下參眾兩院，AP 已判定控制權。共和黨總統面對民主黨國會，屬於分裂政府。</li><li><strong>選後到 11/13</strong>：S&amp;P −0.1%、Nasdaq −0.9%。S&amp;P 已跌破 10/30 的 10 月低點 7,580.07。</li><li><strong>估值</strong>：CAPE 40.7（2026/10）。19 屆期中選舉時的 CAPE 最高是 1998 年的 37.4，2026 年高於全部樣本。</li><li><strong>利率</strong>：10 年期公債 5.15%（11/13）。FedWatch 顯示 12/9 會議升息的機率合計 100%。</li><li><strong>財政</strong>：赤字約占 GDP 6.2%。</li><li><strong>AI 週期</strong>：上一份稿判斷約在「1998–1999 年下半年」。</li><li>最接近的歷史樣本是 1998 年，那一屆窗口①是 +22%，但當時的起點是聯準會剛降息（FEDFUNDS 1998/9 5.51% → 12 月 4.68%），1999/6 之後才回頭升息<span class="tag tag-shi">【事 FRED】</span>。樣本裡沒有「高估值＋升息起點＋大赤字＋AI 集中度」同時出現的前例。</li></ul></li><li><strong>讀法</strong>：歷史結果最多只能當作弱的先驗，<strong>不構成預測</strong>。應該優先看第 6 節列的推翻條件，包括 12/9 FOMC、10 年期殖利率，以及 NVDA 11/18（台北 05:20）的財報。</li></ol>
+<h2 id="1-三窗口統計-s-p-500-1950-2022-19-屆-nasdaq-1974-2022-13-屆-估">1. 三窗口統計（S&amp;P 500：1950–2022，19 屆；Nasdaq：1974–2022，13 屆）<span class="tag tag-gu">【估】</span></h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>指數／窗口</th><th>期中：上漲/總數</th><th>上漲率</th><th>平均</th><th>中位</th><th>最差／最佳</th><th>窗口內MDD 平均／中位／最差</th><th>相對起點最低 平均／最差</th><th>非期中基準（年份）上漲率／平均／中位</th><th>差（均）</th><th>置換p</th><th>bootstrap 95% CI</th><th>Welch p</th></tr></thead><tbody><tr><td>S&amp;P 500 ①選舉日起12個月</td><td>19/19</td><td>100.0%</td><td>+15.1%</td><td>+14.5%</td><td>+1.1%／+33.2%</td><td>-11.6%／-10.3%／-33.2%</td><td>-4.4%／-14.7%</td><td>(1951-2025, n=57) 68.4%／+7.4%／+8.6%</td><td>+7.7%</td><td>0.060</td><td>[+2.0%, +13.5%]</td><td>0.012</td></tr><tr><td>S&amp;P 500 ②選舉日→次年底</td><td>19/19</td><td>100.0%</td><td>+20.1%</td><td>+20.1%</td><td>+0.4%／+43.1%</td><td>-11.9%／-10.3%／-33.5%</td><td>-4.4%／-14.7%</td><td>(1951-2024, n=56) 69.6%／+9.6%／+11.4%</td><td>+10.5%</td><td>0.025</td><td>[+3.6%, +17.5%]</td><td>0.005</td></tr><tr><td>S&amp;P 500 ③10月低點起12個月</td><td>18/19</td><td>94.7%</td><td>+24.4%</td><td>+28.8%</td><td>-1.2%／+40.1%</td><td>-10.1%／-9.4%／-19.4%</td><td>-1.0%／-11.0%</td><td>(1951-2025, n=57) 73.7%／+10.3%／+12.7%</td><td>+14.1%</td><td>0.003</td><td>[+6.8%, +21.2%]</td><td>0.001</td></tr><tr><td>Nasdaq ①選舉日起12個月</td><td>12/13</td><td>92.3%</td><td>+25.3%</td><td>+18.9%</td><td>-11.5%／+69.3%</td><td>-15.3%／-13.6%／-35.9%</td><td>-6.3%／-19.3%</td><td>(1971-2025, n=42) 76.2%／+9.7%／+14.5%</td><td>+15.6%</td><td>0.036</td><td>[+3.0%, +29.2%]</td><td>0.037</td></tr><tr><td>Nasdaq ②選舉日→次年底</td><td>12/13</td><td>92.3%</td><td>+33.5%</td><td>+28.0%</td><td>-8.7%／+127.5%</td><td>-15.4%／-13.6%／-35.9%</td><td>-6.3%／-19.3%</td><td>(1971-2024, n=41) 73.2%／+11.6%／+18.9%</td><td>+22.0%</td><td>0.018</td><td>[+3.8%, +43.7%]</td><td>0.053</td></tr><tr><td>Nasdaq ③10月低點起12個月</td><td>13/13</td><td>100.0%</td><td>+38.9%</td><td>+29.9%</td><td>+2.6%／+103.4%</td><td>-12.6%／-12.9%／-18.7%</td><td>-1.4%／-12.2%</td><td>(1971-2025, n=42) 76.2%／+13.9%／+20.8%</td><td>+25.1%</td><td>0.002</td><td>[+9.8%, +41.7%]</td><td>0.009</td></tr></tbody></table></div>
+<p><strong>窗口定義</strong></p>
+<ul><li><strong>①</strong> 從選舉日收盤，到 12 個月後同一日期（或之前最後一個交易日）的收盤。</li><li><strong>②</strong> 從選舉日收盤，到次年 12 月最後一個交易日。</li><li><strong>③</strong> 從期中年 10 月最低的收盤日起算 12 個月。即使全年低點不在 10 月，也照這個定義，逐屆表會用 † 標註。</li><li>選舉日若休市，就用前一個交易日的收盤。1950–1966 年各屆在資料中都沒有選舉日的收盤，逐屆表用 * 標註，實際用了前一交易日。</li><li><strong>MDD</strong>：窗口內從起點之後的最高點到之後最低點的最大跌幅（起點本身也算在內）。</li><li><strong>相對起點最低</strong>：窗口內最低收盤相對起點收盤的跌幅。如果從沒跌破起點，記為 0。</li><li><strong>非期中基準</strong>：S&amp;P 用 1951–2025 年、Nasdaq 用 1971–2025 年中，不是期中年的年份，套用同樣的日曆定義（例如當年 11 月第一個週一之後的週二）。窗口沒有走完的年份不計入，例如 2025 年的窗口②。</li><li><strong>檢定</strong>：比較期中年與非期中年的平均報酬差。置換檢定 20,000 次（雙尾）；bootstrap 20,000 次，在兩組內各自重抽；seed=20261115。另附 Welch t 檢定、Mann-Whitney 檢定和 Fisher 上漲率檢定，見 <code>calc_output.json</code>。</li></ul>
+<p><strong>總統任期四年各階段的同窗口比較</strong>（上漲率／平均）<span class="tag tag-gu">【估】</span>。這張表看的是：期中後的強勢，是不是只是「任期第 2 年到第 3 年」這段時間的效應。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>指數 窗口</th><th>期中年起（→任期第3年）</th><th>任期第3年起（→大選年）</th><th>大選年起（→新任第1年）</th><th>新任第1年起（→期中年）</th></tr></thead><tbody><tr><td>SPX W1</td><td>19次 100.0%／+15.1%</td><td>19次 84.2%／+9.7%</td><td>19次 63.2%／+8.6%</td><td>19次 57.9%／+3.9%</td></tr><tr><td>SPX W2</td><td>19次 100.0%／+20.1%</td><td>19次 89.5%／+12.3%</td><td>19次 68.4%／+10.5%</td><td>18次 50.0%／+5.6%</td></tr><tr><td>SPX W3</td><td>19次 94.7%／+24.4%</td><td>19次 89.5%／+13.6%</td><td>19次 73.7%／+12.4%</td><td>19次 57.9%／+4.8%</td></tr><tr><td>NDQ W1</td><td>13次 92.3%／+25.3%</td><td>14次 78.6%／+14.0%</td><td>14次 85.7%／+14.1%</td><td>14次 64.3%／+1.0%</td></tr><tr><td>NDQ W2</td><td>13次 92.3%／+33.5%</td><td>14次 78.6%／+16.1%</td><td>14次 85.7%／+16.2%</td><td>13次 53.8%／+1.8%</td></tr><tr><td>NDQ W3</td><td>13次 100.0%／+38.9%</td><td>14次 85.7%／+20.5%</td><td>14次 78.6%／+16.7%</td><td>14次 64.3%／+4.4%</td></tr></tbody></table></div>
+<h2 id="2-逐屆表-s-p-500-nasdaq-價格指數-估-國會-總統欄為-事">2. 逐屆表（S&amp;P 500、Nasdaq；價格指數）<span class="tag tag-gu">【估；國會、總統欄為【事】</span>】</h2>
+<p>說明：</p>
+<ul><li><code>*</code> 表示資料裡沒有選舉日的收盤，改用前一個交易日（1950–1966 年各屆）。</li><li><code>†</code> 表示 10 月低點不是當年的全年低點。</li><li>「選後國會」是新一屆國會開議時的多數黨。參議院的多數黨包含和民主黨合組黨團的獨立派，例如 110 屆是 49D＋2I 對 49R，118 屆是 48D＋3I 對 49R。84 屆是 47D、47R、1 名獨立派，由民主黨組成多數。</li><li>「政府」一欄：總統黨同時控制參眾兩院記為一致政府，否則記為分裂政府。</li><li>1950 年的「年初→選舉日」空白，因為資料從 1950-01-03 開始，沒有 1949 年底的收盤。</li></ul>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>年</th><th>起點收盤日</th><th>總統（黨）</th><th>選後國會 眾/參</th><th>政府</th><th>S&amp;P ①</th><th>①MDD</th><th>①相對起點最低</th><th>S&amp;P ②</th><th>②MDD</th><th>S&amp;P 10月低點日</th><th>S&amp;P ③</th><th>③MDD</th><th>NDQ ①</th><th>NDQ ①MDD</th><th>NDQ ②</th><th>NDQ ③</th><th>11月CAPE</th><th>前段：年初→選舉日 S&amp;P</th><th>年內高點→10月低點 S&amp;P</th></tr></thead><tbody><tr><td>1950</td><td>1950-11-06*</td><td>Truman（D）</td><td>D/D</td><td>一致</td><td>+16.2%</td><td>-8.1%</td><td>-1.9%</td><td>+22.8%</td><td>-8.1%</td><td>1950-10-31†</td><td>+17.5%</td><td>-8.1%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>11.5</td><td>—</td><td>—</td></tr><tr><td>1954</td><td>1954-11-01*</td><td>Eisenhower（R）</td><td>D/D</td><td>分裂</td><td>+33.2%</td><td>-10.6%</td><td>+0.0%</td><td>+43.1%</td><td>-10.6%</td><td>1954-10-29†</td><td>+33.7%</td><td>-10.6%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>15.1</td><td>+28.1%</td><td>-3.3%</td></tr><tr><td>1958</td><td>1958-11-03*</td><td>Eisenhower（R）</td><td>D/D</td><td>分裂</td><td>+11.1%</td><td>-9.2%</td><td>-1.0%</td><td>+16.2%</td><td>-9.2%</td><td>1958-10-01†</td><td>+13.9%</td><td>-9.2%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>17.0</td><td>+28.9%</td><td>-0.2%</td></tr><tr><td>1962</td><td>1962-11-05*</td><td>Kennedy（D）</td><td>D/D</td><td>一致</td><td>+24.8%</td><td>-4.1%</td><td>-0.1%</td><td>+28.6%</td><td>-6.5%</td><td>1962-10-23†</td><td>+36.5%</td><td>-4.1%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>17.9</td><td>-18.4%</td><td>-24.8%</td></tr><tr><td>1966</td><td>1966-11-07*</td><td>Johnson（D）</td><td>D/D</td><td>一致</td><td>+12.9%</td><td>-6.6%</td><td>-1.3%</td><td>+19.5%</td><td>-6.6%</td><td>1966-10-07</td><td>+32.9%</td><td>-6.5%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>19.7</td><td>-12.7%</td><td>-22.2%</td></tr><tr><td>1970</td><td>1970-11-03</td><td>Nixon（R）</td><td>D/D</td><td>分裂</td><td>+12.7%</td><td>-11.4%</td><td>-1.7%</td><td>+21.2%</td><td>-13.9%</td><td>1970-10-27†</td><td>+12.8%</td><td>-10.7%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>15.0</td><td>-8.5%</td><td>-11.1%</td></tr><tr><td>1974</td><td>1974-11-05</td><td>Ford（R）</td><td>D/D</td><td>分裂</td><td>+18.7%</td><td>-14.1%</td><td>-13.4%</td><td>+20.1%</td><td>-14.1%</td><td>1974-10-03</td><td>+38.0%</td><td>-14.1%</td><td>+17.1%</td><td>-16.2%</td><td>+17.6%</td><td>+37.6%</td><td>8.9</td><td>-23.0%</td><td>-37.6%</td></tr><tr><td>1978</td><td>1978-11-07</td><td>Carter（D）</td><td>D/D</td><td>一致</td><td>+6.4%</td><td>-10.2%</td><td>-1.4%</td><td>+15.0%</td><td>-10.2%</td><td>1978-10-31†</td><td>+9.3%</td><td>-10.1%</td><td>+18.9%</td><td>-12.9%</td><td>+34.0%</td><td>+22.0%</td><td>8.9</td><td>-1.3%</td><td>-12.9%</td></tr><tr><td>1982</td><td>1982-11-02</td><td>Reagan（R）</td><td>D/R</td><td>分裂</td><td>+19.9%</td><td>-7.1%</td><td>-3.3%</td><td>+20.0%</td><td>-7.1%</td><td>1982-10-04†</td><td>+36.8%</td><td>-7.1%</td><td>+26.4%</td><td>-17.0%</td><td>+28.0%</td><td>+56.8%</td><td>8.3</td><td>+12.2%</td><td>-2.7%</td></tr><tr><td>1986</td><td>1986-11-04</td><td>Reagan（R）</td><td>D/D</td><td>分裂</td><td>+1.1%</td><td>-33.2%</td><td>-8.7%</td><td>+0.4%</td><td>-33.5%</td><td>1986-10-01†</td><td>+40.1%</td><td>-7.9%</td><td>-11.5%</td><td>-35.9%</td><td>-8.7%</td><td>+27.3%</td><td>13.9</td><td>+16.5%</td><td>-8.0%</td></tr><tr><td>1990</td><td>1990-11-06</td><td>G.H.W. Bush（R）</td><td>D/D</td><td>分裂</td><td>+25.1%</td><td>-6.1%</td><td>-1.8%</td><td>+33.8%</td><td>-6.1%</td><td>1990-10-11</td><td>+29.1%</td><td>-6.1%</td><td>+58.4%</td><td>-7.5%</td><td>+72.2%</td><td>+66.2%</td><td>15.2</td><td>-11.8%</td><td>-19.9%</td></tr><tr><td>1994</td><td>1994-11-08</td><td>Clinton（D）</td><td>R/R</td><td>分裂</td><td>+27.1%</td><td>-4.4%</td><td>-4.3%</td><td>+32.3%</td><td>-4.4%</td><td>1994-10-06†</td><td>+28.8%</td><td>-6.0%</td><td>+36.5%</td><td>-7.9%</td><td>+37.1%</td><td>+36.0%</td><td>20.2</td><td>-0.2%</td><td>-6.1%</td></tr><tr><td>1998</td><td>1998-11-03</td><td>Clinton（D）</td><td>R/R</td><td>分裂</td><td>+22.0%</td><td>-12.1%</td><td>+0.0%</td><td>+32.3%</td><td>-12.1%</td><td>1998-10-08†</td><td>+39.2%</td><td>-10.6%</td><td>+69.3%</td><td>-13.1%</td><td>+127.5%</td><td>+103.4%</td><td>37.4</td><td>+14.5%</td><td>-19.2%</td></tr><tr><td>2002</td><td>2002-11-05</td><td>G.W. Bush（R）</td><td>R/R</td><td>一致</td><td>+14.9%</td><td>-14.7%</td><td>-12.5%</td><td>+21.5%</td><td>-14.7%</td><td>2002-10-09</td><td>+33.7%</td><td>-14.7%</td><td>+40.3%</td><td>-15.2%</td><td>+42.5%</td><td>+70.5%</td><td>23.3</td><td>-20.3%</td><td>-33.8%</td></tr><tr><td>2006</td><td>2006-11-07</td><td>G.W. Bush（R）</td><td>D/D</td><td>分裂</td><td>+6.7%</td><td>-9.4%</td><td>-0.6%</td><td>+6.2%</td><td>-10.1%</td><td>2006-10-02†</td><td>+16.2%</td><td>-9.4%</td><td>+15.7%</td><td>-9.9%</td><td>+11.6%</td><td>+22.8%</td><td>26.9</td><td>+10.8%</td><td>-0.6%</td></tr><tr><td>2010</td><td>2010-11-02</td><td>Obama（D）</td><td>R/D</td><td>分裂</td><td>+3.7%</td><td>-19.4%</td><td>-7.9%</td><td>+5.4%</td><td>-19.4%</td><td>2010-10-04†</td><td>-1.2%</td><td>-19.4%</td><td>+4.2%</td><td>-18.7%</td><td>+2.8%</td><td>+2.6%</td><td>21.7</td><td>+7.0%</td><td>-6.6%</td></tr><tr><td>2014</td><td>2014-11-04</td><td>Obama（D）</td><td>R/R</td><td>分裂</td><td>+4.5%</td><td>-12.4%</td><td>-7.2%</td><td>+1.6%</td><td>-12.4%</td><td>2014-10-15†</td><td>+8.7%</td><td>-12.4%</td><td>+11.2%</td><td>-13.6%</td><td>+8.3%</td><td>+13.8%</td><td>26.6</td><td>+8.9%</td><td>-7.4%</td></tr><tr><td>2018</td><td>2018-11-06</td><td>Trump（R）</td><td>D/R</td><td>分裂</td><td>+11.7%</td><td>-16.4%</td><td>-14.7%</td><td>+17.3%</td><td>-16.4%</td><td>2018-10-29†</td><td>+15.0%</td><td>-16.4%</td><td>+14.0%</td><td>-18.2%</td><td>+21.6%</td><td>+17.4%</td><td>30.2</td><td>+3.1%</td><td>-9.9%</td></tr><tr><td>2022</td><td>2022-11-08</td><td>Biden（D）</td><td>R/D</td><td>分裂</td><td>+14.5%</td><td>-10.3%</td><td>-2.1%</td><td>+24.6%</td><td>-10.3%</td><td>2022-10-12</td><td>+21.6%</td><td>-7.8%</td><td>+28.6%</td><td>-12.3%</td><td>+41.4%</td><td>+29.9%</td><td>28.4</td><td>-19.7%</td><td>-25.4%</td></tr><tr><td>2026</td><td>2026-11-03</td><td>Trump（R）</td><td>D/D（AP已判定控制權；席次未全定）</td><td>分裂</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>2026-10-30†</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>40.7（10月）</td><td>+10.6%</td><td>-3.1%</td></tr></tbody></table></div>
+<h2 id="3-反例與路徑風險-用數據看-估">3. 反例與路徑風險（用數據看）<span class="tag tag-gu">【估】</span></h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>屆</th><th>發生了什麼</th></tr></thead><tbody><tr><td><strong>1962</strong></td><td>選前先崩：S&amp;P 年初到選舉日 −18.4%，年內高點到 10 月低點 −24.8%（全年低點在 6/26）。選後窗口① +24.8%。<strong>「選後漲」不代表當年不痛。</strong></td></tr><tr><td><strong>1974</strong></td><td>年內高點到 10/3 低點 −37.6%。選後又下探到相對起點 −13.4%（窗口① MDD −14.1%），12 個月仍 +18.7%。<strong>起點之後還可能再跌一段。</strong></td></tr><tr><td><strong>1986</strong></td><td>唯一接近零的一屆：窗口① +1.1%、MDD −33.2%（窗口內有 1987/10 崩盤）；Nasdaq 窗口① −11.5%、MDD −35.9%。這段期間有效聯邦基金利率 +0.65pp<span class="tag tag-shi">【事 FRED FEDFUNDS 月均】</span>。</td></tr><tr><td><strong>2002</strong></td><td>選後到 2003/3 相對起點 −12.5%，12 個月 +14.9%。</td></tr><tr><td><strong>2010</strong></td><td>窗口③（從 10/4 起算）<strong>−1.2%</strong>，是唯一負值；窗口① 只有 +3.7%、MDD −19.4%。</td></tr><tr><td><strong>2014</strong></td><td>窗口① +4.5%、窗口② +1.6%，報酬偏弱。</td></tr><tr><td><strong>2018</strong></td><td>10 月低點不是全年低點（全年低點在 12/24）。選後相對起點最低 −14.7%、窗口① MDD −16.4%，12 個月仍 +11.7%，窗口② +17.3%。</td></tr><tr><td><strong>2022</strong></td><td>選前 S&amp;P −19.7%（年初到選舉日）；窗口① +14.5%、相對起點最低 −2.1%、MDD −10.3%。這段期間升息約 +1.55pp（FEDFUNDS 2022/11 3.78 → 2023/11 5.33）<span class="tag tag-shi">【事】</span>，報酬仍為正。</td></tr></tbody></table></div>
+<h2 id="4-可能原因-相關不等於因果">4. 可能原因：相關不等於因果</h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>假說</th><th>本稿數據</th><th>判讀</th></tr></thead><tbody><tr><td><strong>總統任期週期</strong></td><td>四段任期年份的同窗口比較，期中年起的窗口都最強（見上表）<span class="tag tag-gu">【估】</span>。文獻：Booth &amp; Booth（2003）發現任期後兩年的報酬較高，而且控制景氣變數後效應仍在（<a href="https://doi.org/10.1016/S1058-3300(02)00061-7" rel="noopener noreferrer" target="_blank">doi:10.1016/S1058-3300(02)00061-7</a>）；Wong &amp; McAleer（2009）發現 1965–2003 年股價在任期第 2 年見底（<a href="https://doi.org/10.1016/j.matcom.2009.05.007" rel="noopener noreferrer" target="_blank">doi:10.1016/j.matcom.2009.05.007</a>）<span class="tag tag-shi">【事：論文摘要】</span>。坎特伯里大學的工作論文用 1954–2017 年 S&amp;P 總報酬，發現期中年 Q4 加上之後兩季「10 次有 9 次」為正，且貨幣與財政政策解釋不了這個效應（<a href="https://ir.canterbury.ac.nz/server/api/core/bitstreams/4fbf79e0-4b52-4fd5-b7b5-e9f54a95de4e/content" rel="noopener noreferrer" target="_blank">連結</a>）<span class="tag tag-shi">【事：摘要；未核同儕審查狀態】</span></td><td>統計規律有文獻支持，但<strong>機制仍有爭議</strong>。Santa-Clara &amp; Valkanov（2003）指出，黨派差異「並不集中在選舉日附近」（<a href="https://doi.org/10.1111/1540-6261.00590" rel="noopener noreferrer" target="_blank">doi:10.1111/1540-6261.00590</a>）</td></tr><tr><td><strong>政策不確定性消除</strong></td><td>本稿沒有直接檢定，沒有用 EPU 指數</td><td><span class="tag tag-jia">【假】</span>說得通，但目前沒有證據</td></tr><tr><td><strong>國會分裂／僵局</strong></td><td>分裂政府 14 屆，窗口①平均 +15.1%；一致政府 5 屆，平均 +15.0%<span class="tag tag-gu">【估】</span></td><td><strong>看不出差異</strong>。樣本也太小，無法分辨</td></tr><tr><td><strong>總統黨派</strong></td><td>民主黨 9 屆平均 +14.7%；共和黨 10 屆平均 +15.5%<span class="tag tag-gu">【估】</span></td><td>看不出差異</td></tr><tr><td><strong>財政刺激時程</strong></td><td>沒有直接檢定。期中年的赤字占 GDP 比率，各屆差異很大：1998 年是 +0.8%（盈餘），2010 年是 −8.6%（窗口① +3.7%），2022 年是 −5.3%（窗口① +14.5%）<span class="tag tag-shi">【事 FRED FYFSGDA188S】</span></td><td><span class="tag tag-jia">【假】</span>無法定論</td></tr><tr><td><strong>聯準會循環</strong></td><td>窗口①期間 FEDFUNDS 上升超過 25bp 的有 8 屆（1954、1958、1962、1978、1986、1994、1998、2022），全部上漲，平均 +17.5%；其餘 10 屆平均 +13.1%。利率變化與報酬的 Spearman ρ=−0.07，p=0.78<span class="tag tag-gu">【估】</span></td><td><strong>「有升息就不適用」這個說法，在樣本內不成立。</strong> 但歷史上的升息多半發生在景氣擴張期（有反向因果），而且起點的估值都遠低於現在</td></tr><tr><td><strong>期中年前段下跌後的均值回歸</strong></td><td>年內高點到 10 月低點的跌幅，與窗口①報酬：S&amp;P Pearson r=−0.20（p=0.42），Nasdaq r=−0.44（p=0.13）。跌幅 ≥15% 的 7 屆，窗口①平均 +19.0%；其餘 11 屆平均 +12.5%<span class="tag tag-gu">【估】</span></td><td>方向符合均值回歸，但<strong>不顯著</strong></td></tr></tbody></table></div>
+<p><strong>方法限制</strong></p>
+<ul><li><strong>樣本小</strong>：S&amp;P 只有 19 屆，Nasdaq 只有 13 屆。</li><li><strong>事後發現</strong>：這個效應是先在歷史資料裡被發現、廣為流傳後，才拿同一批資料來驗證，有資料探勘和多重比較的問題。本稿就做了 6 個窗口檢定。</li><li><strong>窗口③有挑選起點的偏誤</strong>：從 10 月低點起算，事前不可能知道哪天是低點。</li><li><strong>倖存者偏誤</strong>：只看美國這個事後證明最成功的市場；Nasdaq 從 1971 年才開始，也是倖存的指數。</li><li><strong>窗口重疊</strong>：基準組的窗口②約 14 個月，相鄰年份會重疊；窗口③也可能和下一年重疊，觀測值並非完全獨立。期中組彼此相隔 4 年，不會重疊。</li><li><strong>只有價格報酬</strong>：沒有股利，也沒有扣除通膨。</li></ul>
+<h2 id="5-2026-現況對照">5. 2026 現況對照</h2>
+<p><strong>選舉結果（2026/11/3）</strong></p>
+<ul><li>AP 判定民主黨拿下眾議院與參議院的控制權<span class="tag tag-mei">【媒：AP 標題「Democrats win US House and Senate, taking full control of Congress」，AP 頁面原文被 403 擋，取自搜尋摘要】</span>。</li><li><strong>席次（AP 計數，2026-11-14 00:01 美東＝台北 13:01）</strong><span class="tag tag-mei">【媒，二手轉引；未核】</span>：<ul><li>眾議院：民主黨 256、共和黨 169，<strong>10 席未判定【未核】</strong>。</li><li>參議院：民主黨 55（含 2 名獨立派）、共和黨 44，<strong>阿拉斯加 1 席未判定【未核】</strong>。若沒有候選人過半，將於 11/18 進行排序複選計票<span class="tag tag-mei">【媒】</span>。</li></ul></li><li>密西西比參議員選舉，AP 於 11/11 判定民主黨 Colom 勝選；州政府預定 12/3 宣布結果<span class="tag tag-mei">【媒】</span>。</li><li>以上都還不是官方認證結果。新一屆國會 2027-01-03 就任。</li><li><strong>歸類</strong>：共和黨總統對上民主黨國會，屬於<strong>分裂政府</strong><span class="tag tag-gu">【估】</span>。</li></ul>
+<p><strong>市場</strong><span class="tag tag-shi">【事 FRED，只是價格】</span></p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th></th><th>選舉日 11/3 收盤</th><th>11/13 收盤</th><th>選後至今</th><th>選後最大回撤</th><th>10 月低點</th><th>距年內高點（10/6）</th></tr></thead><tbody><tr><td>S&amp;P 500</td><td>7,568.92</td><td>7,561.67</td><td>−0.1%</td><td>−4.4%（11/4 7,688.62 → 11/5 7,353.73）</td><td>10/30 7,580.07（11/13 已低於它 −0.2%）</td><td>−3.3%（高點 7,818.93）</td></tr><tr><td>Nasdaq</td><td>25,372.01</td><td>25,136.27</td><td>−0.9%</td><td>−5.5%</td><td>10/30 25,437.00（11/13 已低於它 −1.2%）</td><td>−8.9%（高點 27,599.89）</td></tr></tbody></table></div>
+<ul><li>年初到選舉日：S&amp;P +10.6%、Nasdaq +9.2%。S&amp;P 年內高點到 10 月低點只跌 −3.1%（全年低點在 3/30）。</li><li><strong>代表 2026 年沒有「期中年前段大跌」可以回歸</strong>：選前上漲的 9 屆，S&amp;P 窗口①平均 +12.6%、中位數 +11.1%，比全樣本低<span class="tag tag-gu">【估】</span>。</li></ul>
+<p><strong>利率</strong></p>
+<ul><li>10 年期公債：Treasury 面值殖利率 <strong>11/13 為 5.15%</strong>，11/12 為 5.10%，選舉日 11/3 為 4.95%<span class="tag tag-shi">【事 Treasury Daily Par Yield Curve】</span>。FRED DGS10 最新值是 11/12 的 5.10%；取數時 11/13 尚未更新<span class="tag tag-shi">【事】</span>。CEO 說的「約 5.1%」對應 11/12 的數字，最新值是 5.15%。</li><li>聯邦基金目標區間 3.75–4.00%<span class="tag tag-shi">【事，FOMC 10/28】</span>。FEDFUNDS 10 月月均 3.88%<span class="tag tag-shi">【事】</span>。</li></ul>
+<p><strong>FedWatch</strong><span class="tag tag-shi">【事；CME FedWatch 公開頁，資料時間 2026-11-15 03:35:16 CT＝台北 11/15 17:35:16，11/13 為前一交易日；這是市場定價，不是官方決議，也不是必然的預測】</span></p>
+<p>12/9 FOMC：ZQZ6 中價 95.9250，目前區間 3.75–4.00%。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>結果</th><th>11/15</th><th>11/13</th><th>11/9</th><th>11/6</th><th>10/15</th></tr></thead><tbody><tr><td>不變</td><td>0.0%</td><td>0.0%</td><td>16.0%</td><td>23.7%</td><td>10.7%</td></tr><tr><td>+25bp（4.00–4.25%）</td><td>88.5%</td><td>88.5%</td><td>84.0%</td><td>76.3%</td><td>65.7%</td></tr><tr><td>+50bp（4.25–4.50%）</td><td>11.5%</td><td>11.5%</td><td>0.0%</td><td>0</td><td>23.6%</td></tr><tr><td>降息</td><td>0.0%</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+<ul><li>之後各次會議最可能的區間：2027/1/27 為 4.25–4.50%（68.1%）；3/17 為 4.50–4.75%（49.9%）；4/28 為 4.50–4.75%（45.2%）；6/9 為 4.50–4.75%（37.5%）；7/28 為 4.50–4.75%（34.4%）；9/15 為 4.75–5.00%（32.6%）；11/17 為 4.50–4.75%（31.8%）。表上最後一次會議是 2027/11/17，沒有列出 2027/12。</li><li>和 11/9 版本相比，市場已經不再定價「不變」，並開始定價 +50bp。</li></ul>
+<p><strong>估值</strong></p>
+<ul><li>Shiller CAPE：<strong>2026/10 為 40.7</strong><span class="tag tag-shi">【事 Shiller ie_data；11/15 重新下載，和 11/14 的檔案完全相同，最新月份是 2026/10】</span>。</li><li>歷屆期中選舉當年 11 月的 CAPE 介於 8.3（1982）到 37.4（1998），<strong>2026 年高於全部樣本</strong>。</li><li>「CAPE 盈餘殖利率（1/CAPE）減 Shiller GS10」：2026 年為 −2.8pp。歷史上更低的只有 1994 年（−3.0pp），而 1994 那屆窗口① +27.1%。這個差距與窗口①報酬的 Spearman ρ=−0.10，p=0.68<span class="tag tag-gu">【估】</span>。<strong>估值在樣本內沒有預測力</strong>，但這不代表在樣本外的極端值也沒有影響<span class="tag tag-jia">【假】</span>。</li></ul>
+<p><strong>財政</strong></p>
+<ul><li>FY2026 赤字約占 GDP 6.2%<span class="tag tag-gu">【估；取自 AI 週期稿，該稿的來源是 Treasury MTS 經 FRED】</span>。期中年赤字比這更大的只有 2010 年（−8.6%）。</li></ul>
+<p><strong>與 AI 週期稿「約 1998–1999 年下半年」的銜接</strong><span class="tag tag-jia">【假】</span></p>
+<ul><li>最接近的期中樣本是 1998 年：CAPE 37.4，窗口① +22.0%，窗口② +32.3%（Nasdaq +127.5%），但這兩個窗口都在 2000/3 頂點之前結束。</li><li>1998 年秋季聯準會連續降息：FEDFUNDS 從 9 月 5.51% 降到 12 月 4.68%，1999 年 6 月後才回頭升息<span class="tag tag-shi">【事 FRED】</span>。現在則是升息定價 100%。</li><li>如果現在對應的是 1999 年下半年，而不是 1998 年，那麼未來 12 個月的窗口可能包含類似 2000 年的頂點和轉折。歷史平均裡<strong>沒有這種「週期晚段的期中」樣本</strong>。</li></ul>
+<p><strong>歷史平均為什麼可能不適用（重點）</strong><span class="tag tag-gu">【估／假】</span></p>
+<ol><li><strong>估值起點在樣本外</strong>：CAPE 40.7，19 屆的最高也只有 37.4。</li><li><strong>政策方向相反</strong>：多數期中年後，聯準會是在降息，或從低利率起步升息；現在是 3.75–4.00% 加上 10 年期 5.15%，而且還在定價升息。不過樣本內「升息屆」也都上漲，所以這點只能當作風險，不能當作結論。</li><li><strong>沒有前段下跌可以回歸</strong>：2026 年選前反而是上漲。</li><li><strong>財政赤字大、長天期公債供給多</strong>：長端利率壓力比政策利率更直接（見 AI 週期稿）。</li><li><strong>AI 資本支出集中</strong>：指數的漲跌更依賴少數權值股的財報和資本支出指引，例如 NVDA 11/18（台北 05:20）的財報。這屬於個別事件風險，不是選舉週期能解釋的。</li></ol>
+<h2 id="6-情境-不給點位-假">6. 情境（不給點位）<span class="tag tag-jia">【假】</span></h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>情境</th><th>條件</th><th>歷史對照</th><th>推翻／轉換條件</th></tr></thead><tbody><tr><td><strong>基準</strong></td><td>12/9 升息 25bp（符合市場定價）；10 年期維持在約 4.9–5.3%；NVDA 財報與 2027 資本支出指引沒有下修</td><td>歷史規律部分適用。窗口內回檔的尺度可參考歷史 MDD 中位數約 −10%</td><td>10 年期站上約 5.5%，或 FedWatch 2027 年的路徑再上移 → 轉偏鷹。通膨降溫、FedWatch 重新定價「不變」→ 轉偏鴿</td></tr><tr><td><strong>偏鷹</strong></td><td>升息 50bp，或釋放連續升息的訊號；長端利率續升；高估值被壓縮</td><td>1986–87 年：利率走高加上估值擴張，窗口內崩盤（MDD −33%）</td><td>長端利率回落、信用利差收斂</td></tr><tr><td><strong>偏鴿</strong></td><td>通膨數據降溫，Fed 暗示暫停；10 年期回到 4.8% 以下；AI 資本支出指引延續</td><td>1998 年型態（但當時是降息）</td><td>資本支出下修、營收減速，或 CAPE 從 40 以上回落時伴隨盈餘下修 → 轉向「2000–01 年型態」</td></tr></tbody></table></div>
+<p><strong>整體推翻條件</strong>（任何一項出現，都應該把「期中後偏多」的歷史先驗權重降到接近零）<span class="tag tag-jia">【假】</span>：</p>
+<ul><li>12/9 實際升息 50bp，或點陣圖上移。</li><li>10 年期持續高於約 5.5%。</li><li>四大雲端 2027 年資本支出指引出現下修。</li><li>NVDA 財報或指引低於市場共識。</li><li>高收益債利差明顯擴大。</li></ul>
+<h2 id="7-資料來源-交叉核對與缺口">7. 資料來源、交叉核對與缺口</h2>
+<p><strong>資料來源</strong>（取數時間都是台北 2026-11-15）</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>資料</th><th>來源</th><th>取數時間</th><th>說明</th></tr></thead><tbody><tr><td>S&amp;P 500 日收盤，1950-01-03～2016-11-11</td><td>第三方公開鏡像，原始為 Yahoo Finance ^GSPC：①<a href="https://gist.github.com/laughinghan/b4b8993b805945f2368e6d182e8cf8fe" rel="noopener noreferrer" target="_blank">gist laughinghan</a>（1927～2021-02-05）；②<a href="https://datayyy.com/data_csv/gspcDaily.csv" rel="noopener noreferrer" target="_blank">datayyy gspcDaily.csv</a>（1950～2019-05-07）</td><td>17:49</td><td>【未核：非指數公司一手資料】</td></tr><tr><td>S&amp;P 500 日收盤，2016-11-14～2026-11-13</td><td><a href="https://fred.stlouisfed.org/series/SP500" rel="noopener noreferrer" target="_blank">FRED SP500</a></td><td>17:48</td><td>與數據專員的檔案逐列相同</td></tr><tr><td>Nasdaq Composite</td><td><a href="https://fred.stlouisfed.org/series/NASDAQCOM" rel="noopener noreferrer" target="_blank">FRED NASDAQCOM</a>，1971-02-05～2026-11-13</td><td>17:48</td><td>數據專員檔案 17:49 取，與我方取數逐列相同。2019-04-19（NYSE 休市）照 FRED 原樣保留，對窗口幾乎沒有影響</td></tr><tr><td>10 年期公債</td><td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026" rel="noopener noreferrer" target="_blank">Treasury Daily Par Yield</a>、<a href="https://fred.stlouisfed.org/series/DGS10" rel="noopener noreferrer" target="_blank">FRED DGS10</a></td><td>—</td><td></td></tr><tr><td>有效聯邦基金利率</td><td><a href="https://fred.stlouisfed.org/series/FEDFUNDS" rel="noopener noreferrer" target="_blank">FRED FEDFUNDS</a></td><td>—</td><td></td></tr><tr><td>財政收支占 GDP</td><td>FRED FYFSGDA188S</td><td>—</td><td></td></tr><tr><td>CAPE、GS10</td><td><a href="https://shillerdata.com/" rel="noopener noreferrer" target="_blank">Shiller ie_data.xls</a></td><td>17:50</td><td></td></tr><tr><td>眾議院黨派</td><td><a href="https://history.house.gov/Institution/Party-Divisions/Party-Divisions/" rel="noopener noreferrer" target="_blank">House History, Party Divisions</a></td><td>—</td><td></td></tr><tr><td>參議院黨派</td><td><a href="https://www.senate.gov/about/parties-leadership/party-division.shtml" rel="noopener noreferrer" target="_blank">Senate Party Division</a></td><td>—</td><td>舊網址 /history/partydiv.htm 用 curl 取時回 403，改用 WebFetch 取得新頁</td></tr><tr><td>選舉日規則</td><td>11 月第一個週一之後的週二，2 U.S.C. §7（<a href="https://www.law.cornell.edu/uscode/text/2/7" rel="noopener noreferrer" target="_blank">LII</a>）</td><td>—</td><td>各年日期是依規則推算<span class="tag tag-gu">【估】</span></td></tr><tr><td>2026 選舉</td><td>AP（apnews.com）。頁面用 curl 取時回 403，沒有繞過；內容取自搜尋摘要與轉引 AP 計數的網站</td><td>—</td><td><span class="tag tag-mei">【媒】</span></td></tr></tbody></table></div>
+<p><strong>交叉核對</strong><span class="tag tag-gu">【估】</span></p>
+<ul><li><strong>兩個鏡像互比</strong>：1950-01-03～2019-05-07 共 17,448 日，數值完全相同，交易日集合也相同。但兩者很可能同樣源自 Yahoo，<strong>不算獨立的來源</strong>。</li><li><strong>鏡像對 FRED SP500</strong>：2016-11-14～2021-02-05 共 1,064 日，最大相對差 0.036%（2019-08-12：2,882.70 對 2,883.75），只有這一日差距超過 0.01%。</li><li><strong>日線月均對 Shiller 月均價 P</strong>：1950/01～2026/10 共 922 個月，相對差的中位數是 0.001%，只有 1974-07 一個月超過 0.5%（4.4%，應是 Shiller 該月的數值問題，不在任何窗口內）。</li><li><strong>抽樣日期</strong>：1962-11-05（58.35）、1974-11-05（75.11）、1994-11-08（465.65）、2002-11-05（915.39）三個來源可比的都一致；2018-11-06 鏡像 2,755.45 對 FRED 2,755.45。</li><li><strong>數據專員檔案</strong>（<code>from-data-specialist/</code>）：與我方取得的 FRED SP500、NASDAQCOM 逐列相同，最大差 0。</li></ul>
+<p><strong>資料缺口</strong></p>
+<ul><li>1950–2016 年沒有取得指數公司的一手日線：S&amp;P DJI 只提供約 10 年；Stooq 回傳 JavaScript 工作量證明驗證頁，未繞過；WSJ 下載回傳空檔。所以這段改用第三方鏡像，並以 Shiller 月資料佐證。</li><li>2026 選舉席次未全定，AP 原頁也沒有直接取得。</li><li>沒有政策不確定性（EPU）的檢定。</li><li>沒有總報酬與實質報酬版本。</li><li>沒有做 1950 年以前的樣本。</li></ul>
+<p><strong>授權</strong>：S&amp;P 500 與 Nasdaq 指數資料的版權分屬 S&amp;P Dow Jones Indices LLC 和 Nasdaq。資料只供內部研究，原始檔不轉發。</p>
+<p><strong>檔案</strong>（<code>/workspace/cross-sector-screen/midterm-election-20261115/</code>）</p>
+<ul><li>計算腳本：<code>midterm_analysis.py</code>（主計算）、<code>supplement.py</code>（CAPE、殖利率與交叉核對）、<code>build_tables.py</code>（產生表格）</li><li>逐屆與基準結果：<code>midterm_by_year.csv</code>、<code>nonmidterm_baseline_by_year.csv</code>、<code>midterm_cape_rates.csv</code></li><li>計算輸出：<code>calc_output.json</code>、<code>supplement_output.json</code></li><li>拼接後的 S&amp;P 日線：<code>sp500_daily_spliced.csv</code>（內部用）</li><li>原始取數：<code>raw/</code></li></ul>
+    </article>
+    <nav class="other"><h2>其他研究報告</h2><ul><li><a href="ai-disruption-20261123.html">AI 時代產業金流轉移</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="agentic-commerce-20261123.html">Agent 消費端口的受益者</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="spacex-tsla-cashflow-20261117.html">SpaceX／Tesla 現金流與 Terafab</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="ai-apps-shop-20261117.html">AI 應用：SHOP 與初選 12 檔</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="hyperscalers-4-20261117.html">四大雲：MSFT、AMZN、META、ORCL</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="midterm-entry-timing-20261116.html">期中選後進場時點</a>　<span class="meta" style="display:inline">2026-11-16</span></li></ul></nav>
+    <p class="foot">來源檔只作內部研究底稿。本頁為已審正文的網頁版，不是交易授權。</p>
+  </main>
+  <script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function label(t){ if(btn) btn.textContent = t === "dark" ? "切換淺色" : "切換深色"; }
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    try { localStorage.setItem("watchlist-theme", t); } catch(e) {}
+    label(t);
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("watchlist-theme"); } catch(e) {}
+  var prefer = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply((saved === "dark" || saved === "light") ? saved : (prefer ? "dark" : "light"));
+  if (btn) btn.addEventListener("click", function(){
+    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>
