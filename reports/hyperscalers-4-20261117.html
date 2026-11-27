@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>四大雲加入看板：MSFT、AMZN、META、ORCL　關注持股看板</title>
+  <style>
+:root {
+  --bg: #f3f0e8;
+  --bg-elev: #fffcf6;
+  --sidebar: #faf7f0;
+  --line: rgba(28, 36, 48, 0.12);
+  --text: #152033;
+  --muted: #5c6b80;
+  --faint: #8a97a8;
+  --accent: #0f6e68;
+  --accent-soft: rgba(15, 110, 104, 0.12);
+  --chip: #e8f4f2;
+  --shadow: 0 10px 30px rgba(21, 32, 51, 0.08);
+  --radius: 16px;
+}
+[data-theme="dark"] {
+  --bg: #0c111b;
+  --bg-elev: #151c29;
+  --sidebar: #101826;
+  --line: rgba(210, 222, 238, 0.1);
+  --text: #e9eef6;
+  --muted: #9aa8bb;
+  --faint: #738196;
+  --accent: #5ee0d0;
+  --accent-soft: rgba(94, 224, 208, 0.12);
+  --chip: #1b2738;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 19px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+.top {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+}
+.top-inner {
+  max-width: 52rem; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.brand-link {
+  font-weight: 750; text-decoration: none; color: var(--text);
+  font-size: 16px;
+}
+.brand-link:hover { color: var(--accent); }
+.top .spacer { flex: 1; }
+.ghost {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+}
+.ghost:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 24px 20px 64px; }
+.kicker { color: var(--faint); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 31px; letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 24px; letter-spacing: -0.02em; margin: 2em 0 0.6em; }
+h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+h4, h5, h6 { font-size: 18px; margin: 1.4em 0 0.4em; }
+.disclaimer {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+article p { margin: 0.7em 0; }
+article ul, article ol { margin: 0.5em 0 0.8em; padding-left: 1.4em; }
+article li { margin: 0.25em 0; }
+article li > ul, article li > ol { margin: 0.2em 0 0.3em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+blockquote {
+  margin: 1em 0;
+  padding: 8px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+}
+blockquote p { margin: 0.4em 0; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--chip);
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  overflow-wrap: anywhere; word-break: normal;
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 1.4em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elev);
+  max-width: 100%;
+}
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+table {
+  border-collapse: collapse;
+  min-width: 36em;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
+  background: color-mix(in srgb, var(--bg) 55%, var(--bg-elev));
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+.other {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.other h2 { margin-top: 0; font-size: 20px; }
+.other ul { padding-left: 1.2em; }
+.foot {
+  margin-top: 36px;
+  color: var(--faint);
+  font-size: 15px;
+}
+@media (max-width: 720px) {
+  html, body { font-size: 17px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  .wrap { padding: 18px 16px 48px; }
+  .top { padding: 10px 16px; }
+  table { font-size: 15px; min-width: 40em; }
+  th, td { padding: 8px 9px; }
+}
+@media print {
+  .top { position: static; }
+  .ghost { display: none; }
+  body { background: #fff; color: #111; }
+}
+.tag {
+  font-size: 0.86em;
+  font-weight: 700;
+  padding: 0.05em 0.32em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.tag-shi { color: var(--accent); background: var(--accent-soft); }
+.tag-si { color: var(--muted); background: var(--chip); }
+.tag-gu { color: var(--muted); background: var(--chip); }
+.tag-tui { color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.tag-jia { color: var(--muted); background: var(--chip); }
+.tag-mei { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, var(--bg-elev)); }
+.tag-zan { color: var(--muted); background: var(--chip); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand-link" href="../index.html">← 關注持股看板</a>
+      <div class="spacer"></div>
+      <button class="ghost" id="themeBtn" type="button" aria-label="切換主題">切換深淺色</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">研究報告　2026-11-17　台北時間</p>
+    <p class="disclaimer">僅供陳煒川本人自用。研究用途，不是下單指令，不承諾報酬。文中價格與報酬若未另註，為拆股調整價格指數，不是官方收盤，也不是含息總報酬。若引用 Massive 日線，屬延遲／非官方報價，不是交易所官方收盤。本頁只公開已審報告正文，不含原始指數數列或內部計算檔。</p>
+    <article>
+      <h1 id="四大雲加入看板-msft-amzn-meta-orcl-2026-11-17">四大雲加入看板：MSFT、AMZN、META、ORCL（2026-11-17）</h1>
+<p>負責人：AI 晶片研究員｜研究基準：2026-11-17（Asia/Taipei）。只做研究、供使用者本人自用，不交易、不下單、不開付費資料或新 connector、不建排程。結論是條件式判斷，<strong>不是「現在買」或「現在賣」的指令</strong>，也不承諾報酬。</p>
+<p>標籤：<span class="tag tag-shi">【事】</span>一手可核｜<span class="tag tag-gu">【估】</span>由一手或已標示共識數字推算｜<span class="tag tag-jia">【假】</span>研究假設｜<span class="tag tag-mei">【媒】</span>僅媒體，不當事實｜【未核】本輪未取得一手。</p>
+<hr>
+<h2 id="0-結論先行">0. 結論先行</h2>
+<p>四檔本輪皆為 <strong>觀望</strong>。沒有一檔同時滿足「基本面支持 ＋ 收盤重新站上重算後的 SMA20 且量比 ≥1.0×（1.0× 為<span class="tag tag-jia">【假】</span>）＋ 無否決」。也沒有一檔構成本框架下的基本面否決，或「收盤跌破近期 20 日低且放量」的價量否決。不是買進或賣出指令。</p>
+<p>相對位置（皆<span class="tag tag-gu">【估】</span>，非配置建議）：MSFT 的雲增速與 capex 後 FCF 仍為四檔中較穩的一組；AMZN 的 AWS 增速最強，但單季 FCF 大幅為負；META 廣告仍增，但法定費用與資本支出使 FCF 轉負，且已跌破 SMA50／60；ORCL 訂單儲備規模大，但認列偏後、槓桿與增資壓力最高，距 6 月高點已大幅回撤。</p>
+<p>週期對照：沿用總體經濟研究員「AI 週期約網路 1998–99、尚未到 2000–01」的判斷，不重做總經。本輪重算後，四大雲（MSFT＋GOOG＋AMZN＋META）最近一季調和後 capex 後 FCF 仍為負，約 <strong>−250 億美元</strong><span class="tag tag-gu">【估】</span>，與前稿「合計為負」一致，並未改寫階段判斷。含 ORCL 後更負，但 ORCL 財季截止日不同，不得與四大雲直接加總後當成同一時點。</p>
+<p>利率背景沿用 <code>midterm-entry-timing-20261116.md</code>：十年期約 <strong>5.15%</strong>（2026-11-13）；CME FedWatch 於 2026-11-15 03:35 CT（台北 11/15 17:35）顯示 12/9 升息約 88.5% 為 +25bp、11.5% 為 +50bp、0% 維持；11/16 重查失敗，未更新。NVDA FY27 Q3 預計台北 11/18 05:20 公布，屬共同事件風險。</p>
+<h3 id="看板一句話-每檔-40-字">看板一句話（每檔 ≤40 字）</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>代號</th><th>看板一句話</th><th>字數</th></tr></thead><tbody><tr><td>MSFT</td><td>雲與Azure增速仍高，FCF維持正值，但資本支出續升，先觀望。</td><td>32</td></tr><tr><td>AMZN</td><td>AWS近五年最快，年度資本支出約2,200億，季度FCF大幅為負，先觀望。</td><td>37</td></tr><tr><td>META</td><td>廣告仍增，但法定費用與資本支出使FCF轉負，先觀望。</td><td>26</td></tr><tr><td>ORCL</td><td>訂單儲備大但認列偏後，已大幅舉債增資且FCF為負，先觀望。</td><td>29</td></tr></tbody></table></div>
+<hr>
+<h2 id="1-口徑與限制-全文共用">1. 口徑與限制（全文共用）</h2>
+<h3 id="1-1-現價-均線與量能">1.1 現價、均線與量能</h3>
+<p>只引用數據專員 <code>/workspace/cross-sector-screen/hyperscalers-prices-20261117.md</code>（及 <code>.json</code>）。取數台北 2026-11-17 11:12–11:15（ORCL 為同日 11:15 另輪）。<strong>本稿未自行取價，也未使用 Yahoo 頁面上的收盤價作為本益比分子</strong>（Yahoo 分析頁於 2026-11-17 擷取時亦顯示 11/16 收盤，數字碰巧相同，仍不以該頁為價格來源）。</p>
+<ul><li>最新可用完整日為美東 <strong>2026-11-16</strong>。數據專員註明：該日 bar 出現早於慣常時點，API status 為 <strong>DELAYED</strong>；量與成交筆數和前 20 日同量級，看起來是完整一天，但<strong>無法確認 Massive 已定稿</strong>，之後重取可能略有不同。</li><li>來源為 Massive Stocks Basic，<code>adjusted=true</code>：<strong>拆股調整日線聚合，不是官方 regular-session close，也不是含息總報酬</strong>；成交量調整算法未獨立驗證。股數與市值未標資料日期，本稿不拿來算估值。</li><li>SMA 為含末日的收盤算術平均。距均線% = (收盤／SMA − 1) × 100。量比 a＝當日量 ÷ 含當日 20 日均量；本稿觸發條件用 a。</li><li>波段高低點採數據專員客觀 pivot（近 120 日、左右各 5 根、反向至少 5%）。<strong>檔中只列價位</strong>；下文若稱壓力或支撐，均為本研究判斷，標<span class="tag tag-gu">【估】</span>。</li></ul>
+<h3 id="1-2-本益比">1.2 本益比</h3>
+<p>免費來源本輪<strong>未取得</strong>獨立標示的 NTM（未來 12 個月）共識 EPS，故不自行拼接四季估測充當官方 NTM。</p>
+<blockquote><p>trailing PE ＝ 數據專員收盤價 ÷ 最近四季 GAAP 稀釋 EPS（以公司 10-Q／10-K 單季數字加總，標<span class="tag tag-gu">【估】</span>）</p>
+<p>forward PE（指定財年）＝ 數據專員收盤價 ÷ Yahoo Finance Analysis 頁該財年共識平均 EPS<span class="tag tag-gu">【估】</span></p></blockquote>
+<p>Yahoo 分析頁擷取於 <strong>2026-11-17</strong>（頁面顯示美東 11/16 收盤，不把該時刻寫成台北發布時間）。對照「Earnings History / Actual」：</p>
+<ul><li>AMZN、META 的 Actual 對得上公司 GAAP EPS，故這兩檔 Yahoo 平均 EPS 較接近 <strong>GAAP</strong><span class="tag tag-gu">【估】</span>。</li><li>MSFT Q1 FY27 Actual 4.89，對得上公司非 GAAP（剔除 OpenAI 相關）EPS 4.89，不是 GAAP 4.92；「Year Ago EPS」17.28 也低於 FY26 GAAP 17.95。ORCL 各季 Actual（2.26／1.79／2.11／1.92）對得上公司非 GAAP，不是 GAAP。故 <strong>MSFT、ORCL 的 forward PE 宜視為非 GAAP／調整後口徑</strong><span class="tag tag-gu">【估】</span>。</li></ul>
+<p>免費來源本輪<strong>未編成</strong>與本稿同口徑的歷史遠期本益比區間，不引用來路不明的「歷史區間」。此為資料缺口。</p>
+<p>財年截止<span class="tag tag-shi">【事】</span>：MSFT 約 6 月 30 日；ORCL 約 5 月 31 日；AMZN、META（及僅入四大雲合計的 GOOG）為曆年 12 月 31 日。</p>
+<h3 id="1-3-資本支出與自由現金流口徑-不可直接相加後不標註">1.3 資本支出與自由現金流口徑（不可直接相加後不標註）</h3>
+<p>各公司「資本支出」與「FCF」定義不同：</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>公司</th><th>capex 公司常用口徑</th><th>FCF 公司常用口徑</th><th>本稿調和列</th></tr></thead><tbody><tr><td>MSFT</td><td>管理層 capex＝現金 PP&amp;E ＋ 開始確認的融資租賃本金（Q1 FY27 為 452 億，含融資租賃 74 億）</td><td>營業現金流 − 現金 PP&amp;E（<strong>不扣</strong>新增長期融資租賃本金）；Q1 官方約 186 億</td><td>現金 PP&amp;E 393.67 億</td></tr><tr><td>GOOG</td><td>現金 PP&amp;E，不含租賃</td><td>營業現金流 − 現金 PP&amp;E</td><td>現金 PP&amp;E 513.55 億</td></tr><tr><td>AMZN</td><td>「現金資本支出」＝購置 PP&amp;E − 出售所得；融資租賃另外列示</td><td>營業現金流 − 淨 PP&amp;E</td><td>淨 PP&amp;E 758.78 億</td></tr><tr><td>META</td><td>capex <strong>含</strong>融資租賃本金（Q3 349.1 億＝PP&amp;E 339.42 億＋本金 9.64 億）</td><td>營業現金流 − PP&amp;E − 融資租賃本金</td><td>為便於加總，調和列只用現金 PP&amp;E 339.42 億</td></tr><tr><td>ORCL</td><td>GAAP 購置 PP&amp;E；另列「扣短期 capex 融資與具重大融資成分客戶預付款後的淨現金支出」</td><td>營業現金流 − GAAP capex</td><td>單獨列示，財季截止 8/31，不與 9/30 四季直接混成同一時點</td></tr></tbody></table></div>
+<p>Microsoft 10-Q 本期新增經營租賃 ROU 與法說會「融資租賃 74 億」不是同一科目，不強行勾稽。</p>
+<h3 id="1-4-三選一口徑-沿用既有框架">1.4 三選一口徑（沿用既有框架）</h3>
+<ul><li><strong>符合條件才分批</strong>：須基本面支持 ＋ 收盤重新站上重算後的 SMA20，且量比 a ≥1.0×（此閾值為<span class="tag tag-jia">【假】</span>）＋ 無否決。不是「現在買」。</li><li><strong>不建議</strong>：基本面否決，或收盤跌破近期 20 日低（本稿用數據專員「前 20 日低、不含當日」）且放量。是現階段判斷，不是賣出指令。</li><li><strong>觀望</strong>：其餘。</li></ul>
+<hr>
+<h2 id="2-總表">2. 總表</h2>
+<p>價格、均線、量比皆為美東 2026-11-16、數據專員檔<span class="tag tag-shi">【事】</span>；本益比與部分成長率為<span class="tag tag-gu">【估】</span>。前 20 日低不含當日。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>代號</th><th>收盤</th><th>距 SMA20／50／60</th><th>量比 a</th><th>前 20 日低</th><th>trailing PE</th><th>Forward PE</th><th>最近一季重點</th><th>三選一</th></tr></thead><tbody><tr><td>MSFT</td><td>517.99</td><td>−2.01%／−0.26%／+0.33%</td><td>1.14×</td><td>504.96</td><td>27.05×</td><td>FY27 25.89×；FY28 21.40×</td><td>Azure +48%；管理層 capex 452 億；公司 FCF 仍正 186 億</td><td><strong>觀望</strong></td></tr><tr><td>AMZN</td><td>257.75</td><td>+0.25%／+1.16%／+0.86%</td><td>0.97×</td><td>229.36</td><td>20.84×</td><td>FY26 20.14×；FY27 24.11×</td><td>AWS +39.3%；2026 現金 capex 仍約 2,200 億；單季 FCF 約 −335 億</td><td><strong>觀望</strong></td></tr><tr><td>META</td><td>626.41</td><td>−1.06%／−7.88%／−5.63%</td><td>0.49×</td><td>583.80</td><td>21.36×</td><td>FY26 21.55×；FY27 18.48×</td><td>廣告 +26%；法定費用 98.9 億；官方 FCF −21.2 億</td><td><strong>觀望</strong></td></tr><tr><td>ORCL</td><td>119.09</td><td>−5.54%／−12.35%／−13.72%</td><td>0.48×</td><td>109.21</td><td>18.67×（GAAP）</td><td>FY27 14.61×；FY28 10.77×（Yahoo 偏非 GAAP）</td><td>IaaS +121%；RPO 6,640 億、12 個月內約認列 13%；Q1 FCF −54 億</td><td><strong>觀望</strong></td></tr></tbody></table></div>
+<p>AMZN 收盤略高於 SMA20，但量比 a 0.97×，未達「站上且量比 ≥1.0×」的升級門檻。MSFT、META、ORCL 收盤均在 SMA20 之下。四檔收盤都高於前 20 日低；META、ORCL 當日量能偏弱，不構成「跌破 20 日低且放量」。</p>
+<hr>
+<h2 id="3-四大雲-fcf-合計與週期對照">3. 四大雲 FCF 合計與週期對照</h2>
+<p>比較對象沿用前稿：最近一季盡量對齊至 2026-09-30（MSFT FY27 Q1、GOOG／AMZN／META 2026Q3）。數字單位十億美元。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>項目</th><th>MSFT</th><th>GOOG</th><th>AMZN</th><th>META</th><th>四大雲合計</th></tr></thead><tbody><tr><td>營業現金流</td><td>58.000</td><td>42.290</td><td>42.422</td><td>32.786</td><td>175.498</td></tr><tr><td>調和現金 capex</td><td>39.367</td><td>51.355</td><td>75.878（淨額）</td><td>33.942</td><td>200.542</td></tr><tr><td>調和 FCF</td><td>+18.633</td><td>−9.065</td><td>−33.456</td><td>−1.156</td><td><strong>−25.044</strong></td></tr><tr><td>capex／OCF</td><td>67.9%</td><td>121.4%</td><td>178.9%</td><td>103.5%</td><td><strong>114.3%</strong></td></tr><tr><td>公司定義 FCF</td><td>+18.6（約，扣現金 PP&amp;E）</td><td>−9.065</td><td>−33.456（本列按同式）</td><td>−2.120（含租賃本金）</td><td><strong>約 −26.0</strong></td></tr></tbody></table></div>
+<p>以上除「合計、比率、AMZN／META 單季公司定義差額」為<span class="tag tag-gu">【估】</span>外，單項取自各公司 2026 年 10 月財報／10-Q<span class="tag tag-shi">【事】</span>。AMZN 官方另給 <strong>TTM</strong> 營業現金流 1,683 億、TTM FCF 流出 424 億（淨 PP&amp;E 2,106.57 億）<span class="tag tag-shi">【事】</span>，與上表單季不同，不可混讀。</p>
+<p>對照 <code>ai-cycle-stage-20261114.md</code> 前估值約 −264 億：該稿對 AMZN 用購置 PP&amp;E 總額（未扣出售所得約 13.8 億）。本輪改用淨額後，調和合計約 <strong>−250 億</strong>，符號不變。若改用 MSFT 管理層 capex 452 億，則微軟單季公司定義 FCF 不能再寫 186 億，兩種口徑須分列，不混成一個未標註總數。</p>
+<p><strong>含 ORCL：</strong> ORCL FY27 Q1（至 2026-08-31）GAAP FCF <strong>−53.96 億</strong>（OCF 231.03 億 − capex 284.99 億）<span class="tag tag-shi">【事】</span>。若只是為了列示而相加，調和四大雲 −250 億再加 ORCL 約 <strong>−304 億</strong><span class="tag tag-gu">【估】</span>，但截止日相差一個月，<strong>不是同一時點的五家合計</strong>。ORCL 另列扣短期 capex 融資（淨流出 8.30 億）與具重大融資成分客戶預付款（流入 113.63 億）後的淨現金支出 179.66 億<span class="tag tag-shi">【事】</span>，與 GAAP FCF 不同。</p>
+<p>結論：四大雲最近一季 capex 仍高於營業現金流，合計 FCF 為負，與「仍偏基建投入期、類比約 1998–99 而非已進入 2000–01 收割期」的前稿方向一致。這不構成單一公司的自動否決，也不證明投入必然回收。</p>
+<hr>
+<h2 id="4-msft-microsoft">4. MSFT（Microsoft）</h2>
+<p>看板：雲與Azure增速仍高，FCF維持正值，但資本支出續升，先觀望。</p>
+<h3 id="4-1-三選一與觸發">4.1 三選一與觸發</h3>
+<p><strong>觀望。</strong> Azure 與雲業務增速、單季 FCF 仍正，基本面並非否決；但收盤 517.99 低於 SMA20 528.61（−2.01%），升級所需「重新站上 SMA20 且量比 ≥1.0×」未成立。當日量比 1.14×，收盤仍高於前 20 日低 504.96，不構成放量跌破。</p>
+<ul><li><strong>升級至「符合條件才分批」</strong><span class="tag tag-jia">【假／條件】</span>：收盤重新站上重算後 SMA20，且量比 a ≥1.0×；同時下一季仍維持雲／Azure 增速與「FY27 FCF 維持正值」的公司表述，且無新的基本面否決。利率端：十年期若自 5.15% 再明顯走升、或 12/9 實際路徑明顯超出當時定價，須重新評估，不自動升級。</li><li><strong>降級至「不建議」</strong>：收盤跌破前 20 日低（目前參考 504.96，觸發時須重算）且放量；或公司下修雲指引、改口 FY27 FCF 轉負、或出現足以否定回收邏輯的監管／客戶事件。</li></ul>
+<h3 id="4-2-ai-capex-與自研晶片">4.2 AI capex 與自研晶片</h3>
+<p>FY27 Q1（至 2026-09-30）管理層 capex <strong>452 億</strong>，含融資租賃 <strong>74 億</strong>；現金 PP&amp;E <strong>393.67 億</strong>，年增 103.0%<span class="tag tag-gu">【估】</span>。對上年同期法說會管理層 capex 349 億，約 +29.5%<span class="tag tag-gu">【估】</span>。<span class="tag tag-shi">【事】</span>來源：2026-10-28 新聞稿／8-K Ex.99.1、官方法說會、10-Q。</p>
+<p>指引<span class="tag tag-shi">【事，法說會】</span>：Q2 capex「超過 500 億」；「日曆年支出應約為 1,700 億」——此為 <strong>2026 日曆年</strong>，不是 2027 年、也不是 FY27 合計。公司預期 FY27 下半年 capex 再加速；未給 FY27 或 2027 日曆年總額。Q1 實際低於自身「超過 500 億」的展望，主因第三方產能延遲；需求仍大於供給。FY27 FCF 預期維持正值。</p>
+<p>自研晶片<span class="tag tag-shi">【事，官方法說會】</span>：產能組合為「NVIDIA 與 AMD 的最新創新，以及我們自己的 Maia 系統」。已接入首批 NVIDIA Vera Rubin GPU。Maia 200「已在 Teams 與 Copilot 的 AI 體驗中，提供最高約 1.7 倍的每瓦 token」。Maia 300「相對領先的 GPU 系統，每瓦 token 再高約 40%」（公司自己的比較口徑）。一般負載另有 Cobalt CPU。Foundry 營收年增超過兩倍；「每 token 營收提高」。</p>
+<p>對供應鏈：官方仍明確並行採購 NVIDIA、AMD 與自研 Maia，不能把 Maia 進度讀成近期限 NVIDIA。<span class="tag tag-mei">【媒／未核】</span>不得把未在微軟或供應商官方文件點名的「Marvell 代工 Maia」當成事實。Broadcom／Marvell 與微軟的客製關係，見第 8 節。</p>
+<h3 id="4-3-雲端-ai-營收與變現">4.3 雲端／AI 營收與變現</h3>
+<p>Q1 營收 922.79 億 +19%；Microsoft Cloud 639 億 +30%（固定匯率 +31%）；Azure 331.65 億（上年 223.84 億）+48%。雲毛利率 66%；公司指引 Q2 雲毛利率「約 65%」。商業 RPO 6,770 億 +73%；總 RPO 6,830 億，約 30% 將於未來 12 個月認列。<span class="tag tag-shi">【事】</span></p>
+<p>Q2 公司指引<span class="tag tag-shi">【事】</span>：營收 960–971 億（+18–19%）；銷貨成本 327–329 億；營業費用 185–186 億；營業利益率略低於上年；稅率約 20%。Azure 指引固定匯率 +49–50%。</p>
+<h3 id="4-4-最近一季-毛利率-capex-後-fcf">4.4 最近一季、毛利率、capex 後 FCF</h3>
+<p>GAAP 淨利 366.29 億，稀釋 EPS 4.92；非 GAAP EPS 4.89（剔除 OpenAI 相關）。毛利率約 68%（毛利 625.59／營收 922.79＝67.8%<span class="tag tag-gu">【估】</span>）。營業利益 459.15 億，營業利益率約 50%。營業現金流 <strong>580.00 億</strong>，扣現金 PP&amp;E 後 FCF <strong>186.33 億</strong>（公司約稱 186 億）。此 FCF <strong>未扣除</strong>計入管理層 capex 的新增長期融資租賃本金。</p>
+<h3 id="4-5-估值">4.5 估值</h3>
+<p>TTM GAAP EPS＝FY26 17.95 − Q1 FY26 3.72 ＋ Q1 FY27 4.92＝<strong>19.15</strong><span class="tag tag-gu">【估】</span>。trailing PE＝517.99／19.15＝<strong>27.05×</strong><span class="tag tag-gu">【估】</span>。</p>
+<p>Yahoo FY27 平均 EPS 20.01（32 位分析師）、FY28 24.2（33 位）→ forward PE <strong>25.89×／21.40×</strong><span class="tag tag-gu">【估，偏非 GAAP】</span>。歷史同口徑區間：缺口。</p>
+<h3 id="4-6-技術面">4.6 技術面</h3>
+<p>收盤 517.99（當日 −1.12%）。SMA20 528.61（−2.01%），SMA50 519.36（−0.26%，±1% 內），SMA60 516.28（+0.33%，±1% 內），SMA200 441.86（+17.23%）。量比 a 1.14×、b 1.16×。52 週高 559.15（2026-11-04，−7.36%），52 週低 349.20（2026-06-25）。前 20 日高 559.15、低 504.96。</p>
+<p>壓力／支撐<span class="tag tag-gu">【估】</span>：上檔先看 11/4 高點 559.15 與 10/13 高點 551.15；下檔先看未確認的 11/13 低點 513.82，以及 11/2 低點／前 20 日低 504.96。收盤貼近 SMA50／60，尚未重新站上 SMA20。</p>
+<h3 id="4-7-主要風險">4.7 主要風險</h3>
+<p>capex 回收取決於雲與 AI 變現能否跟上「日曆年約 1,700 億、下半年再加速」的投入；第三方產能延遲已在 Q1 出現。競爭來自 AWS、Google Cloud、OCI 與自研晶片進度。監管（競爭法、雲與 AI 相關審查）本輪未逐案核對日程，列為持續風險而非新事實。利率若再升，將同時壓估值與資料中心融資成本。</p>
+<h3 id="4-8-對照前稿">4.8 對照前稿</h3>
+<p>四大雲 FCF 合計仍為負，但微軟單季仍是四家中唯一大幅正值的公司定義 FCF，符合「整體偏投入期、但各家現金流分化」而非全面惡化。</p>
+<hr>
+<h2 id="5-amzn-amazon">5. AMZN（Amazon）</h2>
+<p>看板：AWS近五年最快，年度資本支出約2,200億，季度FCF大幅為負，先觀望。</p>
+<h3 id="5-1-三選一與觸發">5.1 三選一與觸發</h3>
+<p><strong>觀望。</strong> AWS 增速與營業利益率並非否決，但 2026 年仍指引約 2,200 億現金 capex，單季調和 FCF 約 −335 億，回收尚未被現金流驗證。收盤 257.75 僅比 SMA20 257.10 高 0.25%（±1% 內），量比 a 0.97×，<strong>未達</strong>「站上且量比 ≥1.0×」。收盤遠高於前 20 日低 229.36。</p>
+<ul><li><strong>升級至「符合條件才分批」</strong><span class="tag tag-jia">【假／條件】</span>：收盤站上重算後 SMA20 且量比 a ≥1.0×；同時 AWS 增速或指引不出現明顯下修，且公司對 2026 現金 capex「約 2,200 億」沒有再次大幅上修卻缺乏對應變現。利率條件同第 4.1 節。</li><li><strong>降級至「不建議」</strong>：收盤跌破前 20 日低（目前參考 229.36，觸發時須重算）且放量；或 AWS 指引明顯轉弱、年度 capex 再大幅上修而變現倒退。2027 capex「明顯更高」目前不是官方新聞稿／投影片用語，不得單獨作為已確認事實來否決。</li></ul>
+<h3 id="5-2-ai-capex-與自研晶片">5.2 AI capex 與自研晶片</h3>
+<p>Q3 購置 PP&amp;E 772.59 億，出售所得 13.81 億，淨額 <strong>758.78 億</strong>（淨額年增 121.7%<span class="tag tag-gu">【估】</span>）。同期取得融資租賃 14.72 億，另列。<span class="tag tag-shi">【事】</span>2026-10-29 新聞稿／Ex.99.1、投影片、10-Q。公司維持 2026 年現金 capex「約 2,200 億」<span class="tag tag-shi">【事】</span>。第三方／媒體傳述的「2027 年 capex 明顯更高」未出現在官方新聞稿或投影片，標<span class="tag tag-mei">【媒／未核】</span>。</p>
+<p>Trainium：官方新聞稿提到 TorchNeuron，既有 PyTorch 工作負載可在 Trainium 上執行而無需改寫<span class="tag tag-shi">【事】</span>。新聞稿亦列出新的 AWS 交易對象包括 Meta、NVIDIA、OpenAI、Oracle 等<span class="tag tag-shi">【事】</span>。Bedrock token 量「近乎上年的 17 倍」為公司自己的說法<span class="tag tag-shi">【事】</span>。更細的法說會數字（例如晶片出貨增速、外部銷售時點、推論佔 AWS AI 營收比重）本輪未在官方新聞稿、投影片或 10-Q 核到原文（10-Q 未出現 Trainium 一詞），維持<span class="tag tag-mei">【媒／未核】</span>。Graviton／Trainium 對 NVDA 是補充還是替代，公司未在本輪一手資料給出可量化結論。</p>
+<h3 id="5-3-雲端-ai-營收與變現">5.3 雲端／AI 營收與變現</h3>
+<p>Q3 淨銷售 2,019 億 +12%（排除匯率 +13%；公司稱若排除 Prime Day 檔期移動，年增約再高 400 個基點）。AWS <strong>460 億 +39.3%</strong>，年化約 1,840 億，為「近五年最快」<span class="tag tag-shi">【事】</span>。AWS 營業利益 178 億（上年 114 億），AWS 營業利益率 178／460＝<strong>38.7%</strong><span class="tag tag-gu">【估】</span>。總營業利益 281 億，營業利益率 13.9%，公司稱為「有史以來最高」。淨利 207 億、EPS 1.89，對上年 212 億／1.95，主因上年有約 95 億 Anthropic 相關利益。<span class="tag tag-shi">【事】</span></p>
+<p>Jassy 於新聞稿：AWS「預計 2027 與 2028 年營收增速均超過 40%」<span class="tag tag-shi">【事，前瞻表述】</span>。Q4 指引：銷售 2,400–2,470 億；營業利益 285–335 億<span class="tag tag-shi">【事】</span>。</p>
+<h3 id="5-4-最近一季-毛利率-capex-後-fcf">5.4 最近一季、毛利率、capex 後 FCF</h3>
+<p>公司未在本輪摘錄中單列與微軟同口徑的總體毛利率指引，不以記憶補數。單季調和 FCF＝42,422 − 75,878＝<strong>−334.56 億</strong><span class="tag tag-gu">【估】</span>。TTM FCF 流出 <strong>424 億</strong><span class="tag tag-shi">【事】</span>。融資租賃本金未計入上述「現金資本支出」定義。</p>
+<h3 id="5-5-估值">5.5 估值</h3>
+<p>TTM GAAP EPS＝Q4 2025 1.95 ＋ 2.78 ＋ 5.75 ＋ 1.89＝<strong>12.37</strong><span class="tag tag-gu">【估】</span>（Q4 2025＝FY2025 7.17 − 1.59 − 1.68 − 1.95）。trailing PE＝257.75／12.37＝<strong>20.84×</strong><span class="tag tag-gu">【估】</span>。</p>
+<p>Yahoo FY2026 平均 EPS 12.80（53 位）、FY2027 10.69（58 位）→ <strong>20.14×／24.11×</strong><span class="tag tag-gu">【估，偏 GAAP】</span>。次年 EPS 共識低於本年，故 FY27 遠期本益比反而更高；這與 2026 年部分季度含較大投資利益、以及分析師對 2027 年的假設有關，不是結論。歷史同口徑區間：缺口。</p>
+<h3 id="5-6-技術面">5.6 技術面</h3>
+<p>收盤 257.75（當日 −3.34%）。SMA20 257.10（+0.25%，±1% 內），SMA50 254.80（+1.16%），SMA60 255.55（+0.86%，±1% 內），SMA200 244.69（+5.34%）。量比 a 0.97×、b 0.96×。52 週高 287.20（2026-08-03，−10.25%），52 週低 196.00（2026-02-17）。前 20 日高 275.34（11/09）、低 229.36（10/30）。</p>
+<p>壓力／支撐<span class="tag tag-gu">【估】</span>：上檔先看 11/9 高點 275.34，再看 8/3 高點 287.20；下檔先看 9 月低點帶 244–245（亦接近 SMA200），再看 10/30 低點 229.36。11/16 低點 256.68 尚未確認。目前是貼著 SMA20 的弱勢站上，不是放量突破。</p>
+<h3 id="5-7-主要風險">5.7 主要風險</h3>
+<p>高 capex 若 AWS 增速回落到「超過 40%」指引之下，現金流缺口會更大。零售與廣告競爭、雲市場競爭、監管（競爭法與勞動／稅務等，本輪未逐案核日期）。自研 Trainium 若生態進度慢於宣傳，則對成本與對 NVDA 依賴的含意都要重估。</p>
+<h3 id="5-8-對照前稿">5.8 對照前稿</h3>
+<p>AWS 增速是四家雲裡本輪最高的之一，但單季 FCF 也是四大雲負值的最大來源，正好對上「基建投入期、現金流尚未轉正」的前稿圖像。</p>
+<hr>
+<h2 id="6-meta-meta-platforms">6. META（Meta Platforms）</h2>
+<p>看板：廣告仍增，但法定費用與資本支出使FCF轉負，先觀望。</p>
+<h3 id="6-1-三選一與觸發">6.1 三選一與觸發</h3>
+<p><strong>觀望。</strong> 核心廣告仍在成長，尚未構成基本面否決；但官方 FCF 已轉負，2026 capex 指引收在 1,350–1,450 億，且收盤低於 SMA20／50／60。量比僅 0.49×，屬縮量，不是放量跌破前 20 日低 583.80。</p>
+<ul><li><strong>升級至「符合條件才分批」</strong><span class="tag tag-jia">【假／條件】</span>：收盤重新站上重算後 SMA20 且量比 a ≥1.0×；同時後續季度在不含新增大額法定費用的基礎上，營業利益與 FCF 能顯示 capex 開始被廣告／AI 變現跟上。利率條件同第 4.1 節。</li><li><strong>降級至「不建議」</strong>：收盤跌破前 20 日低（目前參考 583.80）且放量；或 capex 指引再大幅上修而廣告增速明顯轉弱；或再出現足以改變資本結構的法定／監管現金支出。</li></ul>
+<h3 id="6-2-ai-capex-與自研晶片">6.2 AI capex 與自研晶片</h3>
+<p>Q3 capex（含融資租賃本金）<strong>349.1 億</strong>（PP&amp;E 339.42 億＋本金 9.64 億），同口徑年增 80.2%<span class="tag tag-gu">【估】</span>。<span class="tag tag-shi">【事】</span>2026-10-21 新聞稿／Ex.99.1。2026 全年 capex 指引收窄為 <strong>1,350–1,450 億</strong>（含融資租賃本金；此前 1,300–1,450 億）。未給 2027 年總額；公司稱預算仍在制定、會繼續積極投資。</p>
+<p>MTIA 未出現在 Q3 新聞稿正文。一手進度改引自 Meta 官方新聞／技術部落格與 Broadcom 官方新聞稿<span class="tag tag-shi">【事】</span>：</p>
+<ul><li>2026-03-11 Meta：兩年內開發並部署四代新 MTIA（300／400／450／500）；300 已用於推薦訓練並已量產；400／450／500 近中期主要用於生成式 AI 推論，進入 2027。已部署數十萬顆 MTIA 做推論。採取投資組合策略，同時外購業界晶片，並以 MTIA 為自研核心。</li><li>2026-04-14 Meta 與 Broadcom 官方同步：擴大合作、共同開發多代 MTIA；首期承諾超過 1 GW，並作為持續多 GW 部署的第一階段；Broadcom 以 XPU 平台協助設計、先進封裝與乙太網路。AVGO 稿並稱合作規劃延伸至 2029，以及「業界首款 2nm AI 加速器」等公司表述。</li></ul>
+<p>對供應鏈<span class="tag tag-shi">【事】</span>：這是 Broadcom 的官方客製合作，有利 AVGO 的自研加速器／ eth 網路曝險，但不等於 Meta 停止採購 NVIDIA 或其他加速器。公司自己強調「投資組合」。Marvell 與 MTIA 的直接代工關係本輪未在官方文件點名，標【未核】。</p>
+<h3 id="6-3-雲端-ai-營收與變現">6.3 雲端／AI 營收與變現</h3>
+<p>META 主要變現仍是廣告，不是對外雲。Q3 營收 646.01 億 +26%；廣告 630.61 億 +26%。Family of Apps 營收 641.58 億、營業利益 171.17 億； Reality Labs 營收 4.43 億、虧損 41.29 億。DAP 36.4 億 +3%；廣告展示次數 +10%、單次廣告價格 +14%。<span class="tag tag-shi">【事】</span>Muse／Muse Wonder 已在新聞稿由執行長提出，作為「個人超級智慧」節點；帳號規模等若僅見於媒體，不在此當成<span class="tag tag-shi">【事】</span>。</p>
+<p>Q4 營收指引 730–760 億；2026 年費用 1,750–1,790 億（已納入第三季法定費用）。不含該筆費用，公司仍預期 2026 年營業利益高於 2025。Reality Labs 全年虧損展望改為 180–190 億，低於 2025。<span class="tag tag-shi">【事】</span></p>
+<h3 id="6-4-最近一季-毛利率-capex-後-fcf">6.4 最近一季、毛利率、capex 後 FCF</h3>
+<p>GAAP 營業利益 129.88 億，營業利益率 20%（上年 40%）。Q3 認列與 52 州檢察長「青少年心理健康與社群媒體」和解相關費用 <strong>98.9 億</strong>；該協議 2026 年 8 月宣布，付款上限約 <strong>185.9 億</strong><span class="tag tag-shi">【事，新聞稿】</span>。剔除該費用，營業利益將為 228.8 億，稀釋 EPS 3.83 將為 7.40。官方 FCF <strong>−21.20 億</strong>（已扣融資租賃本金）；若只扣現金 PP&amp;E，FCF 約 <strong>−11.56 億</strong><span class="tag tag-gu">【估】</span>。本輪不另行發明毛利率百分比。</p>
+<h3 id="6-5-估值">6.5 估值</h3>
+<p>TTM GAAP EPS＝Q4 2025 8.87 ＋ 10.44 ＋ 6.18 ＋ 3.83＝<strong>29.32</strong><span class="tag tag-gu">【估】</span>（Q4 2025＝FY2025 23.49 − 6.43 − 7.14 − 1.05）。trailing PE＝626.41／29.32＝<strong>21.36×</strong><span class="tag tag-gu">【估】</span>。此 TTM 含 Q3 法定費用，也含上年同期較低的 1.05，解讀時須並列。</p>
+<p>Yahoo FY2026 平均 EPS 29.07（55 位）、FY2027 33.90（56 位）→ <strong>21.55×／18.48×</strong><span class="tag tag-gu">【估，偏 GAAP】</span>。歷史同口徑區間：缺口。</p>
+<h3 id="6-6-技術面">6.6 技術面</h3>
+<p>收盤 626.41（當日 −2.38%）。SMA20 633.11（−1.06%），SMA50 680.00（−7.88%），SMA60 663.76（−5.63%），SMA200 630.32（−0.62%，±1% 內）。量比 a／b 均 0.49×，屬縮量。52 週高 779.82（2026-09-24，−19.67%），52 週低 520.26（2026-03-27）。前 20 日高 713.22（10/21）、低 583.80（11/05）。</p>
+<p>壓力／支撐<span class="tag tag-gu">【估】</span>：上檔先看未確認的 11/11 高點 648.45，再看 10 月 711–713 一帶，然後 9/24 高點 779.82；下檔先看 11/5 低點／前 20 日低 583.80。目前貼著 SMA200、且在 SMA50／60 之下，是回撤後的整理，不是放量轉強。</p>
+<h3 id="6-7-主要風險">6.7 主要風險</h3>
+<p>capex 回收取決於廣告定價與 AI 產品（含 Muse）能否把基礎設施變成現金流；Reality Labs 仍虧損。監管：已有 2026 年 8 月和解與 Q3 98.9 億費用，新聞稿並稱後續數月在美國還有多場與青少年議題相關的審判，且「持續關注可能重大影響業務的法律與監管事項」<span class="tag tag-shi">【事】</span>。競爭來自其他廣告平台與基礎模型／雲廠商。</p>
+<h3 id="6-8-對照前稿">6.8 對照前稿</h3>
+<p>單季官方 FCF 轉負，使四大雲合計為負的結論更穩，而不是被廣告成長單獨翻轉。</p>
+<hr>
+<h2 id="7-orcl-oracle-財年於-5-月結束">7. ORCL（Oracle；財年於 5 月結束）</h2>
+<p>看板：訂單儲備大但認列偏後，已大幅舉債增資且FCF為負，先觀望。</p>
+<h3 id="7-1-三選一與觸發">7.1 三選一與觸發</h3>
+<p><strong>觀望。</strong> 雲基礎設施增速與 RPO 規模是支持項，但 FCF 為負、認列時程偏後、8 月底後又完成約 200 億美元股債融資，槓桿與履約風險高於另外三檔。這些構成<strong>謹慎理由，尚不構成本框架下的自動基本面否決</strong>（公司仍重申 FY27 營收至少 900 億、非 GAAP EPS 8.10，並把維持投資級信評列為資本配置優先）。收盤 119.09 低於 SMA20 126.07（−5.54%），也低於 SMA50／60／200；量比僅 0.48×，收盤仍高於前 20 日低／近期低點 109.21，不是放量跌破。</p>
+<ul><li><strong>升級至「符合條件才分批」</strong><span class="tag tag-jia">【假／條件】</span>：收盤重新站上重算後 SMA20 且量比 a ≥1.0×；同時後續財報需看到（a）RPO 認列進度大致符合 10-Q 所揭時程、（b）GAAP 或公司定義的 capex 後現金流朝 Investor Day 所稱「FY28 下半年轉正」靠近、（c）沒有因單一客戶延遲或再融資條件惡化而改寫資本計畫。利率若自 5.15% 再升，對已發行高票息債券與後續再融資尤其敏感，不自動升級。</li><li><strong>降級至「不建議」</strong>：收盤跌破前 20 日低（目前參考 109.21，亦即 11/6 低點／近 52 週低）且放量；或公司下修 FY27 營收／EPS、FCF 轉正時點明顯後移、投資級表述被公司或公開評等新聞稿推翻、或官方文件顯示大客戶無法履約／訂單取消。</li></ul>
+<h3 id="7-2-oci-訂單儲備-rpo-公司揭露-vs-媒體">7.2 OCI 訂單儲備 RPO（公司揭露 vs 媒體）</h3>
+<p><strong><span class="tag tag-shi">【事，FY27 Q1 10-Q，截至 2026-08-31】</span></strong> 剩餘履約義務（RPO）<strong>6,640 億美元</strong>。公司揭露預計認列時程：約 <strong>13%</strong> 於未來 12 個月認列，<strong>37%</strong> 於第 13–36 個月，<strong>34%</strong> 於第 37–60 個月，其餘更之後。據此匡算<span class="tag tag-gu">【估】</span>：12 個月內約 863 億，13–36 個月約 2,457 億，37–60 個月約 2,258 億，其餘約 1,062 億。認列明顯後置，不是「訂單已等於近一年營收」。</p>
+<p>新聞稿<span class="tag tag-shi">【事，2026-09-10】</span>：Q1 另外簽下超過 300 億美元 AI 雲合約；稱對籌資計畫「無增量影響」；已交付超過 30 萬顆 GPU，幾乎是 FY26 Q4 的三倍；另交付 850 MW 資料中心產能。</p>
+<p><strong>單一大客戶占比：</strong></p>
+<ul><li><span class="tag tag-shi">【事，FY26 10-K】</span>「FY2026、2025、2024 沒有單一客戶佔總營收 10% 或以上。」這是<strong>當期營收</strong>口徑，不是 RPO 口徑。</li><li><span class="tag tag-shi">【事，同一 10-K】</span>公司承認存在「某些大型、長期的客戶雲協議」，須投入大量基礎設施；經濟回報取決於客戶需求及<strong>關鍵客戶履行合約義務的能力</strong>；需求或履約能力變化可能影響營業利益率、現金流，並可能須評估相關長期資產是否可回收。</li><li>【未核】10-Q／10-K <strong>未揭露</strong>單一客戶佔 RPO 的比例。本輪在該兩份文件中也<strong>未讀到 OpenAI 被點名</strong>。</li><li><span class="tag tag-mei">【媒】</span>媒體關於 OpenAI（或其他單一超大規模客戶）與 Oracle 合約規模、佔 RPO 比重的報導，不得上調為公司事實。只能作為與上述「關鍵客戶履約風險」官方表述並讀的背景。</li></ul>
+<h3 id="7-3-capex-舉債-淨負債-信評">7.3 capex、舉債、淨負債、信評</h3>
+<p>Q1 GAAP capex <strong>284.99 億</strong>（上年 85.02 億，+235%<span class="tag tag-gu">【估】</span>）。10-Q：FY27 capex「將高於 FY26」（FY26 實際 capex <strong>556.63 億</strong>）<span class="tag tag-shi">【事】</span>。市場廣泛引用的「FY27 capex 900–950 億／淨現金 capex 不超過 700 億」<strong>未出現</strong>在官方新聞稿、投影片或 10-Q；官方投影片的「900 億＋」是 <strong>FY27 營收</strong>展望，不是 capex。該數字標<span class="tag tag-mei">【媒／未核】</span>。</p>
+<p>Investor Day 新聞稿<span class="tag tag-shi">【事，2026-10-28 8-K Ex.99.1】</span>：重申 FY27 營收至少 900 億、非 GAAP EPS 8.10；FY30 營收 2,250 億＋（自 FY26 起 CAGR 超過 35%）、非 GAAP 營業利益率 40%＋、非 GAAP EPS 21 美元＋（均為前瞻）。capex 高峰在 FY27–FY28，FY29 回落；預期 <strong>FY28 下半年 FCF 轉正</strong>，FY29 FCF 至少 300 億。承諾至 FY30 的<strong>額外</strong>資本市場籌資以 200 億為上限（不含既有債務再融資），目前預期為 <strong>100 億股票＋100 億總債務</strong>；此為 Q1 已完成約 200 億 ATM 增資之外的增量。FY29 起成長預期可自行籌措；FY29 淨負債／調整後 EBITDA 低於 3.5 倍。此處淨負債定義為：借款＋供應商融資＋經營及融資租賃負債 − 現金及可轉讓證券。</p>
+<p><strong>2026-08-31 資產負債<span class="tag tag-shi">【事，10-Q】</span></strong>：現金及約當現金 363.69 億（現金流量表含受限制現金的期末現金 389.34 億，其中受限制現金約 26 億，兩數不可混用）；可轉讓債務證券 7.08 億；應付票據及其他借款——流動 76.25 億、非流動 1,177.12 億，帳面合計 <strong>1,253.37 億</strong><span class="tag tag-gu">【估】</span>。公司另披露「1,250 億優先票據及其他長期借款」公允價值 <strong>1,057 億</strong>，低於帳面，顯示二級市場折價<span class="tag tag-shi">【事】</span>。經營租賃負債 346.21 億、融資租賃負債 91.85 億，租賃合計 <strong>438.06 億</strong><span class="tag tag-shi">【事】</span>。Q1 另完成 ATM 普通股約 <strong>199.09 億</strong>；償還票據／定期貸款 42.02 億；償還商業本票約 11 億。</p>
+<p>淨負債<span class="tag tag-gu">【估，須標口徑】</span>：</p>
+<ul><li>窄口徑（借款 − 現金 − 可轉讓證券）＝1,253.37 − 363.69 − 7.08＝<strong>882.60 億</strong>（2026-08-31）。</li><li>加上表內租賃負債後＝<strong>1,320.66 億</strong>。供應商融資餘額本輪未在 10-Q 獨立核出，故 <strong>Investor Day 全口徑淨負債仍不完整</strong>【未核】。</li><li>另有<strong>未入表</strong>的額外租賃承諾 <strong>2,880 億</strong><span class="tag tag-shi">【事，10-Q】</span>：幾乎全與資料中心相關，一般預期於 FY27 第二季至 FY29 之間起租，租期 15 至 19 年。這不是當前淨負債，但是重大未來槓桿與履約承諾。</li></ul>
+<p><strong>近期發債與增資<span class="tag tag-shi">【事，2026-11-04 8-K，事件日 11/2–11/4】</span></strong>：</p>
+<ul><li>普通股：發行 86,206,897 股，8-K 標題與正文作「100 億美元普通股」，11/4 交割。相對 8/31 流通在外約 30.24 億股，約 2.85% 稀釋<span class="tag tag-gu">【估】</span>。</li><li>優先票據合計本金 <strong>100 億美元</strong>，11/4 交割：20 億 7.000% 2029 到期、17.5 億 7.450% 2031、22.5 億 7.850% 2033、25 億 8.000% 2037、15 億 8.650% 2046。</li><li>用途：一般公司目的，可能包括資本支出、償債、未來投資或併購、以及普通股股息或庫藏。</li></ul>
+<p>此 100 億股票＋100 億債券，與 10/28 Investor Day「至 FY30 額外籌資上限 200 億、預期各 100 億」在規模上吻合<span class="tag tag-gu">【估】</span>；若認定該上限已被這次發行事用完，則後續若再出增量股債（再融資除外）就與當時承諾衝突。這是解讀，不是公司在 8-K 裡的原句。票息 7%–8.65% 本身是已發行條款<span class="tag tag-shi">【事】</span>，反映當時市場要求的信用利差，但不代替信評字母。</p>
+<p><strong>信評：</strong> 10/28 公司新聞稿只把「維持投資級信評」列為資本配置優先事項<span class="tag tag-shi">【事】</span>，<strong>未公布</strong>穆迪／標普／惠譽字母評等。本輪未能從公開新聞稿或公司文件核到三大機構評等原文，字母評等標【未核】。不採用第三方轉述。</p>
+<h3 id="7-4-最近一季-雲營收-capex-後-fcf">7.4 最近一季、雲營收、capex 後 FCF</h3>
+<p>FY27 Q1（至 2026-08-31）<span class="tag tag-shi">【事，2026-09-10 新聞稿／10-Q／官方投影片】</span>：總營收 193 億 +30%；雲 116 億 +62%；雲基礎設施（IaaS）<strong>74 億 +121%</strong>；應用（SaaS）42 億 +10%。GAAP 營業利益 67 億 +57%；非 GAAP 營業利益 82 億；GAAP EPS 1.56 +55%；非 GAAP EPS 1.92 +30%。營業現金流 231.03 億；GAAP capex 284.99 億；<strong>GAAP FCF −53.96 億</strong>。FY27 指引：總營收至少 900 億、非 GAAP EPS 8.10。Q2：營收 +30–34%，雲（美元）+65–71%。</p>
+<h3 id="7-5-估值">7.5 估值</h3>
+<p>TTM GAAP EPS＝FY26 5.83 − Q1 FY26 1.01 ＋ Q1 FY27 1.56＝<strong>6.38</strong><span class="tag tag-gu">【估】</span>。trailing PE＝119.09／6.38＝<strong>18.67×</strong><span class="tag tag-gu">【估，GAAP】</span>。</p>
+<p>Yahoo FY27 平均 EPS 8.15（39 位）、FY28 11.06（40 位）→ <strong>14.61×／10.77×</strong><span class="tag tag-gu">【估，偏非 GAAP】</span>。對公司自己的 FY27 非 GAAP EPS 指引 8.10，則為 14.70×<span class="tag tag-gu">【估】</span>。11/4 增資後的流通股尚未反映在 Q1 EPS，後續每股數字可能被稀釋，forward PE 分子已用現價，分母若未同步調整則偏樂觀。歷史同口徑區間：缺口。</p>
+<h3 id="7-6-技術面">7.6 技術面</h3>
+<p>收盤 119.09（當日 −4.99%）。SMA20 126.07（−5.54%），SMA50 135.87（−12.35%），SMA60 138.03（−13.72%），SMA200 153.89（−22.61%）。量比 a／b 均 0.48×。52 週高 250.25（2026-06-01，−52.41%），52 週低 109.21（2026-11-06，+9.05%）。前 20 日高 148.48（10/28，Investor Day 當日）、低 109.21。數據專員記錄：6/1 的 250.25 至 7/28 的 114.50，約 −54%；日線無拆股級跳動。</p>
+<p>壓力／支撐<span class="tag tag-gu">【估】</span>：上檔先看 10/22 低點 122.76 與未確認的 11/11 高點 130.77，再看 10/28 高點 148.48；下檔先看 7/28 低點 114.50，以及 11/6 低點／前 20 日低／近 52 週低 109.21。目前四條主要均線皆在上方，屬深幅回撤後的弱勢整理，縮量尚未證明止穩。</p>
+<h3 id="7-7-大客戶集中度與履約風險">7.7 大客戶集中度與履約風險</h3>
+<p>見 7.2。補充：未入表的 2,880 億資料中心租賃承諾、Q1 已很高的 GAAP capex，以及「經濟回報取決於關鍵客戶履約」的官方風險因素，是同一組風險——訂單若延後、縮減或客戶無力履約，產能與租賃仍可能先發生。這是<span class="tag tag-shi">【事】</span>層面的風險揭露，不是已發生違約的陳述。媒體對單一客戶名稱與金額的報導保持<span class="tag tag-mei">【媒】</span>。</p>
+<h3 id="7-8-對照前稿">7.8 對照前稿</h3>
+<p>ORCL 不在原先「四大雲 FCF 合計」的四家之中。把它並陳後，更凸顯投入期的現金與槓桿壓力，但因財季錯位，不能用來改寫四大雲合計的時點結論。股價自 6 月高點大幅回撤，與「高訂單、高投入、現金流尚未轉正」同時存在，不能單獨讀成基本面已經證偽，也不能讀成已經反映完畢。</p>
+<hr>
+<h2 id="8-自研晶片對-nvda-avgo-mrvl-的供應鏈意涵-彙整">8. 自研晶片對 NVDA／AVGO／MRVL 的供應鏈意涵（彙整）</h2>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>項目</th><th>一手結論</th><th>標籤</th></tr></thead><tbody><tr><td>MSFT Maia</td><td>已與 NVIDIA、AMD 並行部署；Maia 200 已用於 Teams／Copilot；Maia 300 為公司自己的每瓦 token 比較</td><td><span class="tag tag-shi">【事】</span>法說會</td></tr><tr><td>AMZN Trainium</td><td>官方確認 TorchNeuron 與 Trainium 路徑；細項出貨／外部銷售數字本輪無官方原文</td><td>部分<span class="tag tag-shi">【事】</span>、部分<span class="tag tag-mei">【媒／未核】</span></td></tr><tr><td>META MTIA</td><td>官方與 Broadcom 擴大多代合作，首期 &gt;1 GW、規劃至 2029；四代路線圖與「數十萬顆已部署」見 Meta 3/11 稿</td><td><span class="tag tag-shi">【事】</span></td></tr><tr><td>AVGO</td><td>2026-04-14 官方新聞稿點名 MTIA 合作，這是可核的正向關聯</td><td><span class="tag tag-shi">【事】</span></td></tr><tr><td>MRVL</td><td>官方材料稱客製晶片已出貨給「前四大超大規模雲」；但本輪未在官方文件讀到它被點名為 Trainium 或 Maia 的承造者</td><td>出貨給四大<span class="tag tag-shi">【事】</span>；點名 Trainium／Maia<span class="tag tag-mei">【媒／未核】</span></td></tr><tr><td>對 NVDA</td><td>三家（外加 Oracle 大量採購 GPU 的官方表述）仍同時使用外部 GPU；自研是投資組合的一部分，不是本輪可量化的「替代完成」</td><td><span class="tag tag-gu">【估】</span>不得外推為短期需求消失</td></tr></tbody></table></div>
+<hr>
+<h2 id="9-來源-日期">9. 來源（日期）</h2>
+<ul><li>數據專員價量：<code>/workspace/cross-sector-screen/hyperscalers-prices-20261117.md</code>／<code>.json</code>，取數台北 2026-11-17 11:12–11:15，資料日美東 2026-11-16，API DELAYED。</li><li>週期與利率：<code>ai-cycle-stage-20261114.md</code>、<code>midterm-entry-timing-20261116.md</code>；十年期 5.15% 為 2026-11-13；FedWatch 為 2026-11-15 03:35 CT。</li><li>MSFT：2026-10-28 新聞稿／8-K Ex.99.1、官方法說會、FY27 Q1 10-Q（至 2026-09-30）。</li><li>AMZN：2026-10-29 新聞稿／Ex.99.1、官方投影片、10-Q（至 2026-09-30）；法說會官方網頁本輪無逐字稿。</li><li>META：2026-10-21 新聞稿／Ex.99.1；Meta 官方 2026-03-11、2026-04-14 新聞／部落格；Broadcom 官方 2026-04-14 新聞稿。</li><li>GOOG（僅入合計）：2026Q3 10-Q／Ex.99.1 及 2026-10-28 官方法說會（1:30 PM PT＝台北 10/29 05:30）。</li><li>ORCL：2026-09-10 新聞稿、FY27 Q1 10-Q（2026-09-11 申報，至 2026-08-31）、官方投影片；FY26 10-K（至 2026-05-31，2026-06-22 申報）；2026-10-28 Investor Day 8-K Ex.99.1；2026-11-04 股債發行 8-K（事件日 11/2–11/4）。</li><li>共識 EPS：Yahoo Finance Analysis 頁，2026-11-17 擷取（MSFT／AMZN／META／ORCL）。</li><li>TTM EPS：SEC 公司 10-Q／10-K 單季稀釋 EPS 加總，輔以 companyfacts 核對。</li></ul>
+<hr>
+<h2 id="10-資料缺口與限制">10. 資料缺口與限制</h2>
+<ol><li>免費來源無 NTM 共識 EPS；亦無與本稿同口徑的歷史遠期本益比區間。</li><li>MSFT、ORCL 的 Yahoo 平均 EPS 偏非 GAAP；與 GAAP trailing PE 不可當成同一口徑比較。</li><li>AMZN 官方法說會逐字稿未取得；2027 capex 與部分 Trainium 細節維持<span class="tag tag-mei">【媒／未核】</span>。</li><li>ORCL 單一客戶佔 RPO 比例未揭露；OpenAI 等名稱僅見媒體。Investor Day 全口徑淨負債缺供應商融資餘額。三大信評字母評等未從公開新聞稿或公司文件核到原文，標【未核】。市場傳述的 FY27 capex 900–950 億不是官方數字。</li><li>11/16 日線 API 為 DELAYED，數據專員無法確認 Massive 已定稿。</li><li>本輪未逐案核對微軟、亞馬遜的全部進行中監管案件日程；META 僅核到新聞稿中的和解與後續審判提示。</li><li>結論是條件式研究判斷，不是交易指令，不承諾報酬，不給配置比例。</li></ol>
+    </article>
+    <nav class="other"><h2>其他研究報告</h2><ul><li><a href="ai-disruption-20261123.html">AI 時代產業金流轉移</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="agentic-commerce-20261123.html">Agent 消費端口的受益者</a>　<span class="meta" style="display:inline">2026-11-23</span></li><li><a href="spacex-tsla-cashflow-20261117.html">SpaceX／Tesla 現金流與 Terafab</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="ai-apps-shop-20261117.html">AI 應用：SHOP 與初選 12 檔</a>　<span class="meta" style="display:inline">2026-11-17</span></li><li><a href="midterm-election-20261115.html">期中選舉後一年報酬</a>　<span class="meta" style="display:inline">2026-11-15</span></li><li><a href="midterm-entry-timing-20261116.html">期中選後進場時點</a>　<span class="meta" style="display:inline">2026-11-16</span></li></ul></nav>
+    <p class="foot">來源檔只作內部研究底稿。本頁為已審正文的網頁版，不是交易授權。</p>
+  </main>
+  <script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function label(t){ if(btn) btn.textContent = t === "dark" ? "切換淺色" : "切換深色"; }
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    try { localStorage.setItem("watchlist-theme", t); } catch(e) {}
+    label(t);
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("watchlist-theme"); } catch(e) {}
+  var prefer = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply((saved === "dark" || saved === "light") ? saved : (prefer ? "dark" : "light"));
+  if (btn) btn.addEventListener("click", function(){
+    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>
