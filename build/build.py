@@ -1439,8 +1439,12 @@ def main():
     }
     meta["footer"] = build_footer(stocks, macro, meta)
     dest = render(stocks, macro, meta)
-    from reports import build_reports
-    report_paths = build_reports(ROOT / "reports")
+    report_paths = []
+    if Path("/workspace").exists():
+        from reports import build_reports
+        report_paths = build_reports(ROOT / "reports")
+    else:
+        print("reports skipped: /workspace sources unavailable in CI; keeping existing reports/")
     if not args.no_publish:
         publish_gh_site(dest, reports=report_paths)
     # write a compact after-hours report for the parent agent
